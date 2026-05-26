@@ -71,3 +71,4 @@ checkpoints/
 # large Java parser resources
 fkassim/
 fkassim.zip
+\ncollect_data_full/\ncollect_data/*_full.csv\n

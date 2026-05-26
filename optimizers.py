@@ -1,6 +1,7 @@
 from abc import ABC
 import llm
 import re
+import config
 
 class PromptOptimizer(ABC):
     def __init__(self, args, scorer, gradient_dict):
@@ -30,13 +31,47 @@ class PAA(PromptOptimizer):
         return texts
 
     def filter_target_score(self, text, feedbacks):
-        if feedbacks == []:
-            numbers = re.findall(r'\d+\.\d+|\d+', text)
-            target_score = [float(number) for number in numbers if float(number) < 10]
-            assert len(target_score) == 1
-        else:
-            target_score = feedbacks
-        return target_score[0]
+        """
+        Robustly parse a similarity score from model output.
+
+        Priority:
+        1. Parse numbers inside <START>...<END> or <START>...</END>.
+        2. If multiple valid numbers appear, choose the minimum one.
+           This handles outputs like "7 out of 10".
+        3. If parsing fails, return slightly below the attention threshold,
+           so the dimension is conservatively marked as needing attention.
+        """
+        candidates = []
+        if feedbacks:
+            candidates.extend(feedbacks)
+
+        candidates.extend(self.parse_tagged_text(text, "<START>", "<END>"))
+        candidates.extend(self.parse_tagged_text(text, "<START>", "</END>"))
+
+        scores = []
+        for item in candidates:
+            numbers = re.findall(r"[-+]?\d*\.\d+|\d+", str(item))
+            for number in numbers:
+                value = float(number)
+                if 0 <= value <= 10:
+                    scores.append(value)
+
+        if scores:
+            return min(scores)
+
+        numbers = re.findall(r"[-+]?\d*\.\d+|\d+", text)
+        fallback_scores = []
+        for number in numbers:
+            value = float(number)
+            if 0 <= value <= 10:
+                fallback_scores.append(value)
+
+        if fallback_scores:
+            return min(fallback_scores)
+
+        print("\n[WARN] Could not parse target score from model output:")
+        print(repr(text))
+        return float(self.opt.get("attention_threshold", 7.5)) - 0.1
 
 
     def extract_number(self, s):
@@ -62,7 +97,7 @@ class PAA(PromptOptimizer):
             The score is wrapped with <START> and <END>
             """
             gradient_prompt = '\n'.join([line.lstrip() for line in gradient_prompt.split('\n')])
-            res = llm.chatGPT(gradient_prompt, model="gpt-3.5-turbo", temperature=0.0)
+            res = llm.chatGPT(gradient_prompt, model=config.PRSA_FAST_MODEL, temperature=0.0)
             feedbacks = []
             temp = []
             for r in res:    
@@ -70,7 +105,7 @@ class PAA(PromptOptimizer):
                 feedbacks = self.filter_target_score(r, temp)
             try:
                 if float(feedbacks) < self.opt["attention_threshold"]:
-                    print("feedback socre: ",feedbacks)
+                    print(f"[LOW] element={element} score={feedbacks}")
                     gradient[element] = 1
             except:
                 if float(self.extract_number(feedbacks)) < self.opt["attention_threshold"]:
