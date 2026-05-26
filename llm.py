@@ -1,37 +1,17 @@
 from abc import ABC, abstractmethod
-import time
-import config
-import string
 import json
-import utils
+import string
+import sys
+import time
+
 import openai
 
-import os
-from openai import OpenAI
+import config as prsa_config
+import utils
 
-_proxy_client = OpenAI(
-    api_key=os.environ.get("OPENAI_API_KEY"),
-    base_url=os.environ.get("OPENAI_BASE_URL", "https://api.openai.com/v1"),
-)
+openai.api_key = prsa_config.OPENAI_KEY
+openai.api_base = prsa_config.OPENAI_BASE_URL
 
-class _ChatCompletionShim:
-    @staticmethod
-    def create(**kwargs):
-        # Force PRSA to use the model selected in the terminal, e.g. gpt-5.5
-        kwargs["model"] = os.environ.get("OPENAI_MODEL", kwargs.get("model", "gpt-5.5"))
-
-        # Old PRSA code may pass timeout=(300, 300), but new SDK prefers a number
-        if isinstance(kwargs.get("timeout"), tuple):
-            kwargs["timeout"] = max(kwargs["timeout"])
-
-        resp = _proxy_client.chat.completions.create(**kwargs)
-
-        # Return old-style dict so existing PRSA code can still use response["choices"][...]
-        return resp.model_dump()
-
-openai.ChatCompletion = _ChatCompletionShim
-
-import sys
 
 class Predictor(ABC):
     def __init__(self, config):
@@ -41,46 +21,45 @@ class Predictor(ABC):
     def inference(self, input, prompt):
         pass
 
-class ChatGPTPredictor(Predictor):
 
-    def inference(self, input, prompt, gpt_model= "gpt-4-turbo"):
+class ChatGPTPredictor(Predictor):
+    def inference(self, input, prompt, gpt_model=prsa_config.PRSA_STRONG_MODEL):
         responses = chatGPT_inference(
-            prompt, input, n=1,
+            prompt,
+            input,
+            n=1,
             model=gpt_model,
-            temperature=self.config['temperature']
+            temperature=self.config["temperature"],
         )
 
         if not responses:
             print("[Warning]  chatGPT_inference returned an empty response.")
             return None
         return responses[0]
-    
+
 
 class BatchSizeException(Exception):
     pass
 
-def parse_sectioned_prompt(s): 
 
+def parse_sectioned_prompt(s):
     result = {}
     current_header = None
 
-    for line in s.split('\n'):
+    for line in s.split("\n"):
         line = line.strip()
 
-        if line.startswith('# '):
-            # first word without punctuation
+        if line.startswith("# "):
             current_header = line[2:].strip().lower().split()[0]
-    
-            current_header = current_header.translate(str.maketrans('', '', string.punctuation)) 
-            result[current_header] = ''
+            current_header = current_header.translate(str.maketrans("", "", string.punctuation))
+            result[current_header] = ""
         elif current_header is not None:
-            result[current_header] += line + '\n'
- 
+            result[current_header] += line + "\n"
 
     return result
 
-def extract_all_quoted_text(sentence):
 
+def extract_all_quoted_text(sentence):
     parts = sentence.split('"')
 
     if len(parts) >= 3:
@@ -92,9 +71,8 @@ def extract_all_quoted_text(sentence):
 
 
 def llm_attention(config, inputs, Output, attention_dict, gpt_model, characteristic=""):
-    
     attention_text = ""
-    for attention, weight in attention_dict.items(): #Don't consider weight for now
+    for attention, weight in attention_dict.items():  # Don't consider weight for now
         attention_prompt = f"""
             output:
             "{Output}"
@@ -107,49 +85,55 @@ def llm_attention(config, inputs, Output, attention_dict, gpt_model, characteris
     return attention_text
 
 
-
-def generate_prompt(config, inputs, output,  gradient={}, gpt_model= "gpt-4-turbo",max_tokens=4096, instruction_characteristic=""):
+def generate_prompt(
+    config,
+    inputs,
+    output,
+    gradient={},
+    gpt_model=prsa_config.PRSA_STRONG_MODEL,
+    max_tokens=4096,
+    instruction_characteristic="",
+):
     print("config.theme: ", config["theme"])
     if gradient == {}:
         prompt_gen_template = f"""
                             User_Input:
                             "{inputs}"
-                            
+
                             Output:
                             "{output}"
-                            
+
                             Your task is to generate an instruction based on the provided User Input and Output. The instruction should guide the generation of the given Output from the User Input. The instruction should be related to the topic of "{config["theme"]}".
 
                             The instruction is wrapped with <START> and <END>.
                             """
 
-        res_list = chatGPT(prompt_gen_template, n=1, model=gpt_model, max_tokens=4096, temperature=0.0)
+        res_list = chatGPT(prompt_gen_template, n=1, model=gpt_model, max_tokens=max_tokens, temperature=0.0)
         res = res_list[0] if res_list else None
 
-        if res == None:
+        if res is None:
             print("[Warning] ChatGPT returned no response.")
             return None
-        
+
         feedback = utils.parse_tagged_text(res, "<START>", "<END>")
         try:
             assert len(feedback) == 1
-        except:
+        except Exception:
             print("[Warning] Failed to extract a single instruction from LLM output.")
             return None
         prompt = feedback[0]
         return prompt
-    
+
     elif gradient != {}:
         attention = llm_attention(config, inputs, output, gradient, gpt_model, instruction_characteristic)
-        #print("\nattention:", attention)
-        
+
         attention_prompt = f"""
                         User_Input:
                         "{inputs}"
-                        
+
                         Output:
                         "{output}"
-                        
+
                         Output_characteristic:
                         "{attention}"
 
@@ -157,26 +141,27 @@ def generate_prompt(config, inputs, output,  gradient={}, gpt_model= "gpt-4-turb
 
                         The instruction is wrapped with <START> and <END>.
                         """
-             
-        res_list = chatGPT(attention_prompt,n=1, model=gpt_model,temperature=0.0)
+
+        res_list = chatGPT(attention_prompt, n=1, model=gpt_model, temperature=0.0)
         res = res_list[0] if res_list else None
 
-        if res == None:
+        if res is None:
             print("[Warning] chatGPT returned no response.")
             return None
-        
+
         feedback = utils.parse_tagged_text(res, "<START>", "<END>")
         try:
             assert len(feedback) == 1
-        except:
+        except Exception:
             print("[Warning] Failed to extract a single instruction from LLM output.")
             return None
         opt_prompt = feedback[0]
-        return  opt_prompt 
+        return opt_prompt
+
 
 def pre_pruning(user_input, prompt):
     instruction = f"""
-    User Input: 
+    User Input:
     "{user_input}"
 
     Prompt:
@@ -184,11 +169,12 @@ def pre_pruning(user_input, prompt):
 
     I provide a Prompt and User Input. Please identify all parts of the Prompt that are semantically tied to the User Input, and replace them with placeholders "{{}}". Keep the sentence structure intact. Return only the masked prompt.
     The masked prompt is wrapped with <START> and <END>.
-    """      
-    res = chatGPT(instruction, n=1, model="gpt-4-turbo", temperature=0.0)[0]
+    """
+    res = chatGPT(instruction, n=1, model=prsa_config.PRSA_STRONG_MODEL, temperature=0.0)[0]
     feedback = utils.parse_tagged_text(res, "<START>", "<END>")
     pre_prompt = feedback[0]
     return pre_prompt
+
 
 def llm_based_evaluation(target_output, generated_output):
     system_prompt = f"""
@@ -215,31 +201,55 @@ def llm_based_evaluation(target_output, generated_output):
 
     Generated Text: "{generated_output}"
     """
-    res = chatGPT_inference(system_prompt=system_prompt, text=user_prompt, model="gpt-4-turbo", temperature=0)[0]
+    res = chatGPT_inference(
+        system_prompt=system_prompt,
+        text=user_prompt,
+        model=prsa_config.PRSA_STRONG_MODEL,
+        temperature=0,
+    )[0]
     return res
 
-def chatGPT(text, temperature=0.7, n=1, top_p=1, stop=None, max_tokens=4096, 
-                  presence_penalty=0, frequency_penalty=0, model="gpt-4-turbo", logit_bias={}):
-    messages = [{"role": "user", "content": text}]
 
+def chatGPT(
+    text,
+    temperature=0.7,
+    n=1,
+    top_p=1,
+    stop=None,
+    max_tokens=4096,
+    presence_penalty=0,
+    frequency_penalty=0,
+    model=prsa_config.PRSA_STRONG_MODEL,
+    logit_bias={},
+):
+    messages = [{"role": "user", "content": text}]
 
     response = None
     retry_count = 0
     max_retries = 1
     while response is None:
         try:
-            response = openai.ChatCompletion.create(model=model, temperature=temperature, n=n, top_p = top_p,\
-                max_tokens = 4096, presence_penalty=0, frequency_penalty=0, messages=messages, timeout=(300, 300))#, stream=True
+            response = openai.ChatCompletion.create(
+                model=model,
+                temperature=temperature,
+                n=n,
+                top_p=top_p,
+                max_tokens=max_tokens,
+                presence_penalty=presence_penalty,
+                frequency_penalty=frequency_penalty,
+                messages=messages,
+                timeout=(300, 300),
+            )
         except Exception as e:
             retry_count += 1
             if "This model's maximum context length" in str(e):
                 print(e)
-                with open("ERR.txt", 'a') as outf:
-                    outf.write(json.dumps(str(text)) + '\n')
-                sys.exit(1) 
-            if 'is greater than the maximum' in str(e):
+                with open("ERR.txt", "a") as outf:
+                    outf.write(json.dumps(str(text)) + "\n")
+                sys.exit(1)
+            if "is greater than the maximum" in str(e):
                 raise BatchSizeException()
-            if 'We could not parse the JSON body of your request' in str(e):
+            if "We could not parse the JSON body of your request" in str(e):
                 try:
                     json.dumps({"role": "user", "content": text})
                 except Exception as json_err:
@@ -255,11 +265,22 @@ def chatGPT(text, temperature=0.7, n=1, top_p=1, stop=None, max_tokens=4096,
             time.sleep(20)
     if response is None:
         return None
-    return [choice['message']['content'] for choice in response['choices']]
+    return [choice["message"]["content"] for choice in response["choices"]]
 
-def chatGPT_inference(system_prompt, text, temperature=0.7, n=1, top_p=1, stop=None, max_tokens=4096, 
-                  presence_penalty=0, frequency_penalty=0, model="gpt-4-turbo", logit_bias={}):
 
+def chatGPT_inference(
+    system_prompt,
+    text,
+    temperature=0.7,
+    n=1,
+    top_p=1,
+    stop=None,
+    max_tokens=4096,
+    presence_penalty=0,
+    frequency_penalty=0,
+    model=prsa_config.PRSA_STRONG_MODEL,
+    logit_bias={},
+):
     messages = []
     messages.append({"role": "system", "content": system_prompt})
     messages.append({"role": "user", "content": text})
@@ -269,18 +290,27 @@ def chatGPT_inference(system_prompt, text, temperature=0.7, n=1, top_p=1, stop=N
     response = None
     while response is None:
         try:
-            response = openai.ChatCompletion.create(model=model, temperature=temperature, n=n, top_p = top_p,\
-                max_tokens = 4096, presence_penalty=0, frequency_penalty=0, messages=messages, timeout=(300, 300))#, stream=True
+            response = openai.ChatCompletion.create(
+                model=model,
+                temperature=temperature,
+                n=n,
+                top_p=top_p,
+                max_tokens=max_tokens,
+                presence_penalty=presence_penalty,
+                frequency_penalty=frequency_penalty,
+                messages=messages,
+                timeout=(300, 300),
+            )
         except Exception as e:
             retry_count += 1
             if "This model's maximum context length" in str(e):
                 print(e)
-                with open("ERR.txt", 'a') as outf:
-                    outf.write(json.dumps(str(text)) + '\n')
-                sys.exit(1) 
-            if 'is greater than the maximum' in str(e):
+                with open("ERR.txt", "a") as outf:
+                    outf.write(json.dumps(str(text)) + "\n")
+                sys.exit(1)
+            if "is greater than the maximum" in str(e):
                 raise BatchSizeException()
-            if 'We could not parse the JSON body of your request' in str(e):
+            if "We could not parse the JSON body of your request" in str(e):
                 try:
                     json.dumps({"role": "user", "content": text})
                 except Exception as json_err:
@@ -294,15 +324,8 @@ def chatGPT_inference(system_prompt, text, temperature=0.7, n=1, top_p=1, stop=N
             print(e)
             print("Retrying......")
             time.sleep(20)
-    return [choice['message']['content'] for choice in response['choices']]
+    return [choice["message"]["content"] for choice in response["choices"]]
 
-if __name__ == '__main__':
 
+if __name__ == "__main__":
     pass
-
-
-
-
-
-
-

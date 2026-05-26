@@ -8,6 +8,7 @@ import dataset
 import llm
 import optimizers
 import utils
+import config as prsa_config
 
 
 
@@ -60,10 +61,10 @@ if __name__ == '__main__':
             output_data = model.inference(input_data, target_prompt)
 
             if gradient_dict == {}:
-                base_stolen_prompt = llm.generate_prompt(config, input_data, output_data, gpt_model="gpt-3.5-turbo-1106")
+                base_stolen_prompt = llm.generate_prompt(config, input_data, output_data, gpt_model=prsa_config.PRSA_FAST_MODEL)
                 
             else:
-                base_stolen_prompt = llm.generate_prompt(config, input_data, output_data, gradient_dict, gpt_model="gpt-3.5-turbo-1106")
+                base_stolen_prompt = llm.generate_prompt(config, input_data, output_data, gradient_dict, gpt_model=prsa_config.PRSA_FAST_MODEL)
             
             if base_stolen_prompt == None:
                     continue
