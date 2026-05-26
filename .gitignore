@@ -1,0 +1,73 @@
+# local env and secrets
+.env
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.log
+
+# generated outputs / cache
+outputs/
+.cache/
+old_models/
+models/
+checkpoints/
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/
+
+# jupyter
+.ipynb_checkpoints/
+
+# large model files / local resources
+fkassim.zip
+tool/GoogleNews-vectors-negative300.bin.gz
+tool/bert-base-uncased/
+tool/paraphrase-MiniLM-L6-v2/
+
+# local env and cache
+.env
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.log
+outputs/
+.cache/
+old_models/
+models/
+checkpoints/
+
+# generated model/result files
+model/
+*.pkl
+*.bin
+*.bin.gz
+*.zip
+
+# local model/resource folders
+tool/bert-base-uncased/
+tool/paraphrase-MiniLM-L6-v2/
+tool/GoogleNews-vectors-negative300.bin.gz
+
+# jupyter
+.ipynb_checkpoints/
+
+# local env and cache
+.env
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.log
+outputs/
+.cache/
+old_models/
+models/
+checkpoints/
+
+# large Java parser resources
+fkassim/
+fkassim.zip
