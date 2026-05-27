@@ -1,3 +1,22 @@
+
+def sanitize_message_content(x):
+    """Convert None/NaN/inf/non-string values into safe string content for chat APIs."""
+    if x is None:
+        return ""
+    if isinstance(x, float):
+        if math.isnan(x) or math.isinf(x):
+            return ""
+    return str(x)
+
+def sanitize_messages(messages):
+    safe_messages = []
+    for msg in messages:
+        safe_msg = dict(msg)
+        safe_msg["content"] = sanitize_message_content(safe_msg.get("content", ""))
+        safe_messages.append(safe_msg)
+    return safe_messages
+
+import math
 from abc import ABC, abstractmethod
 import json
 import string
@@ -237,7 +256,7 @@ def chatGPT(
                 max_tokens=max_tokens,
                 presence_penalty=presence_penalty,
                 frequency_penalty=frequency_penalty,
-                messages=messages,
+                messages=sanitize_messages(messages),
                 timeout=(300, 300),
             )
         except Exception as e:
@@ -298,7 +317,7 @@ def chatGPT_inference(
                 max_tokens=max_tokens,
                 presence_penalty=presence_penalty,
                 frequency_penalty=frequency_penalty,
-                messages=messages,
+                messages=sanitize_messages(messages),
                 timeout=(300, 300),
             )
         except Exception as e:

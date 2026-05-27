@@ -72,3 +72,13 @@ checkpoints/
 fkassim/
 fkassim.zip
 \ncollect_data_full/\ncollect_data/*_full.csv\n
+# local data / resources / run artifacts
+collect_data_attack10/
+collect_data_full/
+fkassim
+tool/
+log/
+result/
+test_out.txt
+run_log*.txt
+.env
