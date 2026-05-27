@@ -1,0 +1,347 @@
+[nltk_data] Downloading package punkt to /home/miasean/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package stopwords to
+[nltk_data]     /home/miasean/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package punkt to /home/miasean/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package stopwords to
+[nltk_data]     /home/miasean/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     /home/miasean/nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!
+{'theme': 'Email', 'data_dir': 'collect_data_attack10', 'epochs': 1, 'beam_search': 1, 'pre_pruning': 1, 'alpha': 1, 'related_words_interval': 5, 'out': 'log/attack_email10_from_attention50_out.txt', 'temperature': 0.7, 'evaluator': 'syntactic_similarity', 'm': 3, 'n': 2, 'scorer': 'syntactic_similarity'}
+0it [00:00, ?it/s]0
+
+Get the prompt category: Email
+
+========Start Stealing Target Prompt========  ... ...
+config.theme:  Email
+======Run selective beam search====== ... ...
+
+Stolen prompt is : Write a series of three re-engagement emails for a {} targeting {} who have not purchased recently. The emails should use a warm, persuasive, and customer-centric marketing tone, incorporating personalization (e.g., [Customer Name]) and escalating offers with increasing urgency. Use a mix of declarative, imperative, and exclamatory sentences. The first email should offer a 20% discount code, the second free shipping, and the third a 25% final-call discount. Each email should include a subject line, a greeting, a message stressing the brand’s curated pieces and appreciation, and a closing from a Customer Retention Specialist. Ensure the language feels exclusive and encourages re-engagement.
+
+========Evaluation of Prompt Similarity======== ... ...
+
+Prompt similarity score is : 0.6753679513931274
+
+========Evaluation of Functional Consistency======== ... ...
+
+  0%|          | 0/2 [00:00<?, ?it/s][A
+ 50%|█████     | 1/2 [01:46<01:46, 106.37s/it][A
+100%|██████████| 2/2 [03:25<00:00, 102.38s/it][A100%|██████████| 2/2 [03:25<00:00, 102.98s/it]
+
+  0%|          | 0/2 [00:00<?, ?it/s][A
+ 50%|█████     | 1/2 [03:53<03:53, 233.98s/it][A
+100%|██████████| 2/2 [07:10<00:00, 212.23s/it][A100%|██████████| 2/2 [07:10<00:00, 215.49s/it]
+
+Semantic similarity score is: 0.8841977339202448
+
+Syntactic similarity score is: 0.9794224242889928
+
+Structural similarity score is: 0.9872050049033142
+
+======== LLM-based Multi-dimensional Evaluation======== ... ...
+LLM-based evaluation score:  {'Accuracy': 2, 'Completeness': 2, 'Tone': 4, 'Sentiment': 6, 'Semantics': 3}
+LLM-based evaluation score:  {'Accuracy': 3, 'Completeness': 2, 'Tone': 8, 'Sentiment': 8, 'Semantics': 4}
+1it [12:55, 775.24s/it]1
+
+Get the prompt category: Email
+
+========Start Stealing Target Prompt========  ... ...
+config.theme:  Email
+======Run selective beam search====== ... ...
+
+Stolen prompt is : Write a formal customer appreciation email to {} of {}, expressing gratitude and offering a 20% discount code LOYAL20 as a token of loyalty. Use a declarative sentence style and maintain a formal, appreciative, and promotional tone typical of customer loyalty emails.
+
+========Evaluation of Prompt Similarity======== ... ...
+
+Prompt similarity score is : 0.8035440444946289
+
+========Evaluation of Functional Consistency======== ... ...
+
+  0%|          | 0/2 [00:00<?, ?it/s][A
+ 50%|█████     | 1/2 [00:28<00:28, 28.85s/it][A
+100%|██████████| 2/2 [00:57<00:00, 28.53s/it][A100%|██████████| 2/2 [00:57<00:00, 28.58s/it]
+
+  0%|          | 0/2 [00:00<?, ?it/s][A
+ 50%|█████     | 1/2 [01:00<01:00, 60.72s/it][A
+100%|██████████| 2/2 [02:02<00:00, 61.60s/it][A100%|██████████| 2/2 [02:02<00:00, 61.47s/it]
+
+Semantic similarity score is: 0.924166676919997
+
+Syntactic similarity score is: 0.7587327657621725
+
+Structural similarity score is: 0.9489986814783011
+
+======== LLM-based Multi-dimensional Evaluation======== ... ...
+LLM-based evaluation score:  {'Accuracy': 3, 'Completeness': 2, 'Tone': 4, 'Sentiment': 6, 'Semantics': 4}
+LLM-based evaluation score:  {'Accuracy': 3, 'Completeness': 2, 'Tone': 4, 'Sentiment': 6, 'Semantics': 4}
+2it [17:05, 466.20s/it]2
+
+Get the prompt category: Email
+
+========Start Stealing Target Prompt========  ... ...
+config.theme:  Email
+
+Stolen prompt is : Write {}-you and support email for a customer who has purchased a {}. The email should be formal, appreciative, and supportive in tone, using primarily declarative sentences, with imperative sentences only in the list of helpful resources. Offer assistance, provide reference to user manual, online support portal, and mobile app, and request feedback. The subject line should thank the customer for choosing {}.
+
+========Evaluation of Prompt Similarity======== ... ...
+
+Prompt similarity score is : 0.6007571816444397
+
+========Evaluation of Functional Consistency======== ... ...
+
+  0%|          | 0/2 [00:00<?, ?it/s][A
+ 50%|█████     | 1/2 [02:45<02:45, 165.64s/it][A
+100%|██████████| 2/2 [05:11<00:00, 153.91s/it][A100%|██████████| 2/2 [05:11<00:00, 155.67s/it]
+
+  0%|          | 0/2 [00:00<?, ?it/s][A
+ 50%|█████     | 1/2 [02:29<02:29, 149.58s/it][A
+100%|██████████| 2/2 [05:16<00:00, 159.74s/it][A100%|██████████| 2/2 [05:16<00:00, 158.22s/it]
+
+Semantic similarity score is: 0.9043560932217564
+
+Syntactic similarity score is: 0.4022037792605608
+
+Structural similarity score is: 0.9158649478818733
+
+======== LLM-based Multi-dimensional Evaluation======== ... ...
+LLM-based evaluation score:  {'Accuracy': 2, 'Completeness': 1, 'Tone': 3, 'Sentiment': 4, 'Semantics': 2}
+LLM-based evaluation score:  {'Accuracy': 2, 'Completeness': 2, 'Tone': 5, 'Sentiment': 8, 'Semantics': 3}
+3it [28:56, 578.32s/it]3
+
+Get the prompt category: Email
+
+========Start Stealing Target Prompt========  ... ...
+config.theme:  Email
+======Run selective beam search====== ... ...
+
+Stolen prompt is : Write a professional, appreciative, and persuasive re-engagement email from {} to {}. The email should use a warm, promotional tone with eco-friendly branding, include a compound-complex structure with declarative, imperative, and interrogative sentences, and offer an exclusive discount code along with a request for feedback to rekindle the relationship with lapsed customers.
+
+========Evaluation of Prompt Similarity======== ... ...
+
+Prompt similarity score is : 0.7700344324111938
+
+========Evaluation of Functional Consistency======== ... ...
+
+  0%|          | 0/2 [00:00<?, ?it/s][A
+ 50%|█████     | 1/2 [00:40<00:40, 40.06s/it][A
+100%|██████████| 2/2 [01:23<00:00, 42.29s/it][A100%|██████████| 2/2 [01:23<00:00, 41.95s/it]
+
+  0%|          | 0/2 [00:00<?, ?it/s][A
+ 50%|█████     | 1/2 [01:49<01:49, 109.46s/it][A
+100%|██████████| 2/2 [03:37<00:00, 108.66s/it][A100%|██████████| 2/2 [03:37<00:00, 108.78s/it]
+
+Semantic similarity score is: 0.8689819989830838
+
+Syntactic similarity score is: 0.8348047818891349
+
+Structural similarity score is: 0.9322406156002883
+
+======== LLM-based Multi-dimensional Evaluation======== ... ...
+LLM-based evaluation score:  {'Accuracy': 2, 'Completeness': 2, 'Tone': 7, 'Sentiment': 6, 'Semantics': 2}
+LLM-based evaluation score:  {'Accuracy': 2, 'Completeness': 2, 'Tone': 7, 'Sentiment': 8, 'Semantics': 2}
+4it [35:23, 502.53s/it]4
+
+Get the prompt category: Email
+
+========Start Stealing Target Prompt========  ... ...
+config.theme:  Email
+======Run selective beam search====== ... ...
+
+Stolen prompt is : Write a formal customer support email to {}, offering a troubleshooting guide for a {}. The email must be structured as a step-by-step guide with a polite and courteous tone. Use a mix of sentence types, primarily imperative sentences for instructions. Include the following steps: power cycling {}, checking the Wi-Fi connection, updating firmware, resetting {}, and contacting customer support. Provide placeholders for customer support number and email. The subject line should be "Troubleshooting Guide for Your {}". Sign off with a warm regard from a Customer Support Manager, leaving a placeholder for the name. Ensure the email is targeted at the {} customer segment. Output_characteristic: The output should be a structured, polite, and step-by-step troubleshooting guide in the form of a customer support email, complete with placeholders for contact details. The style should be formal, instructional, and courteous.
+
+========Evaluation of Prompt Similarity======== ... ...
+
+Prompt similarity score is : 0.7502439022064209
+
+========Evaluation of Functional Consistency======== ... ...
+
+  0%|          | 0/2 [00:00<?, ?it/s][A
+ 50%|█████     | 1/2 [01:46<01:46, 106.61s/it][A
+100%|██████████| 2/2 [03:14<00:00, 95.44s/it] [A100%|██████████| 2/2 [03:14<00:00, 97.11s/it]
+
+  0%|          | 0/2 [00:00<?, ?it/s][A
+ 50%|█████     | 1/2 [03:08<03:08, 188.73s/it][A
+100%|██████████| 2/2 [06:19<00:00, 190.18s/it][A100%|██████████| 2/2 [06:19<00:00, 189.96s/it]
+
+Semantic similarity score is: 0.9809007935107806
+
+Syntactic similarity score is: 0.6116861178293166
+
+Structural similarity score is: 0.9154694340608133
+
+======== LLM-based Multi-dimensional Evaluation======== ... ...
+LLM-based evaluation score:  {'Accuracy': 2, 'Completeness': 1, 'Tone': 3, 'Sentiment': 4, 'Semantics': 2}
+LLM-based evaluation score:  {'Accuracy': 3, 'Completeness': 2, 'Tone': 4, 'Sentiment': 6, 'Semantics': 5}
+5it [47:01, 573.09s/it]5
+
+Get the prompt category: Email
+
+========Start Stealing Target Prompt========  ... ...
+config.theme:  Email
+======Run selective beam search====== ... ...
+
+Stolen prompt is : Write {} of three re-engagement email templates for a company called {}, targeting {}. Each email should have an emoji-rich subject line, a personalized greeting (using [Name]), a friendly and promotional tone, and a clear call-to-action for exclusive content or discounts. The email body should combine declarative, imperative, and exclamatory sentences. The first email offers exclusive insights, the second offers a limited-time discount, and the third offers exclusive content. Ensure the series feels like a follow-up sequence aimed at reconnecting with inactive community members.
+
+========Evaluation of Prompt Similarity======== ... ...
+
+Prompt similarity score is : 0.7465677857398987
+
+========Evaluation of Functional Consistency======== ... ...
+
+  0%|          | 0/2 [00:00<?, ?it/s][A
+ 50%|█████     | 1/2 [02:47<02:47, 167.11s/it][A
+100%|██████████| 2/2 [05:12<00:00, 154.42s/it][A100%|██████████| 2/2 [05:12<00:00, 156.32s/it]
+
+  0%|          | 0/2 [00:00<?, ?it/s][A
+ 50%|█████     | 1/2 [04:17<04:17, 257.78s/it][A
+100%|██████████| 2/2 [08:30<00:00, 254.92s/it][A100%|██████████| 2/2 [08:30<00:00, 255.35s/it]
+
+Semantic similarity score is: 1
+
+Syntactic similarity score is: 0.915392186257773
+
+Structural similarity score is: 0.9634871460113975
+
+======== LLM-based Multi-dimensional Evaluation======== ... ...
+LLM-based evaluation score:  {'Accuracy': 5, 'Completeness': 4, 'Tone': 7, 'Sentiment': 8, 'Semantics': 6}
+LLM-based evaluation score:  {'Accuracy': 3, 'Completeness': 2, 'Tone': 3, 'Sentiment': 4, 'Semantics': 3}
+6it [1:02:53, 701.89s/it]6
+
+Get the prompt category: Email
+
+========Start Stealing Target Prompt========  ... ...
+config.theme:  Email
+======Run selective beam search====== ... ...
+
+Stolen prompt is : Write a persuasive promotional email aimed at re-engaging {} with {}, {}. The email must highlight three new features: Intelligent Task Manager, Collaboration Tools, and Time Tracking. Use a mix of declarative, imperative, and interrogative sentences. Maintain a professional, enthusiastic, and friendly tone. Include a clear call-to-action button labeled "Revisit {} Now" and a subject line: "Unlock Your Productivity Potential with {}'s Latest Features!" The email should be feature-focused and motivational, encouraging users to take action.
+
+========Evaluation of Prompt Similarity======== ... ...
+
+Prompt similarity score is : 0.7615340948104858
+
+========Evaluation of Functional Consistency======== ... ...
+
+  0%|          | 0/2 [00:00<?, ?it/s][A
+ 50%|█████     | 1/2 [00:40<00:40, 40.83s/it][A
+100%|██████████| 2/2 [01:16<00:00, 38.06s/it][A100%|██████████| 2/2 [01:16<00:00, 38.48s/it]
+
+  0%|          | 0/2 [00:00<?, ?it/s][A
+ 50%|█████     | 1/2 [01:41<01:41, 101.73s/it][A
+100%|██████████| 2/2 [03:18<00:00, 98.94s/it] [A100%|██████████| 2/2 [03:18<00:00, 99.36s/it]
+
+Semantic similarity score is: 0.941131637565316
+
+Syntactic similarity score is: 0.8510417296174294
+
+Structural similarity score is: 0.9253435529819177
+
+======== LLM-based Multi-dimensional Evaluation======== ... ...
+LLM-based evaluation score:  {'Accuracy': 1, 'Completeness': 1, 'Tone': 7, 'Sentiment': 8, 'Semantics': 1}
+LLM-based evaluation score:  {'Accuracy': 2, 'Completeness': 1, 'Tone': 5, 'Sentiment': 3, 'Semantics': 2}
+7it [1:09:40, 605.58s/it]7
+
+Get the prompt category: Email
+
+========Start Stealing Target Prompt========  ... ...
+config.theme:  Email
+======Run selective beam search====== ... ...
+
+Stolen prompt is : Write a re-engagement email for a {} targeting {} who are lapsed subscribers. The email should have a warm, personalized, and persuasive tone, using a mix of declarative, imperative, and exclamatory sentences. It must include a subject line that mentions missing the customer and a special offer, a personalized greeting, an expression of missing the customer, an exclusive re-engagement offer with placeholders for details, mention of new features (personalized recommendations and limited edition roasts), a call-to-action link to reactivate, an offer of customer support, and a warm closing. Ensure the language appeals to a busy {}’s lifestyle and emphasizes quality and joy.
+
+========Evaluation of Prompt Similarity======== ... ...
+
+Prompt similarity score is : 0.7196143865585327
+
+========Evaluation of Functional Consistency======== ... ...
+
+  0%|          | 0/2 [00:00<?, ?it/s][A
+ 50%|█████     | 1/2 [00:39<00:39, 39.48s/it][A
+100%|██████████| 2/2 [01:32<00:00, 47.41s/it][A100%|██████████| 2/2 [01:32<00:00, 46.22s/it]
+
+  0%|          | 0/2 [00:00<?, ?it/s][A
+ 50%|█████     | 1/2 [02:21<02:21, 141.94s/it][A
+100%|██████████| 2/2 [04:01<00:00, 116.73s/it][A100%|██████████| 2/2 [04:01<00:00, 120.51s/it]
+
+Semantic similarity score is: 0.9039674264782832
+
+Syntactic similarity score is: 0.9112594254939776
+
+Structural similarity score is: 0.9471197924032051
+
+======== LLM-based Multi-dimensional Evaluation======== ... ...
+LLM-based evaluation score:  {'Accuracy': 2, 'Completeness': 3, 'Tone': 5, 'Sentiment': 6, 'Semantics': 3}
+LLM-based evaluation score:  {'Accuracy': 3, 'Completeness': 2, 'Tone': 8, 'Sentiment': 8, 'Semantics': 4}
+8it [1:17:17, 558.31s/it]8
+
+Get the prompt category: Email
+
+========Start Stealing Target Prompt========  ... ...
+config.theme:  Email
+======Run selective beam search====== ... ...
+
+Stolen prompt is : Write a persuasive promotional email for the {}'s {}. The email should target {}, use imperative sentences, and adopt a celebratory, eco-conscious tone. Include emojis, bullet points, and {} to inspire attendance and highlight sustainability, elegance, and environmental impact.
+
+========Evaluation of Prompt Similarity======== ... ...
+
+Prompt similarity score is : 0.6725096702575684
+
+========Evaluation of Functional Consistency======== ... ...
+
+  0%|          | 0/2 [00:00<?, ?it/s][A
+ 50%|█████     | 1/2 [00:38<00:38, 38.06s/it][A
+100%|██████████| 2/2 [01:41<00:00, 52.94s/it][A100%|██████████| 2/2 [01:41<00:00, 50.71s/it]
+
+  0%|          | 0/2 [00:00<?, ?it/s][A
+ 50%|█████     | 1/2 [02:00<02:00, 120.44s/it][A
+100%|██████████| 2/2 [04:04<00:00, 122.83s/it][A100%|██████████| 2/2 [04:04<00:00, 122.47s/it]
+
+Semantic similarity score is: 0.9263918870315264
+
+Syntactic similarity score is: 0.8410483348202666
+
+Structural similarity score is: 0.9711255104756917
+
+======== LLM-based Multi-dimensional Evaluation======== ... ...
+LLM-based evaluation score:  {'Accuracy': 2, 'Completeness': 2, 'Tone': 5, 'Sentiment': 6, 'Semantics': 4}
+LLM-based evaluation score:  {'Accuracy': 3, 'Completeness': 2, 'Tone': 2, 'Sentiment': 6, 'Semantics': 5}
+9it [1:26:48, 562.07s/it]9
+
+Get the prompt category: Email
+
+========Start Stealing Target Prompt========  ... ...
+config.theme:  Email
+======Run selective beam search====== ... ...
+
+Stolen prompt is : Write a personalized re-engagement email for {} to a customer who {}. The email should be friendly and professional, primarily use declarative sentences with some imperative and interrogative elements, include a promotional discount offer, express appreciation, and encourage a new purchase. Ensure the tone is appreciative and focused on customer retention.
+
+========Evaluation of Prompt Similarity======== ... ...
+
+Prompt similarity score is : 0.7516466379165649
+
+========Evaluation of Functional Consistency======== ... ...
+
+  0%|          | 0/2 [00:00<?, ?it/s][A
+ 50%|█████     | 1/2 [00:27<00:27, 27.50s/it][A
+100%|██████████| 2/2 [01:01<00:00, 31.37s/it][A100%|██████████| 2/2 [01:01<00:00, 30.79s/it]
+
+  0%|          | 0/2 [00:00<?, ?it/s][A
+ 50%|█████     | 1/2 [01:01<01:01, 61.13s/it][A
+100%|██████████| 2/2 [02:03<00:00, 61.91s/it][A100%|██████████| 2/2 [02:03<00:00, 61.79s/it]
+
+Semantic similarity score is: 0.9759448630917552
+
+Syntactic similarity score is: 0.935406432043319
+
+Structural similarity score is: 0.9556923072249216
+
+======== LLM-based Multi-dimensional Evaluation======== ... ...
+LLM-based evaluation score:  {'Accuracy': 5, 'Completeness': 5, 'Tone': 7, 'Sentiment': 8, 'Semantics': 6}
+LLM-based evaluation score:  {'Accuracy': 3, 'Completeness': 2, 'Tone': 7, 'Sentiment': 8, 'Semantics': 4}
+10it [1:31:18, 471.90s/it]10it [1:31:18, 547.80s/it]
+File saved: result/llm_based_eva_Email_res.csv
+File saved: result/Email_res.csv
