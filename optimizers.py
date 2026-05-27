@@ -85,7 +85,25 @@ class PAA(PromptOptimizer):
             self.opt["attention_threshold"] = 8
 
         elements = ['Characteristic','Topic','Argument','Structure','Style','Tone','Purpose','Sentence Type','Audience','Background']
+        element_desc_map = {
+            "Sentence Type": (
+                "sentence-level form and sentence pattern, including declarative/interrogative/imperative style, "
+                "sentence length, sentence complexity, punctuation pattern, and whether the two outputs use similar sentence structures"
+            ),
+            "Structure": "overall organization, paragraph arrangement, ordering of information, and formatting structure",
+            "Style": "writing style, level of formality, wording pattern, and rhetorical style",
+            "Tone": "emotional tone, politeness, enthusiasm, directness, and attitude toward the reader",
+            "Characteristic": "distinctive writing characteristics, recurring traits, and recognizable behavioral patterns",
+            "Topic": "main topic, subject matter, and topical focus",
+            "Argument": "main claims, reasoning, persuasive logic, and supporting points",
+            "Purpose": "communicative goal, intended function, and what the output is trying to accomplish",
+            "Audience": "intended reader, target user group, and assumptions about the recipient",
+            "Background": "contextual assumptions, scenario setup, domain background, and relevant prior information",
+        }
+
         for idx, element in enumerate(elements):
+            element_desc = element_desc_map.get(element, element)
+
             gradient_prompt = f"""
             Generated Output:
             "{generated_output}"
@@ -93,8 +111,22 @@ class PAA(PromptOptimizer):
             Real Output:
             "{output_data}"
 
-            Score based on {element} similarity between Generated Output and Real Output, if full score is 10.
-            The score is wrapped with <START> and <END>
+            You are a harsh and conservative evaluator.
+Evaluate ONLY this dimension: {element_desc}
+Full score is 10. Do not be generous. Penalize any noticeable difference.
+
+Scoring rubric:
+10 = identical or nearly identical in this dimension.
+9 = very similar, only tiny differences.
+8 = similar, but there are clear noticeable differences.
+7 = only partially similar.
+6 = weakly similar.
+5 or below = substantially different.
+
+Important: If you are unsure between two scores, choose the lower score.
+Output exactly one number between 0 and 10, with up to two decimal places.
+Example output: 7.31
+Do not explain. Do not output tags. Do not output anything except the number.
             """
             gradient_prompt = '\n'.join([line.lstrip() for line in gradient_prompt.split('\n')])
             res = llm.chatGPT(gradient_prompt, model=config.PRSA_FAST_MODEL, temperature=0.0)
@@ -103,6 +135,7 @@ class PAA(PromptOptimizer):
             for r in res:    
                 temp += self.parse_tagged_text(r, "<START>", "<END>")
                 feedbacks = self.filter_target_score(r, temp)
+                print(f"[SCORE] element={element} score={feedbacks} threshold={self.opt['attention_threshold']}")
             try:
                 if float(feedbacks) < self.opt["attention_threshold"]:
                     print(f"[LOW] element={element} score={feedbacks}")

@@ -1,3 +1,4 @@
+from pathlib import Path
 import pickle
 import os
 from tqdm import tqdm
@@ -78,6 +79,7 @@ if __name__ == '__main__':
     with open(args.out, 'a') as outf:
         outf.write(json.dumps(f"{args.theme}: {final_gradient}") + '\n')
 
+    Path('model').mkdir(parents=True, exist_ok=True)
     with open(f'model/gradient_{args.theme}.pkl', 'wb') as f:
         pickle.dump(final_gradient, f)
 
