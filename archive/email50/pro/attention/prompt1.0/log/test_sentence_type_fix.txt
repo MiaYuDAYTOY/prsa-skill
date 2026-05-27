@@ -1,0 +1,26 @@
+/home/miasean/miniconda3/envs/PRSA/lib/python3.10/site-packages/torch/cuda/__init__.py:155: UserWarning: 
+NVIDIA GeForce RTX 5060 Laptop GPU with CUDA capability sm_120 is not compatible with the current PyTorch installation.
+The current PyTorch install supports CUDA capabilities sm_37 sm_50 sm_60 sm_70 sm_75 sm_80 sm_86.
+If you want to use the NVIDIA GeForce RTX 5060 Laptop GPU GPU with PyTorch, please check the instructions at https://pytorch.org/get-started/locally/
+
+  warnings.warn(incompatible_device_warn.format(device_name, capability, " ".join(arch_list), device_name))
+[nltk_data] Downloading package punkt to /home/miasean/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package stopwords to
+[nltk_data]     /home/miasean/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package punkt to /home/miasean/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package stopwords to
+[nltk_data]     /home/miasean/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     /home/miasean/nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!
+{'theme': 'Email', 'data_dir': 'collect_data', 'batch_size': 1, 'epochs': 1, 'temperature': 0.7, 'out': 'test_out.txt', 'attention_threshold': 7.5, 'evaluator': 'semantic_similarity', 'm': 3, 'scorer': 'semantic_similarity'}
+0it [00:00, ?it/s]config.theme:  Email
+[SCORE] element=Characteristic score=9.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=9.0 threshold=7.5
+[SCORE] element=Structure score=9.0 threshold=7.5

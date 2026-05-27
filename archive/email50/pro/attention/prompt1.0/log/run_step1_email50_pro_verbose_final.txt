@@ -1,0 +1,729 @@
+/home/miasean/miniconda3/envs/PRSA/lib/python3.10/site-packages/torch/cuda/__init__.py:155: UserWarning: 
+NVIDIA GeForce RTX 5060 Laptop GPU with CUDA capability sm_120 is not compatible with the current PyTorch installation.
+The current PyTorch install supports CUDA capabilities sm_37 sm_50 sm_60 sm_70 sm_75 sm_80 sm_86.
+If you want to use the NVIDIA GeForce RTX 5060 Laptop GPU GPU with PyTorch, please check the instructions at https://pytorch.org/get-started/locally/
+
+  warnings.warn(incompatible_device_warn.format(device_name, capability, " ".join(arch_list), device_name))
+[nltk_data] Downloading package punkt to /home/miasean/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package stopwords to
+[nltk_data]     /home/miasean/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package punkt to /home/miasean/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package stopwords to
+[nltk_data]     /home/miasean/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     /home/miasean/nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!
+{'theme': 'Email', 'data_dir': 'collect_data', 'batch_size': 1, 'epochs': 1, 'temperature': 0.7, 'out': 'test_out.txt', 'attention_threshold': 7.5, 'evaluator': 'semantic_similarity', 'm': 3, 'scorer': 'semantic_similarity'}
+0it [00:00, ?it/s]config.theme:  Email
+[SCORE] element=Characteristic score=9.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=10.0 threshold=7.5
+[SCORE] element=Structure score=9.0 threshold=7.5
+[SCORE] element=Style score=9.0 threshold=7.5
+[SCORE] element=Tone score=8.0 threshold=7.5
+[SCORE] element=Purpose score=1.0 threshold=7.5
+[LOW] element=Purpose score=1.0
+[SCORE] element=Sentence Type score=8.0 threshold=7.5
+[SCORE] element=Audience score=10.0 threshold=7.5
+[SCORE] element=Background score=9.5 threshold=7.5
+gradient:  {'Purpose': 1}
+1it [01:23, 83.80s/it]config.theme:  Email
+[SCORE] element=Characteristic score=8.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=9.0 threshold=7.5
+[SCORE] element=Structure score=9.0 threshold=7.5
+[SCORE] element=Style score=9.0 threshold=7.5
+[SCORE] element=Tone score=9.0 threshold=7.5
+[SCORE] element=Purpose score=9.0 threshold=7.5
+[SCORE] element=Sentence Type score=9.0 threshold=7.5
+[SCORE] element=Audience score=9.5 threshold=7.5
+[SCORE] element=Background score=10.0 threshold=7.5
+gradient:  {}
+2it [02:28, 72.84s/it]config.theme:  Email
+[SCORE] element=Characteristic score=9.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=10.0 threshold=7.5
+[SCORE] element=Structure score=10.0 threshold=7.5
+[SCORE] element=Style score=7.0 threshold=7.5
+[LOW] element=Style score=7.0
+[SCORE] element=Tone score=9.0 threshold=7.5
+[SCORE] element=Purpose score=10.0 threshold=7.5
+[SCORE] element=Sentence Type score=9.0 threshold=7.5
+[SCORE] element=Audience score=10.0 threshold=7.5
+[SCORE] element=Background score=9.0 threshold=7.5
+gradient:  {'Style': 1}
+3it [03:41, 72.60s/it]config.theme:  Email
+[SCORE] element=Characteristic score=9.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=10.0 threshold=7.5
+[SCORE] element=Structure score=9.0 threshold=7.5
+[SCORE] element=Style score=9.0 threshold=7.5
+[SCORE] element=Tone score=9.0 threshold=7.5
+[SCORE] element=Purpose score=10.0 threshold=7.5
+[SCORE] element=Sentence Type score=8.0 threshold=7.5
+[SCORE] element=Audience score=10.0 threshold=7.5
+[SCORE] element=Background score=9.0 threshold=7.5
+gradient:  {}
+4it [04:50, 71.39s/it]config.theme:  Email
+[SCORE] element=Characteristic score=9.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=9.0 threshold=7.5
+[SCORE] element=Structure score=9.5 threshold=7.5
+[SCORE] element=Style score=6.0 threshold=7.5
+[LOW] element=Style score=6.0
+[SCORE] element=Tone score=9.0 threshold=7.5
+[SCORE] element=Purpose score=10.0 threshold=7.5
+[SCORE] element=Sentence Type score=9.5 threshold=7.5
+[SCORE] element=Audience score=10.0 threshold=7.5
+[SCORE] element=Background score=9.0 threshold=7.5
+gradient:  {'Style': 1}
+5it [05:38, 62.82s/it]config.theme:  Email
+[SCORE] element=Characteristic score=9.0 threshold=7.5
+[SCORE] element=Topic score=9.0 threshold=7.5
+[SCORE] element=Argument score=9.0 threshold=7.5
+[SCORE] element=Structure score=10.0 threshold=7.5
+[SCORE] element=Style score=4.0 threshold=7.5
+[LOW] element=Style score=4.0
+[SCORE] element=Tone score=7.0 threshold=7.5
+[LOW] element=Tone score=7.0
+[SCORE] element=Purpose score=9.0 threshold=7.5
+[SCORE] element=Sentence Type score=9.0 threshold=7.5
+[SCORE] element=Audience score=9.0 threshold=7.5
+[SCORE] element=Background score=9.0 threshold=7.5
+gradient:  {'Style': 1, 'Tone': 1}
+6it [06:49, 65.73s/it]config.theme:  Email
+[SCORE] element=Characteristic score=9.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=10.0 threshold=7.5
+[SCORE] element=Structure score=10.0 threshold=7.5
+[SCORE] element=Style score=9.0 threshold=7.5
+[SCORE] element=Tone score=9.0 threshold=7.5
+[SCORE] element=Purpose score=10.0 threshold=7.5
+[SCORE] element=Sentence Type score=9.0 threshold=7.5
+[SCORE] element=Audience score=10.0 threshold=7.5
+[SCORE] element=Background score=9.0 threshold=7.5
+gradient:  {}
+7it [07:47, 63.08s/it]config.theme:  Email
+[SCORE] element=Characteristic score=9.0 threshold=7.5
+[SCORE] element=Topic score=9.0 threshold=7.5
+[SCORE] element=Argument score=9.0 threshold=7.5
+[SCORE] element=Structure score=8.0 threshold=7.5
+[SCORE] element=Style score=9.0 threshold=7.5
+[SCORE] element=Tone score=9.0 threshold=7.5
+[SCORE] element=Purpose score=8.0 threshold=7.5
+[SCORE] element=Sentence Type score=8.0 threshold=7.5
+[SCORE] element=Audience score=10.0 threshold=7.5
+[SCORE] element=Background score=9.0 threshold=7.5
+gradient:  {}
+8it [09:39, 78.80s/it]config.theme:  Email
+[SCORE] element=Characteristic score=6.0 threshold=7.5
+[LOW] element=Characteristic score=6.0
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=9.0 threshold=7.5
+[SCORE] element=Structure score=9.0 threshold=7.5
+[SCORE] element=Style score=7.0 threshold=7.5
+[LOW] element=Style score=7.0
+[SCORE] element=Tone score=9.0 threshold=7.5
+[SCORE] element=Purpose score=10.0 threshold=7.5
+[SCORE] element=Sentence Type score=9.0 threshold=7.5
+[SCORE] element=Audience score=9.0 threshold=7.5
+[SCORE] element=Background score=9.0 threshold=7.5
+gradient:  {'Characteristic': 1, 'Style': 1}
+9it [10:48, 75.75s/it]config.theme:  Email
+[SCORE] element=Characteristic score=9.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=9.0 threshold=7.5
+[SCORE] element=Structure score=9.0 threshold=7.5
+[SCORE] element=Style score=9.0 threshold=7.5
+[SCORE] element=Tone score=8.0 threshold=7.5
+[SCORE] element=Purpose score=10.0 threshold=7.5
+
+[WARN] Could not parse target score from model output:
+''
+[SCORE] element=Sentence Type score=7.4 threshold=7.5
+[LOW] element=Sentence Type score=7.4
+[SCORE] element=Audience score=10.0 threshold=7.5
+[SCORE] element=Background score=10.0 threshold=7.5
+gradient:  {'Sentence Type': 1}
+10it [12:06, 76.29s/it]config.theme:  Email
+[SCORE] element=Characteristic score=9.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=10.0 threshold=7.5
+[SCORE] element=Structure score=9.0 threshold=7.5
+[SCORE] element=Style score=7.0 threshold=7.5
+[LOW] element=Style score=7.0
+[SCORE] element=Tone score=8.0 threshold=7.5
+[SCORE] element=Purpose score=10.0 threshold=7.5
+
+[WARN] Could not parse target score from model output:
+''
+[SCORE] element=Sentence Type score=7.4 threshold=7.5
+[LOW] element=Sentence Type score=7.4
+[SCORE] element=Audience score=10.0 threshold=7.5
+[SCORE] element=Background score=10.0 threshold=7.5
+gradient:  {'Style': 1, 'Sentence Type': 1}
+11it [13:34, 80.00s/it]config.theme:  Email
+[SCORE] element=Characteristic score=9.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=10.0 threshold=7.5
+[SCORE] element=Structure score=9.0 threshold=7.5
+[SCORE] element=Style score=8.0 threshold=7.5
+[SCORE] element=Tone score=8.0 threshold=7.5
+[SCORE] element=Purpose score=9.0 threshold=7.5
+[SCORE] element=Sentence Type score=9.0 threshold=7.5
+[SCORE] element=Audience score=9.0 threshold=7.5
+[SCORE] element=Background score=10.0 threshold=7.5
+gradient:  {}
+12it [14:36, 74.45s/it]config.theme:  Email
+[SCORE] element=Characteristic score=9.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=10.0 threshold=7.5
+[SCORE] element=Structure score=9.0 threshold=7.5
+[SCORE] element=Style score=9.0 threshold=7.5
+[SCORE] element=Tone score=9.0 threshold=7.5
+[SCORE] element=Purpose score=9.0 threshold=7.5
+[SCORE] element=Sentence Type score=8.0 threshold=7.5
+[SCORE] element=Audience score=9.0 threshold=7.5
+[SCORE] element=Background score=9.0 threshold=7.5
+gradient:  {}
+13it [15:52, 74.91s/it]config.theme:  Email
+[SCORE] element=Characteristic score=8.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=9.0 threshold=7.5
+[SCORE] element=Structure score=9.0 threshold=7.5
+[SCORE] element=Style score=7.0 threshold=7.5
+[LOW] element=Style score=7.0
+[SCORE] element=Tone score=7.0 threshold=7.5
+[LOW] element=Tone score=7.0
+[SCORE] element=Purpose score=9.0 threshold=7.5
+
+[WARN] Could not parse target score from model output:
+''
+[SCORE] element=Sentence Type score=7.4 threshold=7.5
+[LOW] element=Sentence Type score=7.4
+[SCORE] element=Audience score=10.0 threshold=7.5
+[SCORE] element=Background score=9.0 threshold=7.5
+gradient:  {'Style': 1, 'Tone': 1, 'Sentence Type': 1}
+14it [17:21, 79.23s/it]config.theme:  Email
+[SCORE] element=Characteristic score=7.0 threshold=7.5
+[LOW] element=Characteristic score=7.0
+[SCORE] element=Topic score=9.0 threshold=7.5
+[SCORE] element=Argument score=9.0 threshold=7.5
+[SCORE] element=Structure score=8.0 threshold=7.5
+[SCORE] element=Style score=8.0 threshold=7.5
+[SCORE] element=Tone score=8.0 threshold=7.5
+[SCORE] element=Purpose score=9.0 threshold=7.5
+
+[WARN] Could not parse target score from model output:
+''
+[SCORE] element=Sentence Type score=7.4 threshold=7.5
+[LOW] element=Sentence Type score=7.4
+[SCORE] element=Audience score=9.0 threshold=7.5
+[SCORE] element=Background score=7.0 threshold=7.5
+[LOW] element=Background score=7.0
+gradient:  {'Characteristic': 1, 'Sentence Type': 1, 'Background': 1}
+15it [18:47, 81.25s/it]config.theme:  Email
+[SCORE] element=Characteristic score=9.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=8.0 threshold=7.5
+[SCORE] element=Structure score=9.0 threshold=7.5
+[SCORE] element=Style score=9.0 threshold=7.5
+[SCORE] element=Tone score=9.0 threshold=7.5
+[SCORE] element=Purpose score=10.0 threshold=7.5
+[SCORE] element=Sentence Type score=8.0 threshold=7.5
+[SCORE] element=Audience score=9.0 threshold=7.5
+[SCORE] element=Background score=9.0 threshold=7.5
+gradient:  {}
+16it [19:52, 76.38s/it]config.theme:  Email
+[SCORE] element=Characteristic score=9.5 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=9.0 threshold=7.5
+[SCORE] element=Structure score=9.0 threshold=7.5
+[SCORE] element=Style score=9.0 threshold=7.5
+[SCORE] element=Tone score=9.0 threshold=7.5
+[SCORE] element=Purpose score=10.0 threshold=7.5
+[SCORE] element=Sentence Type score=10.0 threshold=7.5
+[SCORE] element=Audience score=10.0 threshold=7.5
+[SCORE] element=Background score=9.0 threshold=7.5
+gradient:  {}
+17it [21:13, 77.75s/it]config.theme:  Email
+[SCORE] element=Characteristic score=9.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=9.0 threshold=7.5
+[SCORE] element=Structure score=9.0 threshold=7.5
+[SCORE] element=Style score=9.0 threshold=7.5
+[SCORE] element=Tone score=10.0 threshold=7.5
+[SCORE] element=Purpose score=9.0 threshold=7.5
+
+[WARN] Could not parse target score from model output:
+''
+[SCORE] element=Sentence Type score=7.4 threshold=7.5
+[LOW] element=Sentence Type score=7.4
+[SCORE] element=Audience score=10.0 threshold=7.5
+[SCORE] element=Background score=9.0 threshold=7.5
+gradient:  {'Sentence Type': 1}
+18it [22:32, 77.95s/it]config.theme:  Email
+[SCORE] element=Characteristic score=9.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=9.0 threshold=7.5
+[SCORE] element=Structure score=9.0 threshold=7.5
+[SCORE] element=Style score=10.0 threshold=7.5
+[SCORE] element=Tone score=9.0 threshold=7.5
+[SCORE] element=Purpose score=9.0 threshold=7.5
+[SCORE] element=Sentence Type score=9.0 threshold=7.5
+[SCORE] element=Audience score=10.0 threshold=7.5
+[SCORE] element=Background score=7.0 threshold=7.5
+[LOW] element=Background score=7.0
+gradient:  {'Background': 1}
+19it [23:54, 79.31s/it]config.theme:  Email
+[SCORE] element=Characteristic score=8.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=5.0 threshold=7.5
+[LOW] element=Argument score=5.0
+[SCORE] element=Structure score=9.0 threshold=7.5
+[SCORE] element=Style score=7.0 threshold=7.5
+[LOW] element=Style score=7.0
+[SCORE] element=Tone score=8.0 threshold=7.5
+[SCORE] element=Purpose score=9.0 threshold=7.5
+[SCORE] element=Sentence Type score=3.0 threshold=7.5
+[LOW] element=Sentence Type score=3.0
+[SCORE] element=Audience score=9.0 threshold=7.5
+[SCORE] element=Background score=9.0 threshold=7.5
+gradient:  {'Argument': 1, 'Style': 1, 'Sentence Type': 1}
+20it [25:07, 77.40s/it]config.theme:  Email
+[SCORE] element=Characteristic score=8.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=9.0 threshold=7.5
+[SCORE] element=Structure score=10.0 threshold=7.5
+[SCORE] element=Style score=9.0 threshold=7.5
+[SCORE] element=Tone score=9.0 threshold=7.5
+[SCORE] element=Purpose score=10.0 threshold=7.5
+[SCORE] element=Sentence Type score=9.0 threshold=7.5
+[SCORE] element=Audience score=10.0 threshold=7.5
+[SCORE] element=Background score=9.0 threshold=7.5
+gradient:  {}
+21it [26:27, 78.22s/it]config.theme:  Email
+[SCORE] element=Characteristic score=8.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=9.5 threshold=7.5
+[SCORE] element=Structure score=9.0 threshold=7.5
+[SCORE] element=Style score=7.0 threshold=7.5
+[LOW] element=Style score=7.0
+[SCORE] element=Tone score=9.0 threshold=7.5
+[SCORE] element=Purpose score=10.0 threshold=7.5
+[SCORE] element=Sentence Type score=8.0 threshold=7.5
+[SCORE] element=Audience score=10.0 threshold=7.5
+[SCORE] element=Background score=9.0 threshold=7.5
+gradient:  {'Style': 1}
+22it [27:38, 76.12s/it]config.theme:  Email
+[SCORE] element=Characteristic score=8.0 threshold=7.5
+[SCORE] element=Topic score=6.0 threshold=7.5
+[LOW] element=Topic score=6.0
+[SCORE] element=Argument score=7.0 threshold=7.5
+[LOW] element=Argument score=7.0
+[SCORE] element=Structure score=8.0 threshold=7.5
+[SCORE] element=Style score=6.0 threshold=7.5
+[LOW] element=Style score=6.0
+[SCORE] element=Tone score=7.0 threshold=7.5
+[LOW] element=Tone score=7.0
+[SCORE] element=Purpose score=9.0 threshold=7.5
+[SCORE] element=Sentence Type score=8.0 threshold=7.5
+[SCORE] element=Audience score=6.0 threshold=7.5
+[LOW] element=Audience score=6.0
+[SCORE] element=Background score=7.0 threshold=7.5
+[LOW] element=Background score=7.0
+gradient:  {'Topic': 1, 'Argument': 1, 'Style': 1, 'Tone': 1, 'Audience': 1, 'Background': 1}
+23it [29:06, 79.68s/it]config.theme:  Email
+[SCORE] element=Characteristic score=9.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=9.0 threshold=7.5
+[SCORE] element=Structure score=9.0 threshold=7.5
+[SCORE] element=Style score=7.0 threshold=7.5
+[LOW] element=Style score=7.0
+[SCORE] element=Tone score=6.0 threshold=7.5
+[LOW] element=Tone score=6.0
+[SCORE] element=Purpose score=9.0 threshold=7.5
+[SCORE] element=Sentence Type score=8.0 threshold=7.5
+[SCORE] element=Audience score=9.0 threshold=7.5
+[SCORE] element=Background score=9.0 threshold=7.5
+gradient:  {'Style': 1, 'Tone': 1}
+24it [30:32, 81.57s/it]config.theme:  Email
+[SCORE] element=Characteristic score=7.0 threshold=7.5
+[LOW] element=Characteristic score=7.0
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=8.0 threshold=7.5
+[SCORE] element=Structure score=9.0 threshold=7.5
+[SCORE] element=Style score=8.0 threshold=7.5
+[SCORE] element=Tone score=7.0 threshold=7.5
+[LOW] element=Tone score=7.0
+[SCORE] element=Purpose score=10.0 threshold=7.5
+
+[WARN] Could not parse target score from model output:
+''
+[SCORE] element=Sentence Type score=7.4 threshold=7.5
+[LOW] element=Sentence Type score=7.4
+[SCORE] element=Audience score=10.0 threshold=7.5
+[SCORE] element=Background score=9.0 threshold=7.5
+gradient:  {'Characteristic': 1, 'Tone': 1, 'Sentence Type': 1}
+25it [32:27, 91.50s/it]config.theme:  Email
+[SCORE] element=Characteristic score=9.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=9.0 threshold=7.5
+[SCORE] element=Structure score=8.0 threshold=7.5
+[SCORE] element=Style score=7.0 threshold=7.5
+[LOW] element=Style score=7.0
+[SCORE] element=Tone score=9.0 threshold=7.5
+[SCORE] element=Purpose score=9.0 threshold=7.5
+
+[WARN] Could not parse target score from model output:
+''
+[SCORE] element=Sentence Type score=7.4 threshold=7.5
+[LOW] element=Sentence Type score=7.4
+[SCORE] element=Audience score=10.0 threshold=7.5
+[SCORE] element=Background score=9.0 threshold=7.5
+gradient:  {'Style': 1, 'Sentence Type': 1}
+26it [33:59, 91.77s/it]config.theme:  Email
+[SCORE] element=Characteristic score=9.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=9.0 threshold=7.5
+[SCORE] element=Structure score=9.0 threshold=7.5
+[SCORE] element=Style score=9.0 threshold=7.5
+[SCORE] element=Tone score=9.0 threshold=7.5
+[SCORE] element=Purpose score=10.0 threshold=7.5
+
+[WARN] Could not parse target score from model output:
+''
+[SCORE] element=Sentence Type score=7.4 threshold=7.5
+[LOW] element=Sentence Type score=7.4
+[SCORE] element=Audience score=10.0 threshold=7.5
+[SCORE] element=Background score=9.0 threshold=7.5
+gradient:  {'Sentence Type': 1}
+27it [35:37, 93.60s/it]config.theme:  Email
+[SCORE] element=Characteristic score=9.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=9.5 threshold=7.5
+[SCORE] element=Structure score=10.0 threshold=7.5
+[SCORE] element=Style score=9.0 threshold=7.5
+[SCORE] element=Tone score=9.0 threshold=7.5
+[SCORE] element=Purpose score=10.0 threshold=7.5
+[SCORE] element=Sentence Type score=8.0 threshold=7.5
+[SCORE] element=Audience score=10.0 threshold=7.5
+[SCORE] element=Background score=10.0 threshold=7.5
+gradient:  {}
+28it [37:06, 92.23s/it]config.theme:  Email
+[SCORE] element=Characteristic score=9.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=9.0 threshold=7.5
+[SCORE] element=Structure score=10.0 threshold=7.5
+[SCORE] element=Style score=8.5 threshold=7.5
+[SCORE] element=Tone score=9.0 threshold=7.5
+[SCORE] element=Purpose score=10.0 threshold=7.5
+
+[WARN] Could not parse target score from model output:
+''
+[SCORE] element=Sentence Type score=7.4 threshold=7.5
+[LOW] element=Sentence Type score=7.4
+[SCORE] element=Audience score=10.0 threshold=7.5
+[SCORE] element=Background score=9.0 threshold=7.5
+gradient:  {'Sentence Type': 1}
+29it [38:53, 96.43s/it]config.theme:  Email
+[SCORE] element=Characteristic score=9.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=10.0 threshold=7.5
+[SCORE] element=Structure score=9.0 threshold=7.5
+[SCORE] element=Style score=9.0 threshold=7.5
+[SCORE] element=Tone score=9.0 threshold=7.5
+[SCORE] element=Purpose score=10.0 threshold=7.5
+[SCORE] element=Sentence Type score=9.0 threshold=7.5
+[SCORE] element=Audience score=10.0 threshold=7.5
+[SCORE] element=Background score=10.0 threshold=7.5
+gradient:  {}
+30it [40:34, 97.85s/it]config.theme:  Email
+[SCORE] element=Characteristic score=9.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=9.0 threshold=7.5
+[SCORE] element=Structure score=8.0 threshold=7.5
+[SCORE] element=Style score=9.0 threshold=7.5
+[SCORE] element=Tone score=9.0 threshold=7.5
+[SCORE] element=Purpose score=9.0 threshold=7.5
+[SCORE] element=Sentence Type score=9.0 threshold=7.5
+[SCORE] element=Audience score=9.0 threshold=7.5
+[SCORE] element=Background score=8.0 threshold=7.5
+gradient:  {}
+31it [42:05, 95.86s/it]config.theme:  Email
+[SCORE] element=Characteristic score=8.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=9.0 threshold=7.5
+[SCORE] element=Structure score=9.0 threshold=7.5
+[SCORE] element=Style score=9.0 threshold=7.5
+[SCORE] element=Tone score=9.0 threshold=7.5
+[SCORE] element=Purpose score=10.0 threshold=7.5
+[SCORE] element=Sentence Type score=8.0 threshold=7.5
+[SCORE] element=Audience score=10.0 threshold=7.5
+[SCORE] element=Background score=9.0 threshold=7.5
+gradient:  {}
+32it [44:42, 114.09s/it]config.theme:  Email
+[SCORE] element=Characteristic score=10.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=9.5 threshold=7.5
+[SCORE] element=Structure score=9.0 threshold=7.5
+[SCORE] element=Style score=9.0 threshold=7.5
+[SCORE] element=Tone score=9.0 threshold=7.5
+[SCORE] element=Purpose score=10.0 threshold=7.5
+[SCORE] element=Sentence Type score=9.0 threshold=7.5
+[SCORE] element=Audience score=10.0 threshold=7.5
+[SCORE] element=Background score=9.0 threshold=7.5
+gradient:  {}
+33it [46:27, 111.34s/it]config.theme:  Email
+[SCORE] element=Characteristic score=9.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=9.0 threshold=7.5
+[SCORE] element=Structure score=9.0 threshold=7.5
+[SCORE] element=Style score=9.0 threshold=7.5
+[SCORE] element=Tone score=9.0 threshold=7.5
+[SCORE] element=Purpose score=10.0 threshold=7.5
+[SCORE] element=Sentence Type score=9.0 threshold=7.5
+[SCORE] element=Audience score=9.5 threshold=7.5
+[SCORE] element=Background score=8.0 threshold=7.5
+gradient:  {}
+34it [47:44, 101.31s/it]config.theme:  Email
+[SCORE] element=Characteristic score=9.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=10.0 threshold=7.5
+[SCORE] element=Structure score=10.0 threshold=7.5
+[SCORE] element=Style score=9.0 threshold=7.5
+[SCORE] element=Tone score=9.0 threshold=7.5
+[SCORE] element=Purpose score=10.0 threshold=7.5
+
+[WARN] Could not parse target score from model output:
+''
+[SCORE] element=Sentence Type score=7.4 threshold=7.5
+[LOW] element=Sentence Type score=7.4
+[SCORE] element=Audience score=10.0 threshold=7.5
+[SCORE] element=Background score=9.0 threshold=7.5
+gradient:  {'Sentence Type': 1}
+35it [49:28, 102.09s/it]config.theme:  Email
+[SCORE] element=Characteristic score=9.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=9.0 threshold=7.5
+[SCORE] element=Structure score=10.0 threshold=7.5
+[SCORE] element=Style score=3.0 threshold=7.5
+[LOW] element=Style score=3.0
+[SCORE] element=Tone score=7.0 threshold=7.5
+[LOW] element=Tone score=7.0
+[SCORE] element=Purpose score=10.0 threshold=7.5
+[SCORE] element=Sentence Type score=8.0 threshold=7.5
+[SCORE] element=Audience score=10.0 threshold=7.5
+[SCORE] element=Background score=8.0 threshold=7.5
+gradient:  {'Style': 1, 'Tone': 1}
+36it [51:36, 109.67s/it]config.theme:  Email
+[SCORE] element=Characteristic score=9.5 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=9.0 threshold=7.5
+[SCORE] element=Structure score=10.0 threshold=7.5
+[SCORE] element=Style score=9.0 threshold=7.5
+[SCORE] element=Tone score=9.0 threshold=7.5
+[SCORE] element=Purpose score=10.0 threshold=7.5
+
+[WARN] Could not parse target score from model output:
+''
+[SCORE] element=Sentence Type score=7.4 threshold=7.5
+[LOW] element=Sentence Type score=7.4
+[SCORE] element=Audience score=9.5 threshold=7.5
+[SCORE] element=Background score=9.0 threshold=7.5
+gradient:  {'Sentence Type': 1}
+37it [53:16, 106.82s/it]config.theme:  Email
+[SCORE] element=Characteristic score=9.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=9.0 threshold=7.5
+[SCORE] element=Structure score=9.0 threshold=7.5
+[SCORE] element=Style score=8.5 threshold=7.5
+[SCORE] element=Tone score=9.0 threshold=7.5
+[SCORE] element=Purpose score=9.0 threshold=7.5
+
+[WARN] Could not parse target score from model output:
+''
+[SCORE] element=Sentence Type score=7.4 threshold=7.5
+[LOW] element=Sentence Type score=7.4
+[SCORE] element=Audience score=9.0 threshold=7.5
+[SCORE] element=Background score=8.0 threshold=7.5
+gradient:  {'Sentence Type': 1}
+38it [54:55, 104.53s/it]config.theme:  Email
+[SCORE] element=Characteristic score=7.0 threshold=7.5
+[LOW] element=Characteristic score=7.0
+[SCORE] element=Topic score=9.0 threshold=7.5
+[SCORE] element=Argument score=9.0 threshold=7.5
+[SCORE] element=Structure score=8.0 threshold=7.5
+[SCORE] element=Style score=7.0 threshold=7.5
+[LOW] element=Style score=7.0
+[SCORE] element=Tone score=7.0 threshold=7.5
+[LOW] element=Tone score=7.0
+[SCORE] element=Purpose score=9.0 threshold=7.5
+
+[WARN] Could not parse target score from model output:
+''
+[SCORE] element=Sentence Type score=7.4 threshold=7.5
+[LOW] element=Sentence Type score=7.4
+[SCORE] element=Audience score=10.0 threshold=7.5
+[SCORE] element=Background score=8.0 threshold=7.5
+gradient:  {'Characteristic': 1, 'Style': 1, 'Tone': 1, 'Sentence Type': 1}
+39it [56:25, 100.02s/it]config.theme:  Email
+[SCORE] element=Characteristic score=8.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=9.0 threshold=7.5
+[SCORE] element=Structure score=9.0 threshold=7.5
+[SCORE] element=Style score=9.0 threshold=7.5
+[SCORE] element=Tone score=9.0 threshold=7.5
+[SCORE] element=Purpose score=9.0 threshold=7.5
+
+[WARN] Could not parse target score from model output:
+''
+[SCORE] element=Sentence Type score=7.4 threshold=7.5
+[LOW] element=Sentence Type score=7.4
+[SCORE] element=Audience score=10.0 threshold=7.5
+[SCORE] element=Background score=9.0 threshold=7.5
+gradient:  {'Sentence Type': 1}
+40it [58:14, 102.96s/it]config.theme:  Email
+[SCORE] element=Characteristic score=7.0 threshold=7.5
+[LOW] element=Characteristic score=7.0
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=9.5 threshold=7.5
+[SCORE] element=Structure score=9.0 threshold=7.5
+[SCORE] element=Style score=9.0 threshold=7.5
+[SCORE] element=Tone score=6.0 threshold=7.5
+[LOW] element=Tone score=6.0
+[SCORE] element=Purpose score=10.0 threshold=7.5
+[SCORE] element=Sentence Type score=7.0 threshold=7.5
+[LOW] element=Sentence Type score=7.0
+[SCORE] element=Audience score=10.0 threshold=7.5
+[SCORE] element=Background score=9.5 threshold=7.5
+gradient:  {'Characteristic': 1, 'Tone': 1, 'Sentence Type': 1}
+41it [59:24, 93.05s/it] config.theme:  Email
+[SCORE] element=Characteristic score=7.0 threshold=7.5
+[LOW] element=Characteristic score=7.0
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=7.0 threshold=7.5
+[LOW] element=Argument score=7.0
+[SCORE] element=Structure score=8.0 threshold=7.5
+[SCORE] element=Style score=9.0 threshold=7.5
+[SCORE] element=Tone score=7.0 threshold=7.5
+[LOW] element=Tone score=7.0
+[SCORE] element=Purpose score=10.0 threshold=7.5
+[SCORE] element=Sentence Type score=9.0 threshold=7.5
+[SCORE] element=Audience score=9.0 threshold=7.5
+[SCORE] element=Background score=9.5 threshold=7.5
+gradient:  {'Characteristic': 1, 'Argument': 1, 'Tone': 1}
+42it [1:00:59, 93.58s/it]config.theme:  Email
+[SCORE] element=Characteristic score=7.0 threshold=7.5
+[LOW] element=Characteristic score=7.0
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=8.0 threshold=7.5
+[SCORE] element=Structure score=9.0 threshold=7.5
+[SCORE] element=Style score=8.0 threshold=7.5
+[SCORE] element=Tone score=8.0 threshold=7.5
+[SCORE] element=Purpose score=9.0 threshold=7.5
+[SCORE] element=Sentence Type score=8.0 threshold=7.5
+[SCORE] element=Audience score=9.0 threshold=7.5
+[SCORE] element=Background score=9.0 threshold=7.5
+gradient:  {'Characteristic': 1}
+43it [1:02:13, 87.60s/it]config.theme:  Email
+[SCORE] element=Characteristic score=8.0 threshold=7.5
+[SCORE] element=Topic score=9.0 threshold=7.5
+[SCORE] element=Argument score=9.0 threshold=7.5
+[SCORE] element=Structure score=9.0 threshold=7.5
+[SCORE] element=Style score=7.0 threshold=7.5
+[LOW] element=Style score=7.0
+[SCORE] element=Tone score=8.5 threshold=7.5
+[SCORE] element=Purpose score=9.0 threshold=7.5
+
+[WARN] Could not parse target score from model output:
+''
+[SCORE] element=Sentence Type score=7.4 threshold=7.5
+[LOW] element=Sentence Type score=7.4
+[SCORE] element=Audience score=9.0 threshold=7.5
+[SCORE] element=Background score=8.0 threshold=7.5
+gradient:  {'Style': 1, 'Sentence Type': 1}
+44it [1:03:58, 92.85s/it]config.theme:  Email
+[SCORE] element=Characteristic score=9.0 threshold=7.5
+[SCORE] element=Topic score=9.0 threshold=7.5
+[SCORE] element=Argument score=9.0 threshold=7.5
+[SCORE] element=Structure score=9.0 threshold=7.5
+[SCORE] element=Style score=9.0 threshold=7.5
+[SCORE] element=Tone score=9.0 threshold=7.5
+[SCORE] element=Purpose score=10.0 threshold=7.5
+[SCORE] element=Sentence Type score=9.0 threshold=7.5
+[SCORE] element=Audience score=10.0 threshold=7.5
+[SCORE] element=Background score=9.0 threshold=7.5
+gradient:  {}
+45it [1:05:34, 93.83s/it]config.theme:  Email
+[SCORE] element=Characteristic score=6.0 threshold=7.5
+[LOW] element=Characteristic score=6.0
+[SCORE] element=Topic score=8.0 threshold=7.5
+[SCORE] element=Argument score=7.0 threshold=7.5
+[LOW] element=Argument score=7.0
+[SCORE] element=Structure score=9.0 threshold=7.5
+[SCORE] element=Style score=6.0 threshold=7.5
+[LOW] element=Style score=6.0
+[SCORE] element=Tone score=9.0 threshold=7.5
+[SCORE] element=Purpose score=9.0 threshold=7.5
+[SCORE] element=Sentence Type score=7.0 threshold=7.5
+[LOW] element=Sentence Type score=7.0
+[SCORE] element=Audience score=9.0 threshold=7.5
+[SCORE] element=Background score=9.0 threshold=7.5
+gradient:  {'Characteristic': 1, 'Argument': 1, 'Style': 1, 'Sentence Type': 1}
+46it [1:07:19, 97.09s/it]config.theme:  Email
+[SCORE] element=Characteristic score=9.5 threshold=7.5
+[SCORE] element=Topic score=9.0 threshold=7.5
+[SCORE] element=Argument score=9.0 threshold=7.5
+[SCORE] element=Structure score=9.0 threshold=7.5
+[SCORE] element=Style score=9.0 threshold=7.5
+[SCORE] element=Tone score=9.0 threshold=7.5
+[SCORE] element=Purpose score=9.0 threshold=7.5
+[SCORE] element=Sentence Type score=9.0 threshold=7.5
+[SCORE] element=Audience score=10.0 threshold=7.5
+[SCORE] element=Background score=8.0 threshold=7.5
+gradient:  {}
+47it [1:09:05, 99.72s/it]config.theme:  Email
+[SCORE] element=Characteristic score=8.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=7.0 threshold=7.5
+[LOW] element=Argument score=7.0
+[SCORE] element=Structure score=7.0 threshold=7.5
+[LOW] element=Structure score=7.0
+[SCORE] element=Style score=8.0 threshold=7.5
+[SCORE] element=Tone score=9.0 threshold=7.5
+[SCORE] element=Purpose score=9.0 threshold=7.5
+[SCORE] element=Sentence Type score=9.0 threshold=7.5
+[SCORE] element=Audience score=9.0 threshold=7.5
+[SCORE] element=Background score=9.0 threshold=7.5
+gradient:  {'Argument': 1, 'Structure': 1}
+48it [1:11:39, 116.03s/it]config.theme:  Email
+[SCORE] element=Characteristic score=9.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=9.0 threshold=7.5
+[SCORE] element=Structure score=9.0 threshold=7.5
+[SCORE] element=Style score=8.0 threshold=7.5
+[SCORE] element=Tone score=9.0 threshold=7.5
+[SCORE] element=Purpose score=9.0 threshold=7.5
+[SCORE] element=Sentence Type score=10.0 threshold=7.5
+[SCORE] element=Audience score=10.0 threshold=7.5
+[SCORE] element=Background score=9.0 threshold=7.5
+gradient:  {}
+49it [1:12:54, 103.92s/it]config.theme:  Email
+[SCORE] element=Characteristic score=9.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=9.0 threshold=7.5
+[SCORE] element=Structure score=9.0 threshold=7.5
+[SCORE] element=Style score=9.0 threshold=7.5
+[SCORE] element=Tone score=9.0 threshold=7.5
+[SCORE] element=Purpose score=10.0 threshold=7.5
+[SCORE] element=Sentence Type score=9.0 threshold=7.5
+[SCORE] element=Audience score=9.0 threshold=7.5
+[SCORE] element=Background score=9.0 threshold=7.5
+gradient:  {}
+50it [1:14:59, 110.23s/it]50it [1:14:59, 89.99s/it] 
