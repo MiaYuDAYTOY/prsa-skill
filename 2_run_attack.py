@@ -66,7 +66,7 @@ if __name__ == '__main__':
         input_data = batch['Preview Input']
         print(idx)
         
-        category = batch['Category']
+        category = batch.get('Category', args.theme)
         print("\nGet the prompt category:", category)
         config["theme"] = category
 
