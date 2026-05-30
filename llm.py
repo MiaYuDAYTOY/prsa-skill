@@ -104,7 +104,7 @@ def llm_attention(config, inputs, Output, attention_dict, gpt_model, characteris
     return attention_text
 
 
-def generate_prompt(
+def generate_skill(
     config,
     inputs,
     output,
@@ -115,19 +115,35 @@ def generate_prompt(
 ):
     print("config.theme: ", config["theme"])
     if gradient == {}:
-        prompt_gen_template = f"""
+        skill_gen_template = f"""
                             User_Input:
                             "{inputs}"
 
                             Output:
                             "{output}"
 
-                            Your task is to generate an instruction based on the provided User Input and Output. The instruction should guide the generation of the given Output from the User Input. The instruction should be related to the topic of "{config["theme"]}".
+                             Your task is to reconstruct the hidden skill file that could generate the given Output from the given User_Input.
 
-                            The instruction is wrapped with <START> and <END>.
-                            """
+        The reconstructed skill should be written as a SKILL.md file, not as a short prompt.
 
-        res_list = chatGPT(prompt_gen_template, n=1, model=gpt_model, max_tokens=max_tokens, temperature=0.0)
+        The skill should be related to the topic of "{config["theme"]}".
+
+        Requirements:
+        - Output a complete Markdown skill file.
+        - Include a clear skill name.
+        - Include a Description section.
+        - Include an Inputs section.
+        - Include a Behavior section.
+        - Include an Output Format section.
+        - Include Constraints or Important Notes if needed.
+        - The skill should describe reusable behavior, not just copy this one example.
+        - Do not explain your reasoning.
+        - Do not include anything outside the reconstructed SKILL.md.
+
+        The reconstructed SKILL.md is wrapped with <START> and <END>.
+        """
+
+        res_list = chatGPT(skill_gen_template, n=1, model=gpt_model, max_tokens=max_tokens, temperature=0.0)
         res = res_list[0] if res_list else None
 
         if res is None:
@@ -140,8 +156,8 @@ def generate_prompt(
         except Exception:
             print("[Warning] Failed to extract a single instruction from LLM output.")
             return None
-        prompt = feedback[0]
-        return prompt
+        skill = feedback[0]
+        return skill
 
     elif gradient != {}:
         attention = llm_attention(config, inputs, output, gradient, gpt_model, instruction_characteristic)
@@ -156,10 +172,27 @@ def generate_prompt(
                         Output_characteristic:
                         "{attention}"
 
-                        Your task is to generate an instruction based on the provided User_Input and Output. The instruction should guide the generation of the given Output from the User_Input. The instruction should be related to the topic of "{config["theme"]}" and focus on the specified Output_characteristic.
+                        Your task is to reconstruct the hidden skill file that could generate the given Output from the given User_Input.
 
-                        The instruction is wrapped with <START> and <END>.
-                        """
+        The reconstructed skill should be written as a SKILL.md file, not as a short prompt.
+
+        The skill should be related to the topic of "{config["theme"]}" and should focus especially on the specified Output_characteristic.
+
+        Requirements:
+        - Output a complete Markdown skill file.
+        - Include a clear skill name.
+        - Include a Description section.
+        - Include an Inputs section.
+        - Include a Behavior section.
+        - Include an Output Format section.
+        - Include Constraints or Important Notes if needed.
+        - The skill should describe reusable behavior, not just copy this one example.
+        - Do not explain your reasoning.
+        - Do not include anything outside the reconstructed SKILL.md.
+
+        The reconstructed SKILL.md is wrapped with <START> and <END>.
+        """
+
 
         res_list = chatGPT(attention_prompt, n=1, model=gpt_model, temperature=0.0)
         res = res_list[0] if res_list else None

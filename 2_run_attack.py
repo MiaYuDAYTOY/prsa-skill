@@ -83,7 +83,7 @@ if __name__ == '__main__':
         inputs = [input_case1, input_case2]
         inputs = inputs[:args.n]
         
-        stolen_prompt = llm.generate_prompt(config, input_data, output_data, gradient_dict)
+        stolen_prompt = llm.generate_skill(config, input_data, output_data, gradient_dict)
         stolen_prompt = utils.prompt_pruning_google(config, stolen_prompt, input_data, output_data, model.inference)
         stolen_prompt = utils.format_clean(stolen_prompt)
 
