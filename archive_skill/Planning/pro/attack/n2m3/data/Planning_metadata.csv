@@ -1,0 +1,6 @@
+skill_id,category,file_path
+business_plan,Planning,raw_skills/Planning/business_plan/SKILL.md
+content_strategy,Planning,raw_skills/Planning/content_strategy/SKILL.md
+language_plan,Planning,raw_skills/Planning/language_plan/SKILL.md
+marketing_plan,Planning,raw_skills/Planning/marketing_plan/SKILL.md
+roadmap_plan,Planning,raw_skills/Planning/roadmap_plan/SKILL.md

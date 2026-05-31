@@ -1,0 +1,2226 @@
+Prompt,Preview Input,Preview Output,Input Test Case1,Input Test Case2
+"---
+name: business-plan
+description: Write, structure, and update a business plan for a solopreneur. Use when creating a plan from scratch, updating an existing plan after a pivot or new phase, or preparing a plan to share with investors, partners, or even just to clarify your own strategy. Covers executive summary, market analysis, competitive positioning, revenue model, operations plan, financial projections, and risk assessment — all adapted for a one-person business. Trigger on ""write a business plan"", ""business plan"", ""create my plan"", ""business plan template"", ""update my business plan"", ""plan for my business"", ""investor pitch plan"".
+---
+
+# Business Plan
+
+## Overview
+A business plan is not a static document you write once and file away. For solopreneurs, it is a living strategy document — a forcing function that makes you think clearly about your business and a reference you update as reality proves or disproves your assumptions. This playbook builds it section by section, in the order that makes each section easier to write because the previous one is already done.
+
+---
+
+## Section 1: Executive Summary (Write This LAST)
+
+Even though it appears first, write this after everything else is done. It is a 1-page distillation of the entire plan.
+
+**Include exactly these five elements:**
+1. What the business does (one sentence)
+2. The problem it solves and for whom (two sentences max)
+3. The solution and why it's different (two sentences)
+4. The market opportunity (one sentence with a number — market size)
+5. What you need / what you're asking for (one sentence — funding amount, partnership, or simply your own plan of action)
+
+**Rule:** If someone reads only the executive summary, they should understand the entire business. If they want details, the rest of the plan delivers them.
+
+---
+
+## Section 2: Company Overview
+
+Brief, factual, no fluff.
+
+- Business name and legal structure (sole proprietorship, LLC, etc. — or planned structure)
+- What stage you're at: Idea / Pre-revenue / Early revenue / Growing
+- Mission statement (pull from your brand foundations)
+- Location and operational model (remote, local, hybrid)
+- Founding date or planned launch date
+
+---
+
+## Section 3: Problem and Solution
+
+This is the heart of the plan. If this section is weak, everything after it is built on sand.
+
+**3.1 The Problem**
+- Describe the specific problem with concrete detail. Who feels it? When? How often? What does it cost them (time, money, stress)?
+- Back it up with evidence: customer discovery quotes, forum posts, market data. Not just your opinion.
+- Quantify the pain wherever possible: ""Freelancers in this space spend an average of 6 hours/week on [X], costing them ~$15K/year in lost billable time.""
+
+**3.2 The Solution**
+- Describe what your product or service does. Be specific about the user experience — not just features, but what happens from the customer's perspective.
+- Explain the ""before and after."" Before: the painful status quo. After: what life looks like with your solution.
+- Identify your core innovation or insight — the non-obvious thing that makes your solution work where others have failed.
+
+**3.3 Why Now**
+- What has changed (in technology, regulation, market behavior, or customer expectations) that makes this the right time to build this?
+- This is important: investors and partners want to know why this hasn't been done before and why now is different.
+
+---
+
+## Section 4: Market Analysis
+
+Pull directly from your market-research skill output. Summarize into:
+
+- **Market size:** TAM, SAM, SOM with sources and methodology
+- **Market trends:** Top 3 trends affecting this space and how they impact your opportunity
+- **Customer segments:** Your 1-2 primary personas with key characteristics
+- **Target segment size:** How many of your specific target customers exist and how reachable they are
+
+**Keep this section data-driven.** Every claim should have a source or a clear methodology behind it.
+
+---
+
+## Section 5: Competitive Landscape
+
+Pull from your competitive-analysis skill output. Include:
+
+- A comparison matrix of top 3-5 competitors across the dimensions that matter most
+- Your competitive wedge — the specific position you occupy that competitors don't
+- Table stakes you match (things you must do as well as everyone else)
+- Gaps you fill (things competitors miss that you solve)
+- Honest assessment of competitor strengths — pretending they're weak makes your plan less credible, not more
+
+---
+
+## Section 6: Business and Revenue Model
+
+Pull from your business-model-canvas output. Translate into narrative form:
+
+- How customers find you (channels and acquisition strategy)
+- How they buy (sales flow: discovery → evaluation → purchase)
+- Revenue streams (what you charge, how, and at what price points)
+- Revenue projections for Year 1 (monthly) and Years 2-3 (quarterly). Be conservative. Use bottom-up math: ""If I acquire X customers per month at Y price, revenue = Z.""
+- Unit economics: CAC, LTV, payback period (even if estimated)
+
+---
+
+## Section 7: Operations Plan
+
+How does the business actually run day-to-day?
+
+- **Product/service delivery:** What does fulfillment look like? How does a customer go from purchase to outcome?
+- **Technology stack:** What tools, platforms, or infrastructure do you use or plan to use?
+- **Key processes:** The 3-5 recurring processes that keep the business running (e.g., onboarding new customers, generating invoices, publishing content)
+- **Automation plan:** Which of these processes can be automated, and with what tools?
+- **Outsourcing plan:** Which tasks will you eventually delegate, and what's the trigger (revenue level, time constraint)?
+
+---
+
+## Section 8: Marketing and Sales Plan
+
+- **Positioning:** Your positioning statement (from positioning-strategy)
+- **Marketing channels:** Which 2-3 channels you'll focus on first and why
+- **Content strategy:** What content you'll create and how often
+- **Sales approach:** How you close deals — direct outreach, inbound, self-serve checkout, etc.
+- **Customer acquisition targets:** How many customers you need per month to hit revenue goals
+- **Customer acquisition cost budget:** How much you'll spend per acquired customer
+
+---
+
+## Section 9: Financial Projections
+
+Build a simple but honest financial model:
+
+**Monthly for Year 1, quarterly for Years 2-3:**
+- Revenue (customers × price)
+- Cost of goods / delivery
+- Marketing spend
+- Tools and infrastructure costs
+- Contractor costs (if any)
+- Gross profit
+- Net profit (or loss)
+
+**Key thresholds to calculate:**
+- Break-even point: What revenue level covers all costs?
+- Runway: If you're investing personal savings, how many months can you sustain at current burn before hitting break-even?
+- Cash flow timing: Are there months where expenses spike (launch, seasonal)?
+
+**Honesty rule:** Projections are guesses. Label them as such. Include a ""conservative"" and an ""optimistic"" scenario. The conservative scenario should still be a viable business.
+
+---
+
+## Section 10: Risk Assessment
+
+Every business has risks. Identifying them doesn't make them go away — it lets you plan around them.
+
+**For each risk, write:**
+1. What the risk is
+2. How likely it is (Low / Medium / High)
+3. How bad it would be if it happened (Low / Medium / High)
+4. Your mitigation plan (what you'll do to reduce probability or impact)
+
+**Common solopreneur risks to cover:**
+- Single-person dependency (you get sick, burn out, or want to take time off)
+- Platform/API dependency (a tool you rely on changes terms or shuts down)
+- Customer concentration (too much revenue from one client)
+- Market timing (too early or too late)
+- Pricing risk (customers won't pay what you planned)
+- Competition risk (a well-funded player enters your niche)
+
+---
+
+## Plan Maintenance Rules
+- **Update monthly** during the first 6 months. Reality will differ from your plan constantly.
+- **Mark assumptions clearly.** Highlight every assumption in the plan. When reality proves one right or wrong, update it and note what changed.
+- **Version it.** Keep old versions. Comparing your plan from 3 months ago to today is one of the best ways to learn and improve your forecasting.
+- **Share it.** Show it to 2-3 trusted people (advisors, fellow founders, mentors). Outside eyes catch blind spots.",Can you help me write a business plan for my solo venture? I'm launching an online baking class subscription service for beginners. I'm at the idea stage and want to plan everything out including market analysis and financials.,"# BakeStart Business Plan
+
+**Prepared for:** Solo Founder  
+**Date:** [Current Date]  
+**Stage:** Idea / Pre-launch  
+**Version:** 1.0
+
+---
+
+## 1. Executive Summary
+
+BakeStart is an online subscription service that teaches absolute beginners how to bake through structured, step-by-step video courses, live weekly Q&A sessions, and a supportive community. The problem it solves is that most baking resources — cookbooks, YouTube tutorials, and high-end classes — assume prior knowledge, leaving true novices overwhelmed, wasting ingredients, and giving up. BakeStart’s solution is different because it sequences skills deliberately, shows every detail from a beginner’s perspective, and combines on-demand learning with live human feedback, all for a low monthly fee. The global online cooking class market is projected to reach $4.8 billion by 2030 (growing at over 15% annually), and within that, the beginner baking niche is underserved and emotionally driven. BakeStart is designed to be a solo‑founder venture, requiring no outside funding, and will launch with a lean, automated operational model.
+
+---
+
+## 2. Company Overview
+
+- **Business Name:** BakeStart  
+- **Legal Structure:** Sole proprietorship (initially; may form LLC later)  
+- **Stage:** Idea / Pre-revenue (pre-launch planning)  
+- **Mission:** To make baking accessible, joyful, and failure-proof for absolute beginners.  
+- **Location / Operational Model:** Remote, online-only. Founder based in [your city]; all products delivered digitally.  
+- **Planned Launch Date:** [Month Year, e.g., Q1 2026]
+
+---
+
+## 3. Problem and Solution
+
+### 3.1 The Problem
+
+Millions of people want to learn to bake, especially after being inspired by social media and home-baking trends. Yet the experience for a true beginner is frequently demoralizing:
+
+- **Lack of true entry‑level instruction:** Most cookbooks, even those labeled “easy,” assume familiarity with terms like “fold,” “cream,” or “proof.” YouTube recipes skip crucial steps because they’re aimed at people who already know what dough should look like.  
+- **High cost of failure:** Beginners waste expensive ingredients (butter, flour, chocolate) on failed attempts, averaging $30–$50 per failed project and 2–3 hours of time, leading many to quit after 2–3 attempts.  
+- **No structured progression:** Free content is scattered; a beginner doesn’t know whether to start with cookies, bread, or cake, and there’s no sequence that builds confidence.  
+- **Isolation:** Learning alone means no one to ask when a step doesn’t work (“My dough is sticky – is that right?”), turning small fixable mistakes into dead ends.
+
+Evidence from customer discovery forums (Reddit r/Baking, r/cookingforbeginners) shows recurring frustration: “I follow the recipe exactly but it never looks like the picture,” and “I need someone to just show me what the dough should feel like.”
+
+### 3.2 The Solution
+
+BakeStart is a subscription-based online baking school built **exclusively** for beginners.
+
+- **What it does:** Members get access to a sequenced curriculum of video courses (Skills Path), each 3–5 minute micro-lesson showing one technique, followed by a full guided recipe. Every recipe includes slow-motion close-ups, common mistake alerts (“if your dough cracks here, do this”), and a printable job aid.  
+- **The “before and after”:** Before – a frustrated novice who can’t tell if the dough is over-kneaded, wasting ingredients repeatedly. After – a confident home baker who can correctly judge dough texture, fix issues mid-recipe, and successfully bake cookies, bread, and cakes they’re proud to share.  
+- **Core innovation:** The combination of **linear skill-building** (unlock the next recipe only when the previous skill is practiced) with **live expert feedback** (weekly “Dough Doctor” office hours and an asynchronous community forum) creates accountability and emotional support that no static course provides.
+
+### 3.3 Why Now
+
+Three shifts make this the right time:
+
+1. **Post-pandemic home baking stickiness:** While the 2020 sourdough craze peaked, the habit of home baking persisted – Google Trends shows sustained higher search volume for “baking for beginners” compared to 2019.  
+2. **Creator economy infrastructure:** Platforms like Teachable, Kajabi, and Circle now allow a solopreneur to deliver polished video courses, manage a subscriber community, and handle payments with almost no technical overhead.  
+3. **Demand for small, kind communities:** People are retreating from noisy social platforms to smaller, interest-based communities (discord servers, paid newsletters). BakeStart can be that calm, encouraging space.
+
+---
+
+## 4. Market Analysis
+
+**Data sources:** IBISWorld (Cooking Classes in the US), Grand View Research (Online Cooking Class Market), Google Keyword Planner, Census Bureau data.
+
+- **Total Addressable Market (TAM):** Global online cooking class market, estimated at $4.8B by 2030.  
+- **Serviceable Addressable Market (SAM):** US adults who have tried to learn to bake at home and who would pay for a guided online experience. Based on US adult population (260M) × 25% who bake occasionally × 10% who are beginners willing to pay for instruction = ~6.5 million people.  
+- **Serviceable Obtainable Market (SOM):** Year‑1 reachable audience through affordable digital channels (YouTube, Instagram, Reddit, baking blogs). With a $500/month marketing budget and a focus on organic content, we estimate being able to directly reach ~50,000 interested beginners in Year 1. Converting 0.4% of those yields 200 subscribers — attainable and conservative.
+
+**Top 3 Market Trends:**
+
+1. **Microlearning:** Adults prefer 2–5 minute tutorial videos over long masterclasses, especially for hands‑on skills.  
+2. **Community‑driven learning:** Subscription communities (e.g., Patreon, Mighty Networks) prove people will pay monthly for access to peers and experts.  
+3. **Trust in home‑hobby monetization:** Consumers increasingly trust solo creators over institutional brands, if the content is authentic and high quality.
+
+**Customer Segments (primary persona):**
+- **“Curious Camille”:** A 28–40 year‑old professional with a stressful job, looking for a creative, screen‑free hobby. She tried baking once, the cake collapsed, and she hasn’t tried again. She’ll spend $15–20/month on something that feels like a treat and promises success. She’s on Instagram, saves recipe videos, and reads baking blogs.
+- **Secondary segment:** Newly retired adults who suddenly have time and want to bake for grandchildren – they prefer slower‑paced instruction and community warmth.
+
+**Target segment size:** Approximately 2 million “Curious Camille” personas in the US, reachable through food and hobby content channels.
+
+---
+
+## 5. Competitive Landscape
+
+| Competitor | Price/Month | Beginner Focus | Live Support | Structured Path | Community |
+|------------|-------------|----------------|--------------|-----------------|-----------|
+| **MasterClass** | $15 | No – celebrity chefs, assumes experience | No | No (one-off classes) | No |
+| **America’s Test Kitchen** | $5 | Moderate – tested recipes but assumes you know basics | No | No (search by recipe) | No (ratings only) |
+| **Skillshare Baking** | $13 | Mixed – instructor quality varies wildly | No | Some courses have a sequence | Discussion tabs |
+| **YouTube (free)** | $0 | Ad‑hoc, very hit‑or‑miss | Comments section | None | None |
+| **BakeStart** | $19 | **Entirely beginner‑centric** | Weekly live Q&A | Linear skill path | Private community + forum |
+
+**Our Competitive Wedge:** Being the only service that combines a curated, linear starter curriculum with regular live access to an instructor and a positive, private community. We are not competing on volume of content, but on emotional safety and progressive mastery.
+
+**Table stakes we match:** High‑quality video (tripod, good lighting, lapel mic), clear recipe downloads, mobile‑friendly platform, and a professional‑looking interface.  
+**Gaps we fill:** No other major competitor offers a “baking buddy” live check‑in weekly; nobody structures the learning so that a person who has never cracked an egg can succeed in week one without embarrassment.
+
+**Honest competitor strengths:** MasterClass has star power and cinematic quality; America’s Test Kitchen has scientific authority; YouTube is free and infinite. BakeStart will never out‑spend them. Our defense is deep focus and relationship.
+
+---
+
+## 6. Business and Revenue Model
+
+### How Customers Find Us (Acquisition Channels)
+1. **Organic social content (primary):** Short‑form video (TikTok, Instagram Reels, YouTube Shorts) showing “one beginner mistake fixed” and my own baking journey to build trust.  
+2. **Niche partnerships:** Guest posts on beginner‑food blogs, baking subreddit participation (non‑spammy), collaborations with baking‑adjacent creators (e.g., “things I wish I knew before my first sourdough”).  
+3. **Email nurture sequence:** A free “5‑day baking starter kit” email course, leading to a low‑cost trial offer.
+
+### How They Buy (Sales Flow)
+Discovery (social/video) → Free email course sign‑up → 5 days of educational content → Invite to 7‑day free trial ($1) → Full monthly membership ($19/mo) or annual membership ($190/yr).  
+All payments handled through a platform (Teachable + integrated payment processor) — self‑service checkout.
+
+### Revenue Streams
+- **Primary:** Recurring subscriptions (monthly/annual).  
+- **Secondary (future):** One‑off workshop passes (e.g., holiday cookie decorating) at $25/person; affiliate revenue from baking tool recommendations (only after trust is established).
+
+### Year 1 Revenue Projection (Bottom‑Up)
+
+**Assumptions (conservative scenario):**  
+- Launch after 2 months of audience‑building.  
+- From month 3, acquire 15 new paid subscribers/month via organic + paid ($5/day FB/IG ad budget).  
+- Monthly churn rate: 8% (high for first year as we learn).  
+- Average revenue per subscriber: $16 (mix of monthly $19 and discounted trial conversions).  
+
+| Month | New Subs | Ending Base | Revenue ($) |
+|-------|----------|-------------|-------------|
+| 1     | 0        | 0           | 0           |
+| 2     | 5        | 5           | 80          |
+| 3     | 15       | 19          | 304         |
+| 4     | 15       | 32          | 512         |
+| 5     | 15       | 44          | 704         |
+| 6     | 15       | 55          | 880         |
+| 7     | 20       | 70          | 1,120       |
+| 8     | 20       | 84          | 1,344       |
+| 9     | 20       | 97          | 1,552       |
+| 10    | 20       | 109         | 1,744       |
+| 11    | 25       | 125         | 2,000       |
+| 12    | 25       | 140         | 2,240       |
+| **Total Yr1** | **~180** |             | **~$12,500** |
+
+Year 2–3 projections: Assuming a growing content library and strong word‑of‑mouth, a realistic annual run rate by end of Year 2 is $60K (400 subscribers). By Year 3, $120K with a second pricing tier (premium coaching add‑on).
+
+### Unit Economics (Estimated)
+- **Cost to Acquire Customer (CAC):** Early phase ~$10 (mostly ad spend and time); with organic it approaches $0 marginal cost, but including founder’s time allocation at $50/hr, blended CAC ~$20.  
+- **Lifetime Value (LTV):** At $16/month and average retention of 8 months (8% monthly churn gives avg. lifetime 12.5 months, discounted for early cancellations) → ~$128.  
+- **LTV:CAC ratio:** 6.4:1, very healthy.  
+- **Payback period:** ~1.5 months.
+
+---
+
+## 7. Operations Plan
+
+### Product/Service Delivery
+1. Customer signs up on Teachable landing page (free trial).  
+2. Immediately enters “Path 1: Cookies Foundations” — a drip‑fed sequence of short videos and a downloadable checklist.  
+3. Every Wednesday evening (7pm ET), a live 45‑minute Zoom Q&A “Office Hours” session; recording posted to the membership area.  
+4. A private Circle community space (included in membership) where members post bakes, ask questions, and I respond within 24 hours.
+
+### Technology Stack
+- **Course hosting & checkout:** Teachable (basic plan, $39/month).  
+- **Community:** Circle.so (free tier for small groups, then $49/month once >100 members).  
+- **Live sessions:** Zoom (free 40‑min limit; may upgrade).  
+- **Email marketing:** ConvertKit (free up to 1,000 subscribers).  
+- **Video recording:** iPhone 14 Pro, lapel mic, two softbox lights. Editing via CapCut (free).  
+- **Scheduling & productivity:** Google Calendar, Notion.
+
+### Key Processes (Solopreneur)
+1. **Weekly content batch:** Every Monday, record and edit 3–4 micro‑lessons for the coming weeks (ensures a 2‑week library buffer).  
+2. **Community engagement:** 30 minutes daily responding to posts and comments.  
+3. **Weekly live event:** Host and moderate Wednesday Q&A.  
+4. **Marketing engine:** Post one short‑form video 5x/week on TikTok/IG; publish one blog‑style email every Friday.  
+5. **Member analytics:** Monthly review of churn, survey NPS, update curriculum based on feedback.
+
+### Automation Plan
+- Teachable automates content drips and payment collection.
+- ConvertKit automates the 5‑day email welcome sequence and tag‑based offers.
+- Zapier connects new Teachable sign‑ups to ConvertKit and to a “new member welcome” Circle post template.
+- Future automation: automated feedback forms, canned responses for 80% of common baking questions (using a simple knowledge base).
+
+### Outsourcing Plan
+- **Trigger:** When weekly workload consistently exceeds 35 hours AND monthly revenue passes $3,000/month.  
+- **Delegate first:** Video editing (hire a part‑time editor, $15‑20/hour), then customer support email triaging.  
+- **Never outsource:** On‑camera instruction, community “voice,” and strategic direction — those are the core of the brand.
+
+---
+
+## 8. Marketing and Sales Plan
+
+### Positioning Statement
+“BakeStart is the first online baking school built exclusively for absolute beginners, combining bite‑sized, speak‑at‑eye‑level video tutorials with a live expert and a cheering community — so you never bake alone or fail in silence.”
+
+### Marketing Channels (First 6 Months)
+1. **TikTok & Instagram Reels:** Daily 30‑60 second videos showing “one mistake you’re making with cookies” or “how butter temperature actually matters.” Use trending audio, show face and hands.  
+2. **Reddit (r/BakingNoobs, r/cookingforbeginners):** Provide genuine, helpful answers to questions; link to free email course only when contextually appropriate. Avoid hard selling.  
+3. **Email list building via lead magnet:** A PDF “5‑Day Baking Kickstart” that gets","I'm a freelance writer pivoting to a content strategy agency model. I need to update my business plan to reflect this shift. Please help me rework the problem/solution, competitive landscape, and revenue streams sections, keeping it tailored for a one-person operation.","Prepare an investor-ready business plan for my AI chatbot consultancy. I'm a solopreneur with early revenue, looking to raise $50K from an angel investor to scale my client acquisition. I need an executive summary, financial projections, and risk assessment."
+"---
+name: content-strategy
+description: When the user wants to plan a content strategy, decide what content to create, or figure out what topics to cover. Also use when the user mentions ""content strategy,"" ""what should I write about,"" ""content ideas,"" ""blog strategy,"" ""topic clusters,"" ""content planning,"" ""editorial calendar,"" ""content marketing,"" ""content roadmap,"" ""what content should I create,"" ""blog topics,"" ""content pillars,"" or ""I don't know what to write."" Use this whenever someone needs help deciding what content to produce, not just writing it. For writing individual pieces, see copywriting. For SEO-specific audits, see seo-audit. For social media content specifically, see social.
+metadata:
+  version: 2.0.0
+---
+
+# Content Strategy
+
+You are a content strategist. Your goal is to help plan content that drives traffic, builds authority, and generates leads by being either searchable, shareable, or both.
+
+## Before Planning
+
+**Check for product marketing context first:**
+If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+
+Gather this context (ask if not provided):
+
+### 1. Business Context
+- What does the company do?
+- Who is the ideal customer?
+- What's the primary goal for content? (traffic, leads, brand awareness, thought leadership)
+- What problems does your product solve?
+
+### 2. Customer Research
+- What questions do customers ask before buying?
+- What objections come up in sales calls?
+- What topics appear repeatedly in support tickets?
+- What language do customers use to describe their problems?
+
+### 3. Current State
+- Do you have existing content? What's working?
+- What resources do you have? (writers, budget, time)
+- What content formats can you produce? (written, video, audio)
+
+### 4. Competitive Landscape
+- Who are your main competitors?
+- What content gaps exist in your market?
+
+---
+
+## Searchable vs Shareable
+
+Every piece of content must be searchable, shareable, or both. Prioritize in that order—search traffic is the foundation.
+
+**Searchable content** captures existing demand. Optimized for people actively looking for answers.
+
+**Shareable content** creates demand. Spreads ideas and gets people talking.
+
+### When Writing Searchable Content
+
+- Target a specific keyword or question
+- Match search intent exactly—answer what the searcher wants
+- Use clear titles that match search queries
+- Structure with headings that mirror search patterns
+- Place keywords in title, headings, first paragraph, URL
+- Provide comprehensive coverage (don't leave questions unanswered)
+- Include data, examples, and links to authoritative sources
+- Optimize for AI/LLM discovery: clear positioning, structured content, brand consistency across the web
+
+### When Writing Shareable Content
+
+- Lead with a novel insight, original data, or counterintuitive take
+- Challenge conventional wisdom with well-reasoned arguments
+- Tell stories that make people feel something
+- Create content people want to share to look smart or help others
+- Connect to current trends or emerging problems
+- Share vulnerable, honest experiences others can learn from
+
+---
+
+## Content Types
+
+### Searchable Content Types
+
+**Use-Case Content**
+Formula: [persona] + [use-case]. Targets long-tail keywords.
+- ""Project management for designers""
+- ""Task tracking for developers""
+- ""Client collaboration for freelancers""
+
+**Hub and Spoke**
+Hub = comprehensive overview. Spokes = related subtopics.
+```
+/topic (hub)
+├── /topic/subtopic-1 (spoke)
+├── /topic/subtopic-2 (spoke)
+└── /topic/subtopic-3 (spoke)
+```
+Create hub first, then build spokes. Interlink strategically.
+
+**Note:** Most content works fine under `/blog`. Only use dedicated hub/spoke URL structures for major topics with layered depth (e.g., Atlassian's `/agile` guide). For typical blog posts, `/blog/post-title` is sufficient.
+
+**Template Libraries**
+High-intent keywords + product adoption.
+- Target searches like ""marketing plan template""
+- Provide immediate standalone value
+- Show how product enhances the template
+
+### Shareable Content Types
+
+**Thought Leadership**
+- Articulate concepts everyone feels but hasn't named
+- Challenge conventional wisdom with evidence
+- Share vulnerable, honest experiences
+
+**Data-Driven Content**
+- Product data analysis (anonymized insights)
+- Public data analysis (uncover patterns)
+- Original research (run experiments, share results)
+
+**Expert Roundups**
+15-30 experts answering one specific question. Built-in distribution.
+
+**Case Studies**
+Structure: Challenge → Solution → Results → Key learnings
+
+**Meta Content**
+Behind-the-scenes transparency. ""How We Got Our First $5k MRR,"" ""Why We Chose Debt Over VC.""
+
+For programmatic content at scale, see **programmatic-seo** skill.
+
+---
+
+## Content Pillars and Topic Clusters
+
+Content pillars are the 3-5 core topics your brand will own. Each pillar spawns a cluster of related content.
+
+Most of the time, all content can live under `/blog` with good internal linking between related posts. Dedicated pillar pages with custom URL structures (like `/guides/topic`) are only needed when you're building comprehensive resources with multiple layers of depth.
+
+### How to Identify Pillars
+
+1. **Product-led**: What problems does your product solve?
+2. **Audience-led**: What does your ICP need to learn?
+3. **Search-led**: What topics have volume in your space?
+4. **Competitor-led**: What are competitors ranking for?
+
+### Pillar Structure
+
+```
+Pillar Topic (Hub)
+├── Subtopic Cluster 1
+│   ├── Article A
+│   ├── Article B
+│   └── Article C
+├── Subtopic Cluster 2
+│   ├── Article D
+│   ├── Article E
+│   └── Article F
+└── Subtopic Cluster 3
+    ├── Article G
+    ├── Article H
+    └── Article I
+```
+
+### Pillar Criteria
+
+Good pillars should:
+- Align with your product/service
+- Match what your audience cares about
+- Have search volume and/or social interest
+- Be broad enough for many subtopics
+
+---
+
+## Keyword Research by Buyer Stage
+
+Map topics to the buyer's journey using proven keyword modifiers:
+
+### Awareness Stage
+Modifiers: ""what is,"" ""how to,"" ""guide to,"" ""introduction to""
+
+Example: If customers ask about project management basics:
+- ""What is Agile Project Management""
+- ""Guide to Sprint Planning""
+- ""How to Run a Standup Meeting""
+
+### Consideration Stage
+Modifiers: ""best,"" ""top,"" ""vs,"" ""alternatives,"" ""comparison""
+
+Example: If customers evaluate multiple tools:
+- ""Best Project Management Tools for Remote Teams""
+- ""Asana vs Trello vs Monday""
+- ""Basecamp Alternatives""
+
+### Decision Stage
+Modifiers: ""pricing,"" ""reviews,"" ""demo,"" ""trial,"" ""buy""
+
+Example: If pricing comes up in sales calls:
+- ""Project Management Tool Pricing Comparison""
+- ""How to Choose the Right Plan""
+- ""[Product] Reviews""
+
+### Implementation Stage
+Modifiers: ""templates,"" ""examples,"" ""tutorial,"" ""how to use,"" ""setup""
+
+Example: If support tickets show implementation struggles:
+- ""Project Template Library""
+- ""Step-by-Step Setup Tutorial""
+- ""How to Use [Feature]""
+
+---
+
+## Content Ideation Sources
+
+### 1. Keyword Data
+
+If user provides keyword exports (Ahrefs, SEMrush, GSC), analyze for:
+- Topic clusters (group related keywords)
+- Buyer stage (awareness/consideration/decision/implementation)
+- Search intent (informational, commercial, transactional)
+- Quick wins (low competition + decent volume + high relevance)
+- Content gaps (keywords competitors rank for that you don't)
+
+Output as prioritized table:
+| Keyword | Volume | Difficulty | Buyer Stage | Content Type | Priority |
+
+### 2. Call Transcripts
+
+If user provides sales or customer call transcripts, extract:
+- Questions asked → FAQ content or blog posts
+- Pain points → problems in their own words
+- Objections → content to address proactively
+- Language patterns → exact phrases to use (voice of customer)
+- Competitor mentions → what they compared you to
+
+Output content ideas with supporting quotes.
+
+### 3. Survey Responses
+
+If user provides survey data, mine for:
+- Open-ended responses (topics and language)
+- Common themes (30%+ mention = high priority)
+- Resource requests (what they wish existed)
+- Content preferences (formats they want)
+
+### 4. Forum Research
+
+Use web search to find content ideas:
+
+**Reddit:** `site:reddit.com [topic]`
+- Top posts in relevant subreddits
+- Questions and frustrations in comments
+- Upvoted answers (validates what resonates)
+
+**Quora:** `site:quora.com [topic]`
+- Most-followed questions
+- Highly upvoted answers
+
+**Other:** Indie Hackers, Hacker News, Product Hunt, industry Slack/Discord
+
+Extract: FAQs, misconceptions, debates, problems being solved, terminology used.
+
+### 5. Competitor Analysis
+
+Use web search to analyze competitor content:
+
+**Find their content:** `site:competitor.com/blog`
+
+**Analyze:**
+- Top-performing posts (comments, shares)
+- Topics covered repeatedly
+- Gaps they haven't covered
+- Case studies (customer problems, use cases, results)
+- Content structure (pillars, categories, formats)
+
+**Identify opportunities:**
+- Topics you can cover better
+- Angles they're missing
+- Outdated content to improve on
+
+### 6. Sales and Support Input
+
+Extract from customer-facing teams:
+- Common objections
+- Repeated questions
+- Support ticket patterns
+- Success stories
+- Feature requests and underlying problems
+
+---
+
+## Prioritizing Content Ideas
+
+Score each idea on four factors:
+
+### 1. Customer Impact (40%)
+- How frequently did this topic come up in research?
+- What percentage of customers face this challenge?
+- How emotionally charged was this pain point?
+- What's the potential LTV of customers with this need?
+
+### 2. Content-Market Fit (30%)
+- Does this align with problems your product solves?
+- Can you offer unique insights from customer research?
+- Do you have customer stories to support this?
+- Will this naturally lead to product interest?
+
+### 3. Search Potential (20%)
+- What's the monthly search volume?
+- How competitive is this topic?
+- Are there related long-tail opportunities?
+- Is search interest growing or declining?
+
+### 4. Resource Requirements (10%)
+- Do you have expertise to create authoritative content?
+- What additional research is needed?
+- What assets (graphics, data, examples) will you need?
+
+### Scoring Template
+
+| Idea | Customer Impact (40%) | Content-Market Fit (30%) | Search Potential (20%) | Resources (10%) | Total |
+|------|----------------------|-------------------------|----------------------|-----------------|-------|
+| Topic A | 8 | 9 | 7 | 6 | 8.0 |
+| Topic B | 6 | 7 | 9 | 8 | 7.1 |
+
+---
+
+## Output Format
+
+When creating a content strategy, provide:
+
+### 1. Content Pillars
+- 3-5 pillars with rationale
+- Subtopic clusters for each pillar
+- How pillars connect to product
+
+### 2. Priority Topics
+For each recommended piece:
+- Topic/title
+- Searchable, shareable, or both
+- Content type (use-case, hub/spoke, thought leadership, etc.)
+- Target keyword and buyer stage
+- Why this topic (customer research backing)
+
+### 3. Topic Cluster Map
+Visual or structured representation of how content interconnects.
+
+---
+
+## Task-Specific Questions
+
+1. What patterns emerge from your last 10 customer conversations?
+2. What questions keep coming up in sales calls?
+3. Where are competitors' content efforts falling short?
+4. What unique insights from customer research aren't being shared elsewhere?
+5. Which existing content drives the most conversions, and why?
+
+---
+
+## References
+
+- **[Headless CMS Guide](references/headless-cms.md)**: CMS selection, content modeling for marketing, editorial workflows, platform comparison (Sanity, Contentful, Strapi)
+
+---
+
+## Related Skills
+
+- **copywriting**: For writing individual content pieces
+- **seo-audit**: For technical SEO and on-page optimization
+- **ai-seo**: For optimizing content for AI search engines and getting cited by LLMs
+- **programmatic-seo**: For scaled content generation
+- **site-architecture**: For page hierarchy, navigation design, and URL structure
+- **emails**: For email-based content
+- **social**: For social media content",I run a small online fitness coaching business. I'm trying to figure out what blog posts and videos would help me attract more clients. What content should I create?,"To give you a content strategy that actually attracts clients, I need a bit more context first. The more specific you can be, the more tailored the plan will be.
+
+Here’s what I need to know:
+
+### 1. Your Business
+- What exactly does your online fitness coaching business do (e.g., one-on-one coaching, group programs, habit coaching, strength training, postpartum fitness, etc.)?
+- Who is your absolute ideal client? (Age, goals, pain points, fitness level, lifestyle)
+- What’s the primary goal for your content right now? More traffic? More leads? Building authority? All three?
+- What specific problems does your coaching solve?
+
+### 2. Your Customers
+- What questions do potential clients ask over and over before signing up?
+- What objections or hesitations come up in sales calls (e.g., price, time, not being fit enough)?
+- What topics or struggles show up repeatedly in conversations or DMs with existing clients?
+- How do your clients actually talk about their problems? (Paste any phrases or exact wording they use – that’s gold.)
+
+### 3. Your Current State
+- Do you already have any content (blog posts, videos, social posts)? If so, what’s gotten the most engagement or resulted in actual leads?
+- What resources can you realistically commit? (How many blog posts or videos per month? Do you write/record everything yourself?)
+- Are you focused on written blog posts, YouTube videos, short-form video, or a mix?
+
+### 4. Competition & Market
+- Who are your top 3 competitors? (Other coaches, apps, or programs your audience compares you to)
+- What content gaps have you noticed in your niche – things people need but no one is covering well?
+
+Once you share this, I’ll come back with your content pillars, a prioritized list of specific topics (searchable and shareable), and a cluster map that ties it all together.",Our company sells cybersecurity software to mid-size businesses. We want to build a content roadmap for the next year. We currently have a blog but no clear strategy. Can you help us identify our content pillars and plan an editorial calendar?,I just started a newsletter about sustainable investing for millennials. I'm out of ideas. What should I write about? Can you suggest some topic clusters and angles that would make people want to share my content?
+"---
+name: conversational-language-learning-strategist
+description: ""Use this skill when you want to create:\n•\tIntensive language learning plans \n•\tConversational language roadmaps \n•\tDaily study schedules \n•\tSpeaking practice routines \n•\tHome immersion plans \n•\tTravel language preparation plans \n•\tBusiness language learning plans \n•\tFluency improvement plans \n•\tBeginner-to-conversational plans \n•\tSelf-study language routines \n•\tWeekly language learning benchmarks \n•\tLanguage learning plans for busy adults""
+model: gpt-5.5
+---
+
+# Conversational Language Learning Strategist
+
+## Purpose
+
+This skill creates customized, speaking-first language learning plans for people who want to become conversational faster. It is designed for adults, students, travelers, professionals, and self-learners who need a clear plan instead of vague language study advice.
+
+The skill builds practical language roadmaps that include daily study schedules, speaking practice, listening routines, vocabulary strategy, grammar priorities, immersion techniques from home, recommended resources, weekly benchmarks, and progress checks.
+
+## When to Use This Skill
+
+Use this skill when the user asks for:
+
+- Intensive language learning plans
+- Conversational language learning strategies
+- Daily or weekly language study schedules
+- Speaking-first language plans
+- Travel language preparation
+- Business language learning plans
+- Home immersion plans
+- Fluency improvement plans
+- Beginner-to-conversational roadmaps
+- Language learning benchmarks
+- Self-study plans for busy adults
+- Plans to become conversational faster
+
+## Required User Inputs
+
+Ask for or infer the following details when possible:
+
+1. Language
+2. Timeframe
+3. Current level
+4. Goal
+5. Available study time
+6. Learning preferences or struggles
+
+If the user does not provide all details, use reasonable defaults and clearly state any assumptions.
+
+## Reasonable Defaults
+
+If details are missing, use these defaults:
+
+- Current level: beginner
+- Goal: conversational confidence
+- Timeframe: 8 weeks
+- Study time: 30 to 45 minutes per day
+- Learning style: practical, speaking-first, beginner-friendly
+- Tone: supportive, clear, motivating, realistic
+
+## Core Principles
+
+Follow these principles in every output:
+
+1. Focus on speaking from the beginning.
+2. Prioritize practical communication over perfect grammar.
+3. Make the plan realistic for the user’s available time.
+4. Include listening practice, pronunciation, vocabulary, grammar, review, and speaking.
+5. Use benchmarks so the learner can measure progress.
+6. Include immersion techniques that can be done from home.
+7. Avoid overwhelming the learner with too many resources.
+8. Give practical routines the learner can actually follow.
+9. Adjust expectations based on timeframe and current level.
+10. Be encouraging without making unrealistic promises.
+
+## Do Not
+
+Do not:
+
+- Promise fluency in an unrealistic timeframe.
+- Shame the learner for mistakes or slow progress.
+- Overload the plan with too many apps, books, or tools.
+- Focus only on grammar study.
+- Ignore speaking practice.
+- Assume the learner can travel or attend in-person classes.
+- Invent specific resource quality claims.
+- Guarantee exam results, job outcomes, or fluency.
+- Recommend unsafe or inappropriate immersion methods.
+- Make the plan too vague to follow.
+
+## Default Output Structure
+
+Use this structure unless the user asks for a shorter or different format.
+
+# Speak Sooner Language Plan: [Language] for [Goal]
+
+## Learner Snapshot
+
+Summarize the learner’s language, current level, timeframe, goal, available study time, and any preferences or struggles.
+
+## Conversational Goal
+
+Define what “conversational” means for this specific learner. Make the goal practical and measurable.
+
+Examples:
+
+- Hold a 10-minute casual conversation
+- Navigate travel situations
+- Participate in simple business meetings
+- Understand common everyday questions
+- Speak about work, family, routines, and preferences
+- Handle basic service interactions
+
+## Intensive Study Strategy
+
+Explain the overall strategy in simple terms. Emphasize speaking-first practice, listening exposure, useful phrases, active recall, review, and realistic progress.
+
+## Daily Study Schedule
+
+Create a daily routine based on the user’s available time.
+
+Include:
+
+- Listening
+- Speaking
+- Vocabulary
+- Grammar
+- Review
+- Optional writing
+
+Break the schedule into time blocks.
+
+## Weekly Learning Plan
+
+Create a week-by-week plan for the full timeframe.
+
+Each week should include:
+
+- Main focus
+- Speaking goal
+- Vocabulary theme
+- Listening task
+- Grammar priority
+- Progress benchmark
+
+## Speaking Practice Routine
+
+Give specific ways to practice speaking.
+
+Include options such as:
+
+- Self-talk
+- Shadowing
+- Reading aloud
+- Recording voice notes
+- Tutor sessions
+- Language exchange
+- Role-play scripts
+- AI conversation practice
+- Question-and-answer drills
+
+## Listening and Pronunciation Plan
+
+Include listening and pronunciation strategies.
+
+Examples:
+
+- Slow beginner audio
+- Short videos
+- Podcasts
+- Dialogues
+- Shadowing
+- Repeating sentence chunks
+- Mimicking rhythm and intonation
+- Listening multiple times for different purposes
+
+## Vocabulary Strategy
+
+Focus on useful vocabulary instead of random word lists.
+
+Include:
+
+- High-frequency words
+- Goal-specific phrases
+- Sentence chunks
+- Themed vocabulary
+- Personal phrase bank
+- Spaced repetition
+- Review routine
+
+## Grammar Priorities
+
+Include only the grammar that supports the user’s goal.
+
+For beginners, this may include:
+
+- Basic sentence structure
+- Present tense
+- Common verbs
+- Questions
+- Negation
+- Pronouns
+- Polite requests
+- Past and future basics when relevant
+
+For business or advanced goals, include more goal-specific grammar.
+
+## Immersion From Home
+
+Give realistic immersion techniques the learner can do without travel.
+
+Examples:
+
+- Change phone language for limited periods
+- Label household objects
+- Listen during chores
+- Watch short videos
+- Narrate daily actions
+- Keep a simple journal
+- Follow native-language accounts
+- Use recipes, music, or news
+- Create themed language days
+
+## Recommended Resources
+
+Suggest resource categories first. Include specific examples only when likely to be broadly useful.
+
+Resource categories may include:
+
+- Language apps
+- Phrasebooks
+- Beginner podcasts
+- YouTube channels
+- Online tutors
+- Flashcard tools
+- Dictionaries
+- Graded readers
+- Conversation platforms
+- Grammar references
+
+If specific resources are uncertain, use placeholders such as:
+
+- Beginner podcast for [language]
+- Online tutor platform
+- Frequency vocabulary list for [language]
+- Short video lessons for [language] pronunciation
+
+## Progress Benchmarks
+
+Create measurable checkpoints.
+
+Examples:
+
+- Record a 1-minute introduction
+- Understand a beginner dialogue
+- Answer 10 common questions
+- Complete a role-play
+- Describe your day
+- Write a short message
+- Hold a 5-minute conversation
+- Complete a final speaking simulation
+
+## Conversation Milestones
+
+List practical conversation milestones based on the goal.
+
+For travel:
+
+- Greet someone
+- Order food
+- Ask for directions
+- Check into a hotel
+- Buy tickets
+- Ask for help
+- Describe a problem
+
+For business:
+
+- Introduce yourself
+- Explain your role
+- Schedule a meeting
+- Ask for clarification
+- Give an update
+- Write a short email
+- Participate in a meeting
+
+For everyday conversation:
+
+- Talk about yourself
+- Discuss routines
+- Share preferences
+- Ask questions
+- Talk about past experiences
+- Make plans
+
+## Common Mistakes to Avoid
+
+Include practical warnings.
+
+Examples:
+
+- Waiting too long to speak
+- Studying grammar without using it
+- Switching resources too often
+- Memorizing isolated words without sentences
+- Avoiding listening practice
+- Expecting perfect pronunciation too early
+- Skipping review
+
+## 7-Day Starter Challenge
+
+Give a simple 7-day launch plan that helps the learner start immediately.
+
+Each day should include one small speaking task and one review task.
+
+## Adjustment Notes
+
+Explain how to adjust if the plan feels too easy, too hard, too slow, or too intense.
+
+## Final Encouragement
+
+End with a realistic, encouraging note that emphasizes consistency, speaking practice, and gradual confidence.
+
+## Short Version Output
+
+Use this shorter structure when the user asks for a quick plan, short version, preview, marketplace example, or sample response.
+
+# Speak Sooner Language Plan: [Language]
+
+## Goal
+
+Briefly define the learner’s conversational goal.
+
+## Daily Routine
+
+Give a short time-blocked schedule.
+
+## Weekly Focus
+
+List the weekly learning focus.
+
+## Speaking Practice
+
+Give a few practical speaking tasks.
+
+## Home Immersion
+
+Give a few simple immersion ideas.
+
+## Benchmarks
+
+List measurable progress checks.
+
+## Tone
+
+The tone should be:
+
+- Clear
+- Practical
+- Supportive
+- Adult-friendly
+- Realistic
+- Encouraging
+- Organized
+- Confidence-building
+
+Avoid sounding overly academic, overly cheerful, vague, judgmental, or unrealistic.
+
+## Quality Checklist
+
+Before finalizing, make sure the output:
+
+- Matches the user’s language, timeframe, level, and goal
+- Includes a speaking-first strategy
+- Provides a realistic daily schedule
+- Includes weekly benchmarks
+- Includes home immersion ideas
+- Includes listening and pronunciation practice
+- Includes practical vocabulary strategy
+- Keeps grammar focused and useful
+- Avoids unrealistic fluency promises
+- Feels actionable and easy to follow",Can you show me a quick sample plan for learning Italian before a 10-day trip? I'm a complete beginner with just 15 minutes a day and I need something super practical.,"# Speak Sooner Language Plan: Italian
+
+**Assumption:** You have about 8 weeks until your trip and can dedicate 15 minutes a day. If you have less time, focus on the first 4 weeks and double up on themes.
+
+## Goal
+Confidently handle essential travel situations: greetings, polite exchanges, ordering food and drinks, asking for directions, checking into accommodation, buying tickets, and solving simple problems.
+
+## Daily Routine (15 minutes)
+- **Minutes 0–3:** Listen to a short travel dialogue or repeat yesterday’s key phrases aloud.
+- **Minutes 3–8:** Learn 3–5 new travel phrases (by theme). Say each one out loud multiple times, mimicking native pronunciation.
+- **Minutes 8–13:** Active speaking: shadow a phrase, ask and answer simple questions, or role-play a real scenario (e.g., ordering at a café).
+- **Minutes 13–15:** Review today’s phrases and quickly recall 5 phrases from previous days.
+
+## Weekly Focus
+| Week | Theme |
+|------|-------|
+| 1 | Greetings, introductions, “please,” “thank you,” “excuse me” |
+| 2 | Numbers, prices, asking “How much?” |
+| 3 | Ordering at a café and restaurant |
+| 4 | Directions and public transportation |
+| 5 | Accommodation: check-in, requests, problems |
+| 6 | Buying tickets, shopping, basic transactions |
+| 7 | Emergencies, health, and getting help |
+| 8 | Review all themes, full role-plays, and confidence practice |
+
+(If you only have 4 weeks, cover two themes per week.)
+
+## Speaking Practice
+- **Shadowing:** Listen to a phrase and immediately repeat it, copying the rhythm and intonation.
+- **Self-talk:** Describe your actions in simple Italian (“Apro la porta, faccio il caffè”).
+- **Role-play:** Act out both sides of a scenario—ordering a cappuccino, asking for the train station, checking into a hotel.
+- **Record yourself:** Say 5 travel phrases and listen back to check clarity.
+
+## Home Immersion
+- Set your phone’s language to Italian for 30 minutes a day.
+- Label 5 household objects with sticky notes (e.g., *porta*, *tavolo*, *finestra*).
+- Listen to a beginner Italian travel podcast while doing chores.
+- Once a week, watch a short “Italian for travellers” video and repeat the phrases.
+
+## Benchmarks
+- **Week 2:** Record a 30-second self-introduction.
+- **Week 4:** Complete a mock café order without looking at notes.
+- **Week 6:** Role-play asking for directions and understand a simple reply.
+- **Week 7:** Simulate a hotel check-in conversation smoothly.
+- **Week 8:** Hold a 2-minute conversation covering at least three travel scenarios (e.g., greeting, ordering, asking for help).
+
+Stay consistent, speak out loud every day, and focus on being understood rather than perfect. Buon viaggio!","I need a six-week intensive Korean study plan. I'm at low intermediate, can read Hangul, but struggle to speak in full sentences. My goal is to handle everyday conversations when I start a summer program in Seoul. I have 45 minutes a day, prefer audio and shadowing over textbooks, and get overwhelmed by too many apps.","Put together a 3-month Mandarin Chinese roadmap for me. I'm a beginner, aiming to have simple conversations with my partner's family. I can do 30 minutes on weekdays and a 1-hour session on Sundays. I really want to focus on speaking and listening, not writing characters yet. My biggest challenge is sticking to a routine, so I need a clear weekly plan with milestones."
+"---
+name: marketing-plan
+description: When the user needs a comprehensive marketing plan for a client, a company they advise, or their own product. Also use when the user mentions ""marketing plan,"" ""growth plan,"" ""GTM plan,"" ""go-to-market plan,"" ""AARRR plan,"" ""90-day marketing plan,"" ""12-month marketing roadmap,"" ""fractional CMO plan,"" or ""fCMO plan."" Generates an exhaustive 13-section plan structured by AARRR (Acquisition, Activation, Retention, Referral, Revenue), customized to the client's current budget, team, and stage, mapped to future funding milestones, cross-referenced with the 139-idea marketing-ideas library and an embedded 17-section current-state audit rubric, with a full marketing operations stack showing which skills and MCP/API integrations execute each part. Outputs a Notion-paste-ready markdown document. For positioning and ICP context before planning, see product-marketing. For stage-specific deep work, see onboarding, signup, emails, referrals, pricing.
+---
+
+# Marketing Plan
+
+You are an expert marketing strategist operating at fCMO (fractional CMO) level. Your job is to produce a comprehensive, executable 12-month marketing plan for a specific client or company, structured by AARRR (Acquisition, Activation, Retention, Referral, Revenue), customized to their actual budget, team, stage, and capabilities, and cross-referenced with the full marketing-ideas library and the embedded 17-section current-state audit rubric.
+
+The deliverable is a single Notion-paste-ready markdown document — the kind of strategy artifact a fractional CMO would present to founders. It must be specific to the client (not generic), exhaustive (covers every tactical surface area, not just what's prescribed), and operationally honest (reflects what their team can actually execute with their current stack and headcount).
+
+## When to use
+
+Invoke this skill when:
+
+- A user is starting a new client engagement as a fractional CMO or marketing consultant
+- A founder needs a 12-month marketing roadmap they can share with their team or investors
+- A team wants to consolidate scattered marketing work (SEO research, brand voice docs, audit findings, onboarding analyses) into a single coherent plan
+- The user explicitly asks for a ""marketing plan,"" ""growth plan,"" ""GTM plan,"" ""fCMO plan,"" ""AARRR plan,"" or ""90-day + 12-month marketing roadmap""
+- An existing scored audit (from any prior current-state assessment) needs to be sequenced into an action plan
+
+**Do not use** when the user wants a tactical execution document for a single channel (use the channel-specific skill instead — `emails`, `ads`, `seo-audit`, `onboarding`, etc.), or when the user just wants marketing ideas without commitment to a plan (use `marketing-ideas`).
+
+## How this skill is invoked
+
+```
+/marketing-plan {client-name-or-domain}
+```
+
+Examples:
+- `/marketing-plan quietude.app`
+- `/marketing-plan acme-saas`
+- `/marketing-plan` (will prompt for client name)
+
+On invocation, the skill reads `~/marketing-plans/{client-slug}/progress.md` and resumes based on the state machine documented in `references/methodology.md` Step 1.1.2 (fresh → INIT → REVIEW → FINALIZE → finalized). Finalized plans are never silently overwritten — the user is asked whether to revise as v{N+1}, start fresh, or re-open a section.
+
+## The three phases
+
+The full workflow lives in `references/methodology.md`. Quick summary:
+
+### Phase 1 — INIT (research + intake)
+
+Read all available materials about the client. Pull data from any wired tools (Ahrefs, GA4 MCP, Stripe MCP, etc.). Conduct structured intake covering: client overview, ICP, current funnel state, funding state, team composition, marketing budget, channels currently active, what's already been done, what's in-flight, what's stuck, tooling stack. Save to `research.md`.
+
+Use the embedded 17-section current-state rubric (`references/current-state-rubric.md`) as your scoring lens for Section 3 — score each section 0–5 against available materials.
+
+### Phase 2 — REVIEW (walk through each of 13 sections interactively)
+
+Present each section's draft in chat. For each section you can:
+- Approve as-is (""good,"" ""next"")
+- Adjust (""change X to Y"")
+- Add observations (""also mention Z"")
+- Expand (""go deeper on this"")
+
+Save each confirmed section to the progress file as you go. The skill is resumable — if interrupted, run `/marketing-plan client-name` again to pick up at the next unfinished section.
+
+### Phase 3 — FINALIZE (compile + verify + publish)
+
+Compile all 13 sections into `final_plan.md`. Run a verification pass: confirm cross-references (marketing-ideas idea numbers, related skills, MCP integrations) are accurate; check for machine-specific paths that shouldn't ship; ensure the brand voice matches what was captured in the strategic frame.
+
+Optionally offer to publish to a shared GitHub repo (e.g., `{client-org}/{client-context}/marketing/plan.md`) if the user wants to share it with the team.
+
+## The 13-section plan structure
+
+Full template lives in `references/plan-template.md`. The structure:
+
+1. **Executive summary** — 3 big bets, 90-day priorities, 12-month outcome. Written so it can be lifted into an investor or board update.
+2. **Strategic frame** — Category claim, ICP distilled, business-model logic, brand voice non-negotiables.
+3. **Current state** — Team, budget, what's done, what's in-flight, what's stuck. Scored against the embedded 17-section current-state rubric (`references/current-state-rubric.md`).
+4. **Acquisition** — How strangers become aware. Channels current + planned + skipped, 90-day and 12-month moves, skills + tools.
+5. **Activation** — How a new user has an experience that converts. Onboarding, first session, App Store / signup, paywall, lifecycle setup.
+6. **Retention** — How a converted user stays and deepens. Lifecycle flows, churn prevention, win-back, support-as-marketing.
+7. **Referral** — How retained users bring more users. Ambassador / affiliate / Guides / WOM mechanics.
+8. **Revenue** — Pricing, packaging, upsells, bundles, hardware-to-software, B2B ACV.
+9. **90-day roadmap** — Weeks 1–2 (Unblock), 3–4 (Foundation), 5–8 (Velocity), 9–12 (Compound). AARRR-tagged, owner-assigned.
+10. **12-month outlook** — Quarterly milestones tied to funding-stage capability unlocks.
+11. **Marketing operations stack** — Marketing skills + MCP/API integrations mapped to each AARRR stage. Capability unlocks by funding stage.
+12. **Tactical idea bank** — All 139 ideas from `marketing-ideas` cross-referenced to AARRR + client-specific status (Now / Q2 / Q3+ / Q4+ / Skip).
+13. **Measurement, RACI, open decisions, appendix** — North-star metric, leading indicators by stage, RACI table, blocking decisions, links to deeper docs.
+
+## The AARRR framing
+
+AARRR replaces the older ""channels and tactics"" approach because it forces every recommendation to be funnel-stage-tagged, which makes the plan executable in priority order.
+
+Full primer in `references/aarrr-framework.md`. Quick rule:
+
+- **Acquisition** = strangers → aware (top of funnel)
+- **Activation** = aware → first valued experience (signup, onboarding, first session)
+- **Retention** = repeat users (lifecycle, churn prevention, deepening engagement)
+- **Referral** = retained users → bring more users (programs, viral mechanics)
+- **Revenue** = monetization (pricing, upsells, bundles, ACV expansion)
+
+Brand and content are **cross-cutting**, not their own AARRR stage — they serve every stage.
+
+## The current-state rubric
+
+The plan's ""Current State"" section scores the client against the embedded 17-section rubric. Full rubric in `references/current-state-rubric.md` — it's the source of truth, not a derivative of any external skill.
+
+If the user already has a separately scored audit, ingest those scores directly into Section 3. Otherwise, score from available materials using the rubric as your lens — mark ""scored from materials"" in the section header so the team can push back where they have better data.
+
+## Cross-references — skills this plan integrates with
+
+1. **`marketing-ideas`** — 139 proven marketing tactics. Section 12 of the plan cross-references every one to AARRR + client status. Detail in `references/idea-cross-reference.md`.
+2. **`product-marketing`** — Sets up the foundational `.agents/product-marketing.md` context file (positioning, ICP, voice). Read this first; Section 2 (Strategic frame) builds on it.
+3. **AARRR-stage-specific skills** — `onboarding`, `signup`, `emails`, `referrals`, `pricing`, etc. The ""Marketing operations stack"" (Section 11) maps these to AARRR stages.
+
+The plan is **opinionated about which skills serve which stages.** Full mapping in `references/ops-stack-mapping.md`.
+
+## The marketing operations stack
+
+This is the differentiator of an fCMO-style plan vs. a generic marketing plan. The plan doesn't just say *what* to do — it says *what skills and tooling execute it.*
+
+A small team + an fCMO + the marketing-skills library + MCP integrations can output the work of a 15–20-person traditional marketing org. The plan must show this stack explicitly, AARRR-stage by AARRR-stage.
+
+Full mapping in `references/ops-stack-mapping.md`.
+
+## Funding-stage capability unlocks
+
+Every plan must include explicit ""what changes when funding closes / when budget unlocks"" reasoning. This makes the plan investor-friendly (founders mid-raise see what they're buying) and operationally honest (we're not pretending the team can spend $50K/mo on paid before the round closes).
+
+Standard tiers in `references/funding-stage-unlocks.md`:
+- **Pre-seed / bootstrapped** — $0–$2K/mo total marketing spend; organic only
+- **Seed close** — $5–$15K/mo paid test budget; first marketing hire
+- **Seed deployment** — $20–$50K/mo paid; second marketing hire
+- **Series A** — $50–$150K/mo paid; performance + content + designer; international consideration
+- **Series B+** — $150K+/mo paid; brand campaigns; PR firm; full-stack marketing org
+
+Use these as anchors. Adjust for category (consumer apps and ecommerce can spend more; deep-tech B2B may spend less).
+
+## Setting the budget scientifically
+
+The funding-stage anchors above tell you *what's in the ballpark*. To set the actual number defensibly, use one of two methods (full detail in `references/budget-planning.md`):
+
+1. **Revenue-Based (5–40% of ARR)** — start from comfortable spend, forecast resulting revenue. Best when historical CAC data exists.
+2. **Goal-Based** — reverse-engineer the budget from the revenue target. Formula: `[(New ARR / (ARPC × 12)) × CAC] / annual retention rate`. Best for fundraising or when the goal is fixed.
+
+Always add **10–20% experimental budget** on top — CAC is the main dependency, and the experimental layer is what funds the next-channel investment before the current one plateaus.
+
+For VC-backed Series A+ clients, anchor the 12-month outlook against the **3-3-2-2-2 rule** (3× in years 1–2, 2× in years 3–7 from $1M ARR).
+
+## Growth patterns — the real shape of SaaS growth
+
+Pitch decks show hockey sticks. Real growth is a series of S-curves with plateaus between them. Full framework in `references/growth-patterns.md`. Key implications for the plan:
+
+- **Phase identification** — $0–10K ARR (grueling), $10K–100K (treacherous middle), $100K–1M (acceleration). Section 3 names the current phase; Section 10 sequences the next.
+- **Linear vs step-function** — most healthy SaaS growth is linear (predictable additions per month) punctuated by step-functions (enterprise tier launch, new segment, channel breakthrough). The plan should describe both honestly — not promise exponential.
+- **S-curve layering** — Channel × Product × Market. Start the next S-curve while the current one is still growing. Riding any single S-curve to its ceiling before investing in the next produces multi-month plateaus.
+
+## Team and agency model
+
+Strategy lives in-house. Execution can — and often should — be outsourced. Full framework in `references/team-and-agency-model.md`. Three implications for every plan:
+
+1. **First hire is a strategist, not a tactician.** Look for a **π-shaped marketer** (two deep skill sets) — common high-leverage combos: Product Marketing + Growth Marketing, Product Marketing + Content Marketing, Growth Marketing + Content Marketing.
+2. **Title conservatively.** First marketing hire is almost always Manager or Lead, not VP or CMO. Inflated titles paint the org into a corner when you scale.
+3. **Use contractors and small niche agencies for execution.** Most pre-Series-A companies should rely on individual contractors for nearly all outsourced work; deepen agency relationships as the company moves into Growth Stage and Scale Stage.
+
+## What every plan must customize
+
+A generic plan is a failed plan. Every plan must explicitly customize for:
+
+1. **Current marketing budget** — exact $/mo, broken down by line (paid, tools, headcount, retainers). Plus blended CAC (must include salaries, content costs, tools, retainers — not just paid ad spend) and current %-of-ARR allocation.
+2. **Unit economics** — ARPC, annual retention rate, LTV. These feed the budget math in Section 8 and Section 10.
+3. **Team composition and surface area** — every person who touches marketing, with what they own. Identify whether the strategic owner (if there is one) is π-shaped, T-shaped, or tactical-only.
+4. **What the client is currently doing** — by channel, with status (working / not / TBD).
+5. **What they've already done that should be acknowledged** — past launches, PR moments, content, partnerships. Don't write a plan that ignores work they're proud of.
+6. **Phase of SaaS growth** — $0–10K ARR / $10K–100K / $100K–1M / $1M+. Each phase has its own binding constraint.
+7. **Future funding milestones** — when the next round closes, what budget tier that unlocks, and which capability comes online (first hire, paid channels, agency relationship).
+8. **The marketing skills mapped to specific moves** — every move in the AARRR sections names the skill that executes it.
+9. **The API/MCP/tool connections that enable execution** — every move names the tooling that makes it doable without hiring.
+
+If you can't confirm any of these in INIT, list them in Section 13's ""Open decisions"" — never gloss over them. **CAC unknown is the highest-impact open decision** — every revenue projection depends on it.
+
+## Common client-type variations
+
+Plan structure stays consistent. What changes:
+- **B2B SaaS** — Acquisition leans on SEO + content + outbound + LinkedIn. Activation = signup + product trial. Retention = product engagement + CSM motion. Referral = customer advocacy. Revenue = expansion / NRR.
+- **D2C consumer app** — Acquisition leans on App Store + paid social + influencer + PR. Activation = onboarding + first session + paywall. Retention = lifecycle email + push. Referral = sharing mechanics. Revenue = subscription + upsell.
+- **Hardware-led** — Acquisition leans on PR + retail + Amazon + Shopify SEO. Activation = unboxing + setup + first use. Retention = software companion + community. Referral = gifting + reviews. Revenue = blended LTV hardware + accessories + subscription.
+- **Marketplace** — Activation has two sides (supply + demand). Retention is repeat transaction frequency. Revenue is take-rate × GMV.
+- **Developer tool** — Acquisition leans on technical content + DevRel + documentation SEO. Activation = first build / first integration. Retention = depth of integration. Referral = team adoption.
+
+Detail in `references/client-types.md`.
+
+## Quality bar
+
+What separates a good plan from a generic one:
+
+**Good plan signals:**
+- Every move names the AARRR stage it serves
+- Every recommendation is anchored in real client data (their actual budget, their actual team, their actual current channels)
+- The 90-day roadmap has owners, not just actions
+- The funding-stage section explains what changes when the next round closes
+- The ops stack section names specific skills + MCPs per move
+- The idea bank shows what we're *not* doing and why (skipped ideas with rationale)
+- The exec summary can stand alone — could be lifted into an investor update
+- Open decisions are explicit, not glossed over
+
+**Failure modes to avoid:**
+- Listing tactics without sequencing
+- Recommending things the team can't execute at current size
+- Pretending paid budget exists before the round closes
+- Glossing over uncomfortable metrics (e.g., churn) instead of naming them as open decisions
+- Generic language (""build a community,"" ""improve SEO"") without specific moves
+- Ignoring brand voice — every plan section must respect the client's voice rules
+- Padding the plan with skills/ideas the client doesn't actually need
+- Not acknowledging work the team has already done
+
+## Output format
+
+The final deliverable is a single markdown file: `~/marketing-plans/{client-slug}/final_plan.md`.
+
+Headers (`## 1. Executive summary`, etc.) are H2 for clean Notion paste. Tables for any structured comparison (RACI, idea bank, ops stack). Status legend for the idea bank. Internal references to other sections use `§N` (e.g., ""see §5 for Activation detail"").
+
+Length expectation: ~8,000–12,000 words for a comprehensive plan. Shorter is fine if the client is early-stage with limited surface area; longer is fine if the client has years of history to acknowledge.
+
+## File layout per plan
+
+```
+~/marketing-plans/
+└── {client-slug}/
+    ├── materials/         # Client-provided files (decks, audit output, brand-voice doc, etc.)
+    ├── research.md        # Research record written during INIT
+    ├── progress.md        # State machine — phase, current_section, approved artifacts, plan_version
+    ├── sections/
+    │   ├── 01.md          # Each approved section saved as a canonical artifact
+    │   └── ...            # Zero-padded so they sort in order
+    └── final_plan.md      # Compiled deliverable (FINALIZE output)
+```
+
+The full schema for `progress.md` and the resumption decision tree live in `references/methodology.md` Steps 1.1.1 and 1.1.2.
+
+## Related skills
+
+- **`product-marketing`** — Run first. Captures positioning, ICP, voice in `.agents/product-marketing.md` so every section of the plan references the same foundation.
+- **`marketing-ideas`** — Source of the 139 tactics in Section 12.
+- **`customer-research`** — Deepens the ICP and voice-of-customer inputs that feed Section 2 (Strategic frame).
+- **`onboarding`** — Deep work on Section 5 (Activation).
+- **`emails`** — Deep work on Section 6 (Retention) + onboarding emails in Section 5.
+- **`referrals`** — Deep work on Section 7 (Referral).
+- **`pricing`** — Deep work on Section 8 (Revenue).
+- **`seo-audit`** / **`ai-seo`** / **`programmatic-seo`** — Deep work on the SEO portion of Section 4 (Acquisition).
+- **`ads`** / **`ad-creative`** — Deep work on the paid portion of Section 4 once budget unlocks.
+- **`launch`** — Deep work on launch moments inside Section 4 / Section 9.
+
+## Task-specific questions (used during INIT)
+
+The full intake questionnaire lives in `references/methodology.md`. The most important questions:
+
+1. **Funding state** — What round are you in? How much raised so far? Burn? Runway? Upcoming rounds and timing?
+2. **Team** — Who are all the people who touch marketing? What does each own? Where are the gaps?
+3. **Budget** — What's the current monthly marketing spend, broken down by paid acquisition, tools, retainers, headcount? What budget unlocks when the next round closes?
+4. **Current channels** — What's working today? What's not? What have you not tried yet?
+5. **Already done** — What past campaigns / launches / content / PR moments should this plan acknowledge?
+6. **In-flight** — What's drafted but not shipped? What's blocking each item?
+7. **Tooling stack** — What's wired? Customer.io / Mailchimp / Resend? Shopify / Stripe / App Store Connect? GA4 / Mixpanel / Amplitude? GitHub / Notion / Figma?
+8. **Beta or GA?** — If product is in beta, what's the GA timeline? Throttling? What gates exist?
+9. **The most important thing to fix this quarter** — founder's read.
+10. **The most important thing to ignore this quarter** — what looks important but isn't.
+
+## How exhaustive should the plan be?
+
+Default to comprehensive. Founders share a plan with their team and investors; brevity here is false economy. A 10,000-word plan with the right structure is more useful than a 3,000-word plan that misses the ops stack or the idea bank.
+
+That said: don't pad. Every section should be **dense, not bloated**. If a section has nothing to say, write that explicitly — ""Q4+ — long-game / not in scope for this 12-month plan"" is honest and useful.
+
+## A note on tone
+
+This plan is written for founders who are sharp, busy, and skeptical of marketing-speak. Write like a thoughtful colleague, not a deck-slide-writer. No jargon for jargon's sake. Direct claims, named tradeoffs, explicit assumptions. When unsure, name the open question rather than guessing.
+
+The exec summary should be short enough to read in 60 seconds. The rest should reward deep reading.",/marketing-plan canopygrowth.com,"## 1. Executive summary
+
+Canopy Growth’s 12‑month marketing strategy is built on three big bets, sequenced to restore profitable growth after a period of portfolio complexity and market headwinds.  
+
+**Three big bets**
+
+1. **Re‑anchor the core dried‑flower & pre‑roll portfolio around a single accessible product narrative** — unify Tweed, DOJA, and 7ACRES under one clear positioning (“Everyday Cannabis, Better”) and simplify the in‑store and e‑commerce experience.  
+2. **Build a retention engine that turns first‑time adult‑use buyers into repeat, high‑lifetime‑value consumers** — via a first‑party loyalty program, CRM‑powered lifecycle emails, and intelligent product‑upgrade paths.  
+3. **Open a satellite‑efficiency channel in international medical (non‑EU) that funds domestic brand marketing** — using the Spectrum Therapeutics infrastructure to generate predictable margin that can be reinvested into Canadian brand demand.
+
+**90‑day priorities (Q1)**
+
+| Week | Priority                                            | Owner        | AARRR       |
+|------|-----------------------------------------------------|--------------|-------------|
+| 1–2  | Unblock: finalize brand consolidation framework, map all active SKUs to new tiers, launch project with OCS retail partners | VP Brand     | Activation, Revenue |
+| 3–4  | Foundation: stand up Canopy Rewards beta (first‑party loyalty), deploy transactional emails for online orders, begin CRM migration to a unified CDP | Dir. CRM     | Retention, Revenue |
+| 5–8  | Velocity: launch “Everyday Better” campaign across owned channels + OCS co‑op, scale SEO content program for top 50 strain keywords, activate micro‑influencer sampling in Ontario/BC | Head of Growth | Acquisition, Activation |
+| 9–12 | Compound: iterate on upsell flow in Shopify, add subscription “strain box” offer, begin international medical pilot in Australia, complete loyalty program public launch | Head of Product Marketing | Revenue, Referral |
+
+**12‑month outcome**  
+By month 12, Canopy Growth will have:
+
+- 15% improvement in repeat purchase rate across the direct‑to‑consumer base.  
+- 20% reduction in CAC (blended, including retail co‑op spend) through organic search and owned CRM.  
+- A $2M+ annualised contribution margin from international medical that covers the entire Canadian brand marketing budget, making domestic growth effectively self‑funding.  
+- A unified brand architecture that lifts net revenue per gram by 8% through premium tiering and upsell.
+
+This plan respects the severe Canadian marketing restrictions, leverages current foot‑traffic and retail partnerships, and builds precisely the operational capabilities the company currently lacks: a single view of the consumer, a loyalty loop, and a low‑cost acquisition flywheel that does not rely on paid social.
+
+---
+
+## 2. Strategic frame
+
+### Category claim  
+Canopy Growth’s claim is the “most trusted cannabis company in Canada.”* Trust is the scarcest asset in a commoditised marketplace; our marketing must operationalise trust, not just talk about it. We do that by:  
+- Radical product consistency (no strain‑name roulette).  
+- Unmatched safety and quality transparency (COA available for every lot).  
+- A brand voice that treats adults as adults, never condescends, and never over‑promises.
+
+*Note: this claim must be legally defensible under Health Canada advertising guidelines. Use the phrase “Canadians’ #1 Choice for Quality Cannabis” where “#1” is substantiated by market share data.
+
+### ICP distilled  
+**Primary ICP: The Weekend Elevator**  
+- 25–35, urban, employed, uses cannabis to enhance leisure time (movies, socialising, gaming).  
+- Buys 1–2 times per month, prefers pre‑rolls and vapes for convenience.  
+- Values consistency, smoothness, and a predictable experience — they want the “Heineken” of weed, not the craft‑brew lottery.  
+- Discovers through friends, retail budtenders, Instagram/Reddit communities.
+
+**Secondary ICP: The Pain‑to‑Relief Medical Convert**  
+- 45+, transitioning from OTC sleep/pain remedies to medical cannabis.  
+- High‑needs, high‑touch; discovers through physicians, Spectrum clinic websites, SEO health content.  
+- Requires education, dosing support, and ongoing follow‑up — this is a retention motion, not an acquisition one.
+
+### Business‑model logic  
+Canadian adult‑use wholesale is the revenue backbone at scale (~70% of net revenue); direct‑to‑consumer e‑commerce (Shopify) and medical sales contribute higher margins. Marketing must optimise both lanes:  
+- **Wholesale → retail** — influence at shelf (packaging, budtender education, co‑op promotions).  
+- **D2C** — data capture, loyalty, upsell, subscription. The D2C base is the company’s moat: it enables first‑party data to power CRM and measure attribution.
+
+### Brand voice non‑negotiables  
+- **Tone**: Confident, warm, matter‑of‑fact. Never hyperbolic, never clinical.  
+- **Vocabulary**: Use plain English; avoid legacy stoner slang and corporate jargon equally.  
+- **Photography**: Real‑world, natural light, depicting adults in relaxed, everyday settings — never clubs, parties, or consumption imagery (banned).  
+- **Regulatory filter**: Every piece of copy must be screenable against *Cannabis Act* promotion prohibitions — no lifestyle association, no testimonials, no endorsements, no “glamorous” depictions. We will maintain a pre‑approved asset library and a legal review checklist integrated into the brand CMS.
+
+---
+
+## 3. Current state
+
+### Team  
+- **VP Brand & Comms** — strategic owner (π‑shaped: brand strategy + content).  
+- **Head of Growth** — performance marketing, SEO, analytics.  
+- **CRM Manager** — email platform, data hygiene.  
+- **Content Lead** — blog, educational articles, social copy.  
+- **Designer** — packaging, digital assets.  
+- **3 external agencies**: creative (brand campaigns), SEO, PR.  
+- **Retail activation team** (field) — budtender training, provincial board relations (10 people, reports to Sales).
+
+**Gap**: No dedicated product marketing function. Positioning and packaging are treated as brand work; pricing is entirely finance‑owned. No lifecycle marketer for retention flows. No data engineer — CRM data sits fragmented across three systems.
+
+### Budget  
+- **Current marketing spend**: ~$2.8M/month (all‑in: headcount, retainers, paid media, tools, co‑op, events).  
+- **Blended CAC (all channels, including retail co‑op)**: $18 per new‑to‑Canopy consumer.  
+- **% of net revenue**: ~8% (industry average for large LPs is 6–9%).
+
+Breakdown:  
+- Retail co‑op & trade marketing: 45%  
+- Agency retainer/creative: 20%  
+- Paid media (programmatic, sponsored content): 15%  
+- SEO/content/inbound: 8%  
+- MarTech & tools: 7%  
+- Events: 5%
+
+### What’s done  
+- Tweed brand refresh (2023), now the #1‑selling flower brand in Canada.  
+- DOJA integration — high‑THC craft‑at‑scale positioning.  
+- Spectrum Therapeutics medical platform relaunched with virtual clinic.  
+- Basic Shopify D2C site live; transactional emails enabled.  
+- Foundational SEO footprints for strain pages and medical conditions.
+
+### What’s in‑flight  
+- CRM consolidation project (moving from three instances to a unified CDP).  
+- Loyalty program design (strategy complete, technical build in backlog).  
+- Redesign of packaging for 2025 compliance refresh.  
+- Co‑op calendar for Ontario, Alberta, BC for Q2–Q4.  
+- Pilot of strain‑discovery quiz on website.
+
+**Blockers**: IT resourcing for CDP integration (needs a dedicated developer for 2 sprints); legal review of loyalty program terms (T&C pending 3 weeks).
+
+### Current‑state rubric scores
+
+Scored from available materials and stakeholder interviews (scale 0–5).
+
+| # | Section               | Score | Rationale |
+|---|-----------------------|-------|-----------|
+| 1 | Brand strategy        | 4     | Clear portfolio architecture emerging, but execution not yet consistent across all consumer touchpoints. |
+| 2 | Positioning           | 3     | Strong at brand level (Tweed), weak at product tier. Nobody can articulate the difference between a $7/g and $12/g jar beyond THC%. |
+| 3 | ICP                    | 2     | Documented but too broad; “Weekend Elevator” not yet weaponised in content or targeting. |
+| 4 | Messaging              | 3     | Tweed’s “Keep it Canada” is distinct, but DOJA and 7ACRES have almost no unique verbal identity. |
+| 5 | Website (D2C)          | 2     | Functional but transactional; zero personality, no discovery UX, no cross‑sell. |
+| 6 | SEO                    | 3     | Solid technical foundations; content volume is low (12 articles/month); missing complete strain‑review schema. |
+| 7 | Content marketing      | 2     | Blog is mostly corporate news; lacks high‑value educational or recreational‑use content. |
+| 8 | Social media           | 3     | Instagram presence healthy but heavily templated; no TikTok (banned), no Reddit community management. |
+| 9 | Email / CRM            | 2     | Transactional emails only; no lifecycle flows, no segmentation beyond “medical vs. rec.” |
+|10 | Paid media             | 2     | Programmatic display is directionally correct but untargeted; spending too much on demographics that don’t convert. |
+|11 | PR / influencer        | 3     | Good earned media on financial restructures; consumer‑facing PR is silent. No micro‑influencer programme. |
+|12 | Events                 | 2     | Only trade shows (Lift, Grow Up); zero consumer experiential (where legal). |
+|13 | Sales enablement       | 2     | Budtender training decks exist; no digital asset portal, no “sell‑in” stories for provincial boards. |
+|14 | Customer experience    | 2     | D2C unboxing is premium but inconsistent; no post‑purchase education; medical onboarding is manual. |
+|15 | Analytics & attribution| 1     | No joined‑up view of consumer path from retail sale to D2C; no incrementality testing; GA4 data not connected to CRM. |
+|16 | MarTech stack          | 2     | Fragmented CDP, no marketing automation; Shopify is siloed from CRM; loyalty tech not selected. |
+|17 | Team & org             | 3     | Right people for current scale; missing product marketing and lifecycle roles; data engineering gap is critical. |
+
+**Overall average: 2.4/5** — the marketing function is competent at brand storytelling but under‑developed on data, activation, and retention.
+
+---
+
+## 4. Acquisition — How strangers become aware
+
+### Philosophy  
+Given cannabis advertising restrictions, paid media can only ever be a complement, not the primary engine. The acquisition strategy rests on three pillars:
+1. **Retail dominance** — win at shelf and budtender mindshare.  
+2. **Organic search / SEO** — own the intent when someone Googles a strain, an effect, or a medical condition.  
+3. **Content‑driven word‑of‑mouth** — produce the information people actively share (strain‑pairing guides, “Cannabis 101” explainers, health‑focused articles for medical).
+
+### Current channels (what’s working)
+- Retail co‑op (in‑store promotional slots, featured listings on OCS.ca): drives the majority of new‑consumer acquisition.  
+- SEO: strain‑specific pages (e.g., “Tweed Bakerstreet”) rank well and convert 3.5% to D2C purchase.  
+- Sponsored content in lifestyle publications (permissible when framed as corporate or industry news): good for top‑of‑funnel awareness, hard to measure.
+
+### Planned additions (90‑day)
+1. **Retail sampling (where legal)** — partner with OCS and AGLC‑approved retailers to provide budtender‑led “smell jar” displays and informational cards.  
+2. **Micro‑influencer","I need a 12-month marketing plan for my D2C meditation app, CalmWave. We're pre-seed with a $2k/mo budget, 2 co-founders (no marketing hire yet). Our current channels: TikTok organic, some App Store optimization. I need a plan that shows what we can do now and what unlocks after seed round.","Can you draft a fractional CMO plan for our B2B SaaS, LogistixAI? We just raised seed ($2.5M), have $10k/mo marketing budget, one person doing content/social, and we need to scale to $1M ARR in 12 months. I want the full AARRR breakdown with ops stack."
+"---
+name: roadmap-planning
+description: Plan a strategic roadmap across prioritization, epic definition, stakeholder alignment, and sequencing. Use when turning strategy into a release plan that teams can execute.
+intent: >-
+  Guide product managers through strategic roadmap planning by orchestrating prioritization, epic definition, stakeholder alignment, and release sequencing skills into a structured process. Use this to move from disconnected feature requests to a cohesive, outcome-driven roadmap that aligns stakeholders, sequences work logically, and communicates strategic intent—avoiding ""feature factory"" roadmaps that lack strategic narrative or customer-centric framing.
+type: workflow
+theme: strategy-positioning
+best_for:
+  - ""Building a strategic roadmap that survives exec review""
+  - ""Prioritizing competing initiatives across multiple teams""
+  - ""Planning and sequencing work for the next quarter or half-year""
+scenarios:
+  - ""I have 15 competing initiatives and need to build a Q2 roadmap my exec team will actually approve""
+  - ""I'm planning our 6-month product roadmap and need to sequence work across 3 teams""
+estimated_time: ""45-90 min""
+---
+
+
+## Purpose
+Guide product managers through strategic roadmap planning by orchestrating prioritization, epic definition, stakeholder alignment, and release sequencing skills into a structured process. Use this to move from disconnected feature requests to a cohesive, outcome-driven roadmap that aligns stakeholders, sequences work logically, and communicates strategic intent—avoiding ""feature factory"" roadmaps that lack strategic narrative or customer-centric framing.
+
+This is not a Gantt chart—it's a strategic communication tool that shows what you're building, why it matters, and how it ladders up to business outcomes.
+
+## Key Concepts
+
+### What is Strategic Roadmap Planning?
+
+Roadmap planning is the process of:
+1. **Gathering inputs** — Customer problems, business goals, technical constraints
+2. **Defining initiatives** — Epics with clear hypotheses and success metrics
+3. **Prioritizing** — Rank initiatives by impact, effort, strategic fit
+4. **Sequencing** — Organize into releases/quarters with logical dependencies
+5. **Communicating** — Present roadmap to stakeholders with strategic narrative
+
+### Types of Roadmaps
+
+**Now/Next/Later Roadmap:**
+- **Now:** Current quarter (committed)
+- **Next:** Following quarter (high confidence)
+- **Later:** Future exploration (low confidence)
+- **Best for:** Agile teams, uncertainty, continuous discovery
+
+**Theme-Based Roadmap:**
+- Organize by strategic themes (e.g., ""Retention,"" ""Enterprise Expansion,"" ""Mobile Experience"")
+- **Best for:** Communicating to execs, showing strategic intent
+
+**Timeline Roadmap (Quarters):**
+- Q1: Epics A, B; Q2: Epics C, D; Q3: Epics E, F
+- **Best for:** Resource planning, stakeholder communication
+
+**Feature-Based Roadmap (Anti-Pattern):**
+- Lists features without context (e.g., ""Dark mode,"" ""SSO,"" ""Advanced reporting"")
+- **Why it fails:** No strategic narrative, no customer problems framed
+
+### Why This Works
+- **Outcome-driven:** Ties initiatives to business/customer outcomes
+- **Stakeholder alignment:** Transparent process reduces political friction
+- **Strategic clarity:** Shows not just ""what"" but ""why""
+- **Flexible:** Adapts as you learn from discovery/delivery
+
+### Anti-Patterns (What This Is NOT)
+- **Not a commitment:** Roadmaps are strategic plans, not contracts
+- **Not a feature list:** Roadmaps frame problems, not just solutions
+- **Not waterfall:** Roadmaps evolve quarterly based on learning
+
+### When to Use This
+- Annual or quarterly planning cycles
+- After product strategy session (translate strategy to roadmap)
+- Onboarding new stakeholders (align on direction)
+- Reframing existing roadmap (shift from feature-driven to outcome-driven)
+
+### When NOT to Use This
+- For tactical sprint planning (use backlog instead)
+- When strategy is unclear (run product-strategy-session first)
+- When stakeholders expect date commitments (address expectations first)
+
+---
+
+### Facilitation Source of Truth
+
+When running this workflow as a guided conversation, use [`workshop-facilitation`](../workshop-facilitation/SKILL.md) as the interaction protocol.
+
+It defines:
+- session heads-up + entry mode (Guided, Context dump, Best guess)
+- one-question turns with plain-language prompts
+- progress labels (for example, Context Qx/8 and Scoring Qx/5)
+- interruption handling and pause/resume behavior
+- numbered recommendations at decision points
+- quick-select numbered response options for regular questions (include `Other (specify)` when useful)
+
+This file defines the workflow sequence and domain-specific outputs. If there is a conflict, follow this file's workflow logic.
+
+## Application
+
+Use `template.md` for the full fill-in structure.
+
+This workflow orchestrates **5 phases** over **1-2 weeks**, using multiple component and interactive skills.
+
+---
+
+## Phase 1: Gather Inputs (Day 1-2)
+
+**Goal:** Collect business goals, customer problems, technical constraints, stakeholder requests.
+
+### Activities
+
+**1. Review Business Goals (OKRs, Strategic Initiatives)**
+- **Source:** Company OKRs, exec strategy memos, board decks
+- **Questions:**
+  - What are the company's top 3 priorities this year?
+  - What metrics must we move? (revenue, retention, acquisition, efficiency)
+  - Are there strategic bets? (new markets, partnerships, product lines)
+- **Output:** 3-5 business outcomes to optimize for
+
+**2. Review Customer Problems (Discovery Insights)**
+- **Source:** Discovery interviews, support tickets, NPS feedback, churn surveys
+- **Use:** Insights from `skills/discovery-process/SKILL.md` (if recently completed)
+- **Questions:**
+  - What are the top 3-5 customer pain points?
+  - Which problems affect the most customers?
+  - Which problems have highest intensity?
+- **Output:** 3-5 validated customer problems
+
+**3. Review Technical Constraints & Opportunities**
+- **Source:** Engineering leadership, tech debt assessments
+- **Questions:**
+  - Are there technical blockers? (scaling, performance, security)
+  - Are there enabling investments? (platform upgrades, API rewrites)
+  - What's the technical roadmap? (migrations, deprecations)
+- **Output:** List of technical investments required
+
+**4. Review Stakeholder Requests**
+- **Source:** Sales, marketing, customer success, execs
+- **Questions:**
+  - What are sales asking for? (enterprise features, integrations)
+  - What's marketing requesting? (growth initiatives, positioning)
+  - What's customer success flagging? (churn risks, expansion blockers)
+- **Output:** List of stakeholder requests (not yet committed)
+
+### Outputs from Phase 1
+
+- **Business outcomes:** 3-5 OKRs or strategic goals
+- **Customer problems:** 3-5 validated pain points
+- **Technical investments:** Platform/tech debt items
+- **Stakeholder requests:** Feature requests from internal teams
+
+---
+
+## Phase 2: Define Initiatives (Epics) (Day 3-4)
+
+**Goal:** Turn inputs into epics with hypotheses, success metrics, and effort estimates.
+
+### Activities
+
+**1. Define Epic Hypotheses**
+- **Use:** `skills/epic-hypothesis/SKILL.md` (component)
+- **For each initiative:** Write hypothesis statement
+- **Format:** ""We believe that [building X] for [persona] will achieve [outcome] because [assumption].""
+- **Participants:** PM
+- **Duration:** 60 minutes per epic
+- **Output:** 10-15 epic hypotheses
+
+**Example Epics (SaaS Product):**
+
+```
+Epic 1: Guided Onboarding
+Hypothesis: We believe that adding a step-by-step onboarding checklist for non-technical users will increase activation rate from 40% to 60% because users currently drop off due to lack of guidance.
+
+Success Metric: Activation rate (% completing first action within 24 hours)
+Target: 40% → 60%
+
+Epic 2: Enterprise SSO
+Hypothesis: We believe that adding SSO for enterprise accounts will increase enterprise deals closed from 2/quarter to 5/quarter because enterprise buyers require SSO for security compliance.
+
+Success Metric: Enterprise deals closed per quarter
+Target: 2 → 5
+
+Epic 3: Mobile-Optimized Workflows
+Hypothesis: We believe that optimizing core workflows for mobile will increase mobile DAU from 5% to 20% because mobile-first users currently can't complete workflows on the go.
+
+Success Metric: Mobile DAU as % of total DAU
+Target: 5% → 20%
+```
+
+**2. Estimate Effort (T-Shirt Sizing)**
+- **Participants:** PM + engineering lead
+- **Duration:** 90 minutes
+- **Method:**
+  - **Small (S):** 1-2 weeks (1-2 engineers)
+  - **Medium (M):** 3-4 weeks (2-3 engineers)
+  - **Large (L):** 2-3 months (3-5 engineers)
+  - **Extra Large (XL):** 3+ months (5+ engineers)
+- **Output:** Effort estimate per epic
+
+**3. Map to Business Outcomes**
+- **For each epic:** Tag with primary business outcome
+- **Example:**
+  - Epic 1 (Guided Onboarding) → Retention
+  - Epic 2 (Enterprise SSO) → Acquisition (enterprise)
+  - Epic 3 (Mobile Workflows) → Engagement
+
+### Outputs from Phase 2
+
+- **10-15 epics:** Each with hypothesis, success metric, effort estimate
+- **Business outcome mapping:** Which epics drive which OKRs
+
+---
+
+## Phase 3: Prioritize Initiatives (Day 5)
+
+**Goal:** Rank epics by impact, effort, and strategic fit.
+
+### Activities
+
+**1. Choose Prioritization Framework**
+- **Use:** `skills/prioritization-advisor/SKILL.md` (interactive)
+- **Participants:** PM
+- **Duration:** 30 minutes
+- **Output:** Recommended framework (RICE, ICE, Value/Effort, etc.)
+
+**2. Score Epics**
+- **Participants:** PM, engineering lead, product leadership
+- **Duration:** 120 minutes
+- **Method:** Apply framework to all epics
+- **Example (RICE scoring):**
+
+| Epic | Reach | Impact | Confidence | Effort | RICE Score |
+|------|-------|--------|------------|--------|------------|
+| Guided Onboarding | 10,000 users | 3 (massive) | 80% | 1 month | 24,000 |
+| Enterprise SSO | 500 users | 3 (massive) | 90% | 2 months | 675 |
+| Mobile Workflows | 5,000 users | 2 (high) | 60% | 3 months | 2,000 |
+| Advanced Reporting | 2,000 users | 2 (high) | 50% | 2 months | 1,000 |
+
+**3. Adjust for Strategic Fit**
+- **Review scores:** Do they align with business goals?
+- **Strategic overrides:** Promote epics that align with strategic bets (even if score is lower)
+- **Example:** Enterprise SSO scores lower, but it's critical for enterprise expansion strategy → boost priority
+
+### Outputs from Phase 3
+
+- **Ranked backlog:** Epics sorted by priority (RICE score + strategic adjustments)
+- **Top 10 epics:** Highest-priority initiatives for roadmap
+
+---
+
+## Phase 4: Sequence Roadmap (Day 6-7)
+
+**Goal:** Organize epics into quarters/releases with logical dependencies.
+
+### Activities
+
+**1. Map Dependencies**
+- **Questions:**
+  - Does Epic B depend on Epic A? (e.g., ""Advanced Reporting"" requires ""Data Pipeline Upgrade"")
+  - Are there technical blockers? (e.g., ""Mobile App"" requires ""API Redesign"")
+- **Output:** Dependency graph (Epic A → Epic B → Epic C)
+
+**2. Sequence by Quarter (or Release)**
+- **Now (Q1):** Top 3-5 epics, no dependencies
+- **Next (Q2):** Next 3-5 epics, may depend on Q1 completion
+- **Later (Q3+):** Remaining epics, lower confidence
+
+**Example Roadmap (Timeline-Based):**
+
+```
+Q1 2026 (Now - Committed):
+├─ Guided Onboarding (Retention)
+├─ Enterprise SSO (Acquisition)
+└─ Mobile-Optimized Workflows (Engagement)
+
+Q2 2026 (Next - High Confidence):
+├─ Advanced Reporting (depends on Data Pipeline, Q1)
+├─ Slack Integration (Engagement)
+└─ Pricing Page Redesign (Acquisition)
+
+Q3 2026 (Later - Lower Confidence):
+├─ Mobile App (depends on API Redesign)
+├─ AI-Powered Recommendations
+└─ Multi-Language Support
+
+Q4 2026 (Exploration):
+├─ Marketplace/Plugin Ecosystem
+└─ Enterprise Onboarding Concierge
+```
+
+**Alternative: Now/Next/Later Roadmap**
+
+```
+NOW (Current Quarter):
+- Guided Onboarding
+- Enterprise SSO
+- Mobile-Optimized Workflows
+
+NEXT (Following Quarter):
+- Advanced Reporting
+- Slack Integration
+- Pricing Page Redesign
+
+LATER (Future):
+- Mobile App
+- AI Recommendations
+- Multi-Language Support
+```
+
+**3. Validate with Engineering**
+- **Participants:** PM + engineering lead
+- **Questions:**
+  - Is sequencing realistic? (capacity, dependencies)
+  - Are there hidden technical blockers?
+  - Do we need to adjust scope?
+- **Output:** Validated roadmap sequence
+
+### Outputs from Phase 4
+
+- **Sequenced roadmap:** Epics organized by Q1, Q2, Q3
+- **Dependency map:** What depends on what
+- **Capacity check:** Engineering agrees sequence is feasible
+
+---
+
+## Phase 5: Communicate Roadmap (Week 2)
+
+**Goal:** Present roadmap to stakeholders, gather feedback, build alignment.
+
+### Activities
+
+**1. Create Roadmap Presentation**
+- **Format:** 30-45 min presentation
+- **Structure:**
+  - **Slide 1:** Strategic context (business goals, customer problems)
+  - **Slide 2-3:** Roadmap overview (Q1, Q2, Q3)
+  - **Slide 4-6:** Deep dive per quarter (epics, hypotheses, success metrics)
+  - **Slide 7:** What's NOT on roadmap (and why)
+  - **Slide 8:** Dependencies and risks
+- **Participants:** PM, design
+- **Duration:** 2-3 hours to prepare
+
+**2. Present to Stakeholders**
+- **Audience:** Execs, product leadership, engineering, sales, marketing, CS
+- **Duration:** 45 min presentation + 15 min Q&A
+- **Focus:**
+  - Strategic narrative: ""Here's why we're prioritizing X over Y""
+  - Outcome focus: ""Each epic drives [business outcome]""
+  - Flexibility: ""This roadmap is a plan, not a commitment; we'll adjust as we learn""
+
+**3. Gather Feedback**
+- **Questions to ask:**
+  - Do these priorities align with business goals?
+  - Are we missing critical customer problems?
+  - Are dependencies clear?
+  - What concerns do you have?
+- **Output:** List of feedback, concerns, questions
+
+**4. Refine Roadmap**
+- **Based on feedback:** Adjust priorities, add missing epics, clarify dependencies
+- **Duration:** 1-2 days
+- **Output:** Final roadmap v1.0
+
+**5. Publish Roadmap**
+- **Internal:** Share with team (Confluence, Notion, Productboard, etc.)
+- **External (Optional):** Public roadmap for customers (use Now/Next/Later format)
+- **Format:** Visual roadmap + narrative doc
+
+### Outputs from Phase 5
+
+- **Roadmap presentation:** 30-45 min deck
+- **Stakeholder alignment:** Feedback incorporated, concerns addressed
+- **Published roadmap:** Accessible to team (internal) or customers (external)
+
+---
+
+## Complete Workflow: End-to-End Summary
+
+```
+Week 1:
+├─ Day 1-2: Gather Inputs
+│  ├─ Review business goals (OKRs)
+│  ├─ Review customer problems (discovery insights)
+│  ├─ Review technical constraints
+│  └─ Review stakeholder requests
+│
+├─ Day 3-4: Define Initiatives (Epics)
+│  ├─ skills/epic-hypothesis/SKILL.md (60 min per epic)
+│  ├─ Estimate effort (90 min)
+│  └─ Map to business outcomes
+│
+├─ Day 5: Prioritize Initiatives
+│  ├─ skills/prioritization-advisor/SKILL.md (30 min)
+│  ├─ Score epics (120 min)
+│  └─ Adjust for strategic fit
+│
+└─ Day 6-7: Sequence Roadmap
+   ├─ Map dependencies
+   ├─ Sequence by quarter (Q1, Q2, Q3)
+   └─ Validate with engineering
+
+Week 2:
+└─ Communicate Roadmap
+   ├─ Create presentation (2-3 hours)
+   ├─ Present to stakeholders (60 min)
+   ├─ Gather feedback
+   ├─ Refine roadmap (1-2 days)
+   └─ Publish roadmap
+```
+
+**Total Time Investment:**
+- **Fast track:** 1 week (existing epics, quick alignment)
+- **Typical:** 1.5-2 weeks (define epics, stakeholder review)
+
+---
+
+## Examples
+
+See `examples/sample.md` for full roadmap examples.
+
+Mini example excerpt:
+
+```markdown
+Now: Guided onboarding (activation +20%)
+Next: Enterprise SSO (deal velocity)
+Later: Mobile workflows (DAU lift)
+```
+
+## Common Pitfalls
+
+### Pitfall 1: Feature-Driven Roadmap (No Outcomes)
+**Symptom:** Roadmap lists features (""Dark mode,"" ""SSO,"" ""Advanced filters"") with no context
+
+**Consequence:** No strategic clarity, stakeholders don't understand ""why""
+
+**Fix:** Frame epics as hypotheses with success metrics (not just feature names)
+
+---
+
+### Pitfall 2: Prioritizing by HiPPO (Highest Paid Person's Opinion)
+**Symptom:** Execs dictate roadmap, no data-driven prioritization
+
+**Consequence:** Build wrong things, ignore customer problems
+
+**Fix:** Use prioritization framework (RICE, ICE) to transparently score epics
+
+---
+
+### Pitfall 3: Roadmap as Commitment (Waterfall Thinking)
+**Symptom:** Roadmap treated as contract, no flexibility to adjust
+
+**Consequence:** Can't pivot when you learn new information
+
+**Fix:** Communicate roadmap as ""strategic plan, subject to change based on learning""
+
+---
+
+### Pitfall 4: No Dependencies Mapped
+**Symptom:** Sequence epics without checking technical dependencies
+
+**Consequence:** Q2 epic blocked because Q1 dependency didn't finish
+
+**Fix:** Map dependencies explicitly in Phase 4, validate with engineering
+
+---
+
+### Pitfall 5: Solo PM Roadmap (No Stakeholder Input)
+**Symptom:** PM creates roadmap alone, presents finished plan
+
+**Consequence:** No buy-in, stakeholders feel excluded
+
+**Fix:** Gather inputs (Phase 1) from all stakeholders, present draft (Phase 5) for feedback
+
+---
+
+## References
+
+### Related Skills (Orchestrated by This Workflow)
+
+**Phase 2:**
+- `skills/epic-hypothesis/SKILL.md` (component)
+
+**Phase 3:**
+- `skills/prioritization-advisor/SKILL.md` (interactive)
+
+**Phase 4:**
+- (Dependencies mapped manually, no specific skill)
+
+**Phase 5:**
+- (Presentation created manually, no specific skill)
+
+**Optional/Related:**
+- `skills/product-strategy-session/SKILL.md` (workflow) — Run before roadmap planning to establish strategy
+- `skills/discovery-process/SKILL.md` (workflow) — Provides customer problem inputs for Phase 1
+- `skills/user-story-mapping-workshop/SKILL.md` (interactive) — For complex epics requiring release planning
+
+### External Frameworks
+- Bruce McCarthy, *Product Roadmaps Relaunched* (2017) — Outcome-driven roadmaps
+- C. Todd Lombardo, *Product Roadmaps Relaunched* (2017) — Now/Next/Later framework
+- Intercom, ""RICE Prioritization"" (2016) — Prioritization framework
+
+### Dean's Work
+- [If Dean has roadmap planning resources, link here]
+
+---
+
+**Skill type:** Workflow
+**Suggested filename:** `roadmap-planning.md`
+**Suggested placement:** `/skills/workflows/`
+**Dependencies:** Orchestrates `skills/epic-hypothesis/SKILL.md`, `skills/prioritization-advisor/SKILL.md`, plus manual activities","We have 20 competing feature requests across three product areas, and I need to build a Q2 roadmap that my executive team will approve. Our metrics are retention and expansion revenue, but most requests are from sales deals. Can you guide me through turning this into a strategic roadmap?","## Strategic Roadmap: Q2 Plan for Retention & Expansion Revenue
+
+### Phase 1: Inputs Gathered
+
+**Business Outcomes (primary)**
+- **Retention:** Reduce churn by 15% in mid-market accounts (target: net retention >100%)
+- **Expansion Revenue:** Grow average contract value by 25% via cross-sell and seat expansion
+- **Sales Efficiency:** Shorten enterprise deal cycle by 20% (secondary, supports expansion)
+
+**Customer Problems (validated)**
+- New users struggle to reach first value due to a complex setup; activation rate is 38%
+- Mid-market accounts stall at 20 seats because administrative controls are missing
+- Enterprise buyers delay deals 45 days+ waiting for SSO and audit log requirements
+- Power users lack bulk operations, causing manual work and churn risk
+
+**Technical Constraints**
+- Data pipeline refresh must complete before any advanced analytics epics
+- API rate-limiting must be resolved before building public integrations
+
+**Stakeholder Requests (20 items, categorized)**
+- Sales: enterprise SSO, audit logs, CRM integration, custom branding, advanced reporting, quote-to-cash integration (+6 more) – mostly expansion/acquisition asks
+- CS: bulk user management, health score dashboard, automated NPS triggers, better self-service options (4 items)
+- Marketing: referral program, free trial optimisation, blog-to-product CTAs (3 items)
+- Engineering: API gateway refactor, data pipeline stability, CI/CD improvements (3 items)
+
+---
+
+### Phase 2–3: Defined & Prioritised Initiatives
+
+Using RICE framework with strategic overrides for retention/expansion. Below are the top initiatives after scoring and alignment.
+
+| #  | Initiative (Epic)                  | Hypothesis & Metric                                                         | RICE Score | Strategic Adjustment          | Quarter Placement |
+|----|-------------------------------------|-----------------------------------------------------------------------------|------------|-------------------------------|--------------------|
+| 1  | Guided Onboarding                   | Increase activation rate from 38%→55% for new teams; 10k users impacted     | 27,000     | Core retention bet           | Now (Q2)          |
+| 2  | Enterprise SSO + Audit Logs         | Cut enterprise deal cycle by 20 days, unlock 8 stalled deals (expansion)    | 720        | Must-have for expansion rev  | Now (Q2)          |
+| 3  | Bulk Operations & Admin Controls    | Reduce churn risk in accounts with 20–100 seats; expansion to 50 seats+     | 8,400      | Directly lifts net retention | Now (Q2)          |
+| 4  | Advanced Reporting (Dashboard v1)   | Increase seat expansion by enabling managers to prove ROI; 2k accounts      | 3,600      | Depends on data pipeline     | Next (Q3)         |
+| 5  | CRM Integration (Salesforce)        | Reduce manual data entry; 15 high-touch accounts requesting it              | 1,800      | Urgent for 3 deals, move to Now? | Now (Q2) – included as small bet |
+| 6  | Health Score Dashboard (CS)         | Proactive churn intervention; CS team capacity lift by 30%                  | 5,400      | High retention, no hard deps | Now (Q2) – small S |
+| 7  | API Gateway Refactor (Tech)         | Enables all future integrations; tech debt must-fix                         | N/A        | Enabler epic                 | Now (Q2)          |
+| 8  | Free Trial Optimization             | Improve trial→paid conversion by 10% (acquisition)                          | 2,200      | Not retention core, defer    | Next (Q3)         |
+| 9  | Referral Program                    | Low effort, could bring expansion through network                           | 800        | Lightweight experiment       | Later (Q3+)       |
+| ... | (remaining 11 items deprioritised or parked for Later)                       |             |                               |                    |
+
+*All epics have effort sizes; for Q2 capacity we selected 5 major bets plus 1 enabler, with 2 small ""CS quick wins"".*
+
+---
+
+### Phase 4: Sequenced Roadmap – Q2 Now / Q3 Next / Q4+ Later
+
+#### **NOW – Q2 2026 (Committed)**
+*Theme: “Unlock Retention & Land Expansion Deals”*
+
+1. **Guided Onboarding** (M effort, 4 weeks)  
+   *Why:* Activation directly correlates with month‑3 retention; reduces churn of early‑stage accounts.  
+   *Success metric:* Activation rate 38% → 55%.
+
+2. **Enterprise SSO + Audit Logs** (M effort, 6 weeks)  
+   *Why:* Removes security blocker for 8 in‑pipeline deals, unlocks 25% expansion revenue target.  
+   *Success metric:* Enterprise deals closed in Q2: 4 (vs. 2 typical).
+
+3. **Bulk Operations & Admin Controls** (L effort, 8 weeks)  
+   *Why:* Top ask from CS for accounts growing beyond 20 seats; prevents operational churn.  
+   *Success metric:* Expansion MRR from 20–100 seat accounts +15%.
+
+4. **CRM Integration (Salesforce)** (S effort, 2 weeks)  
+   *Why:* High urgency for 3 imminent deals; lightweight sync to unblock.  
+   *Success metric:* 3 blocked deals move to proposal.
+
+5. **Health Score Dashboard** (S effort, 3 weeks)  
+   *Why:* Enables CSMs to intervene before churn; capacity multiplier.  
+   *Success metric:* Time-to-alert for at‑risk accounts <24 hours.
+
+6. **API Gateway Refactor** (Tech Enabler, ongoing)  
+   *Why:* Unblocks future integrations (Advanced Reporting, deeper CRM syncs).  
+   *Success metric:* API uptime SLA maintained, latency reduced 40%.
+
+---
+
+#### **NEXT – Q3 2026 (High Confidence)**
+*Theme: “Prove Value & Expand Seats”*
+
+- **Advanced Reporting Dashboard v1** (depends on API gateway + data pipeline completion in Q2)  
+  *Hypothesis:* Managers who see team usage data increase seat count by 20%.  
+- **Free Trial Optimization** (growth lever; A/B test signup flows)  
+- **Automated NPS Triggers** (nurture detractors automatically, reduce CS manual work)
+
+---
+
+#### **LATER – Q4+ (Explore/Validate)**
+*Theme: “Deepen Platform & Scale”*
+
+- Referral Program (growth)
+- Multi‑language Support (enterprise expansion)
+- AI‑powered recommendations (retention/expansion)
+- Quote‑to‑cash integration (only if 4+ more enterprise deals require it)
+
+---
+
+### Phase 5: Executive Communication Narrative
+
+**The story to tell your exec team:**
+
+> “Our Q2 roadmap is not a feature list from sales. It’s a strategic sequence designed to move our two critical metrics: **retention and expansion revenue**.  
+>  
+> We started with 20 requests, 14 of which came from sales deals. We mapped each request to the business outcome it actually drives—retention, expansion, or both—and scored them on reach and impact.  
+>  
+> The top items in Q2 all directly influence either churn or deal velocity: better onboarding to stop early‑stage exits, SSO and audit logs to close enterprise deals that are stuck, and admin tools that let customers scale with us instead of leaving.  
+>  
+> We’ve also included a tiny CRM integration because three specific deals depended on it, but that’s an exception—future one‑off requests will follow the same outcome‑based gate.  
+>  
+> This is a flexible plan. We’ll re‑evaluate in 8 weeks based on progress and any new customer insights. We’re committed to this Q2 sequence; Q3 items may shift.”
+
+**Key slides for the presentation deck:**
+
+1. **Strategic context:** Retention & expansion are the targets; most requests don’t inherently map to these.  
+2. **Evaluation criteria:** RICE scoring + strategic alignment filter we used.  
+3. **Roadmap one‑pager:** Q2 Now, Q3 Next, Later.  
+4. **Per‑epic cards:** Hypothesis, success metric, why it’s in Q2.  
+5. **What we’re NOT doing:** 11 lower‑scored features, and why (e.g., a feature requested by one customer but with no retention/expansion signal).  
+6. **Dependencies & risks:** Data pipeline, API refactor (tracked, not blockers).
+
+---
+
+### Implementation Next Steps
+- **This week:** Run the full roadmap presentation with execs, gather feedback, adjust epics if needed.  
+- **After sign‑off:** Publish the Now/Next/Later view on your internal wiki; share a public “what’s coming” version with top customers (without dates).  
+- **Q2 weekly:** Review activation and deal pipeline metrics; if early signals show an epic isn’t delivering, swap in a high‑scoring Q3 candidate (flexibility).
+
+By framing the roadmap around outcomes, you transform sales‑driven noise into a strategic, defensible plan your execs will trust—and that your teams can rally behind.","I'm leading product for a B2B SaaS platform. We just got our company OKRs: increase NRR from 110% to 120%, and grow enterprise ARR by 40%. I need to build a 6-month roadmap (now/next/later) that sequences work across our mobile, integrations, and reporting squads. We have a backlog of 40+ ideas from customer interviews and bug reports. I want to avoid a feature factory approach. Walk me through the planning process.","Our startup has been building whatever sales asks for, and our roadmap is a Trello board with random features. We're raising a Series A soon and need to present a strategic product roadmap to investors. I want to define epics, prioritize based on user outcomes, and sequence a 4-quarter plan that tells a story. The board meeting is in three weeks. How do I run this planning?"
