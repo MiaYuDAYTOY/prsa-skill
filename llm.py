@@ -216,16 +216,58 @@ def pre_pruning(user_input, prompt):
     User Input:
     "{user_input}"
 
-    Prompt:
+    Instruction or SKILL.md:
     "{prompt}"
 
-    I provide a Prompt and User Input. Please identify all parts of the Prompt that are semantically tied to the User Input, and replace them with placeholders "{{}}". Keep the sentence structure intact. Return only the masked prompt.
-    The masked prompt is wrapped with <START> and <END>.
+    Your task is to generalize the Instruction or SKILL.md so it can be reused for similar user inputs.
+
+    If the content is a SKILL.md file:
+    - Preserve the YAML frontmatter if it exists.
+    - Preserve all Markdown headings and section structure.
+    - Preserve the reusable skill behavior, workflow, constraints, and output format.
+    - Do NOT delete important sections.
+    - Do NOT rewrite it into a short prompt.
+    - Only replace concrete details that are tied specifically to the current User Input with placeholders like "{{}}".
+    - Keep placeholders meaningful when possible, such as [target audience], [goal], [constraints], or "{{}}".
+    - Return the full generalized SKILL.md.
+
+    If the content is a short prompt:
+    - Keep the sentence structure intact.
+    - Replace user-specific concrete details with placeholders.
+
+    Return only the generalized Instruction or SKILL.md.
+    Wrap the result with <START> and <END>.
     """
-    res = chatGPT(instruction, n=1, model=prsa_config.PRSA_STRONG_MODEL, temperature=0.0)[0]
+
+    res_list = chatGPT(
+        instruction,
+        n=1,
+        model=prsa_config.PRSA_STRONG_MODEL,
+        temperature=0.0,
+    )
+    res = res_list[0] if res_list else None
+
+    if res is None:
+        print("[Warning] pre_pruning returned no response; using original prompt.")
+        return prompt
+
     feedback = utils.parse_tagged_text(res, "<START>", "<END>")
-    pre_prompt = feedback[0]
-    return pre_prompt
+    if not feedback:
+        feedback = utils.parse_tagged_text(res, "<START>", "</END>")
+
+    if feedback:
+        return feedback[0].strip()
+
+    cleaned = str(res).strip()
+    cleaned = re.sub(r"^```(?:markdown|md)?\s*", "", cleaned)
+    cleaned = re.sub(r"\s*```$", "", cleaned)
+
+    if cleaned:
+        print("[Warning] pre_pruning could not find <START>/<END>; using raw model output.")
+        return cleaned
+
+    print("[Warning] pre_pruning produced empty output; using original prompt.")
+    return prompt
 
 
 def llm_based_evaluation(target_output, generated_output):
