@@ -1,0 +1,94 @@
+[nltk_data] Downloading package punkt to /home/miasean/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package stopwords to
+[nltk_data]     /home/miasean/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package punkt to /home/miasean/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package stopwords to
+[nltk_data]     /home/miasean/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     /home/miasean/nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!
+{'theme': 'Planning', 'data_dir': 'skill_data', 'batch_size': 1, 'epochs': 1, 'temperature': 0.7, 'out': 'log/skill_attention_Planning_out.txt', 'attention_threshold': 7.5, 'evaluator': 'semantic_similarity', 'm': 3, 'scorer': 'semantic_similarity'}
+0it [00:00, ?it/s]config.theme:  Planning
+[SCORE] element=Characteristic score=7.0 threshold=7.5
+[LOW] element=Characteristic score=7.0
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=8.0 threshold=7.5
+[SCORE] element=Structure score=7.0 threshold=7.5
+[LOW] element=Structure score=7.0
+[SCORE] element=Style score=9.0 threshold=7.5
+[SCORE] element=Tone score=7.5 threshold=7.5
+[SCORE] element=Purpose score=9.0 threshold=7.5
+[SCORE] element=Sentence Type score=8.0 threshold=7.5
+[SCORE] element=Audience score=8.0 threshold=7.5
+[SCORE] element=Background score=7.0 threshold=7.5
+[LOW] element=Background score=7.0
+gradient:  {'Characteristic': 1, 'Structure': 1, 'Background': 1}
+1it [10:19, 619.14s/it]config.theme:  Planning
+[SCORE] element=Characteristic score=8.0 threshold=7.5
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=8.0 threshold=7.5
+[SCORE] element=Structure score=8.0 threshold=7.5
+[SCORE] element=Style score=8.0 threshold=7.5
+[SCORE] element=Tone score=9.5 threshold=7.5
+[SCORE] element=Purpose score=9.0 threshold=7.5
+[SCORE] element=Sentence Type score=7.0 threshold=7.5
+[LOW] element=Sentence Type score=7.0
+[SCORE] element=Audience score=9.0 threshold=7.5
+[SCORE] element=Background score=8.0 threshold=7.5
+gradient:  {'Sentence Type': 1}
+2it [16:27, 471.60s/it]config.theme:  Planning
+[SCORE] element=Characteristic score=8.0 threshold=7.5
+[SCORE] element=Topic score=9.0 threshold=7.5
+[SCORE] element=Argument score=8.0 threshold=7.5
+[SCORE] element=Structure score=8.0 threshold=7.5
+[SCORE] element=Style score=7.0 threshold=7.5
+[LOW] element=Style score=7.0
+[SCORE] element=Tone score=9.0 threshold=7.5
+[SCORE] element=Purpose score=9.0 threshold=7.5
+
+[WARN] Could not parse target score from model output:
+''
+[SCORE] element=Sentence Type score=7.4 threshold=7.5
+[LOW] element=Sentence Type score=7.4
+[SCORE] element=Audience score=8.0 threshold=7.5
+[SCORE] element=Background score=8.0 threshold=7.5
+gradient:  {'Style': 1, 'Sentence Type': 1}
+3it [23:44, 455.66s/it]config.theme:  Planning
+[SCORE] element=Characteristic score=7.0 threshold=7.5
+[LOW] element=Characteristic score=7.0
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=7.0 threshold=7.5
+[LOW] element=Argument score=7.0
+[SCORE] element=Structure score=9.0 threshold=7.5
+[SCORE] element=Style score=8.0 threshold=7.5
+[SCORE] element=Tone score=9.5 threshold=7.5
+[SCORE] element=Purpose score=9.0 threshold=7.5
+[SCORE] element=Sentence Type score=8.0 threshold=7.5
+[SCORE] element=Audience score=10.0 threshold=7.5
+[SCORE] element=Background score=8.0 threshold=7.5
+gradient:  {'Characteristic': 1, 'Argument': 1}
+4it [31:20, 455.79s/it]config.theme:  Planning
+[SCORE] element=Characteristic score=7.0 threshold=7.5
+[LOW] element=Characteristic score=7.0
+[SCORE] element=Topic score=10.0 threshold=7.5
+[SCORE] element=Argument score=9.0 threshold=7.5
+[SCORE] element=Structure score=6.5 threshold=7.5
+[LOW] element=Structure score=6.5
+[SCORE] element=Style score=7.0 threshold=7.5
+[LOW] element=Style score=7.0
+[SCORE] element=Tone score=8.0 threshold=7.5
+[SCORE] element=Purpose score=9.0 threshold=7.5
+
+[WARN] Could not parse target score from model output:
+''
+[SCORE] element=Sentence Type score=7.4 threshold=7.5
+[LOW] element=Sentence Type score=7.4
+[SCORE] element=Audience score=9.0 threshold=7.5
+[SCORE] element=Background score=8.0 threshold=7.5
+gradient:  {'Characteristic': 1, 'Structure': 1, 'Style': 1, 'Sentence Type': 1}
+5it [39:23, 465.56s/it]5it [39:23, 472.61s/it]
