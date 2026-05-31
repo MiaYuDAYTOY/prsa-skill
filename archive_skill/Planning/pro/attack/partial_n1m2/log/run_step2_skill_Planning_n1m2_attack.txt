@@ -1,0 +1,35 @@
+[nltk_data] Downloading package punkt to /home/miasean/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package stopwords to
+[nltk_data]     /home/miasean/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package punkt to /home/miasean/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package stopwords to
+[nltk_data]     /home/miasean/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     /home/miasean/nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!
+{'theme': 'Planning', 'data_dir': 'skill_data', 'epochs': 1, 'beam_search': 1, 'pre_pruning': 1, 'alpha': 1, 'related_words_interval': 5, 'out': 'log/skill_attack_Planning_n1m2_out.txt', 'temperature': 0.7, 'evaluator': 'syntactic_similarity', 'm': 2, 'n': 1, 'scorer': 'syntactic_similarity'}
+0it [00:00, ?it/s]0
+
+Get the prompt category: Planning
+
+========Start Stealing Target Prompt========  ... ...
+config.theme:  Planning
+[Warning] Failed to extract a single instruction from LLM output.
+
+Stolen prompt is : Can you help me write a business plan for my solo venture? I'm launching a [type of business] for [target audience]. I'm at the idea stage and want to plan everything out including market analysis and financials.
+
+========Evaluation of Prompt Similarity======== ... ...
+
+Prompt similarity score is : 0.6727170944213867
+
+========Evaluation of Functional Consistency======== ... ...
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [05:16<00:00, 316.90s/it][A100%|██████████| 1/1 [05:16<00:00, 316.90s/it]
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
