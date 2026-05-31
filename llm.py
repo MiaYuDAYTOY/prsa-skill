@@ -151,13 +151,14 @@ def generate_skill(
             return None
 
         feedback = utils.parse_tagged_text(res, "<START>", "<END>")
-        try:
-            assert len(feedback) == 1
-        except Exception:
-            print("[Warning] Failed to extract a single instruction from LLM output.")
-            return None
-        skill = feedback[0]
-        return skill
+        if not feedback:
+            feedback = utils.parse_tagged_text(res, "<START>", "</END>")
+
+        if feedback:
+            return feedback[0].strip()
+
+        print("[Warning] Failed to extract tagged skill; using raw LLM output as fallback.")
+        return str(res).strip()
 
     elif gradient != {}:
         attention = llm_attention(config, inputs, output, gradient, gpt_model, instruction_characteristic)
@@ -202,13 +203,14 @@ def generate_skill(
             return None
 
         feedback = utils.parse_tagged_text(res, "<START>", "<END>")
-        try:
-            assert len(feedback) == 1
-        except Exception:
-            print("[Warning] Failed to extract a single instruction from LLM output.")
-            return None
-        opt_prompt = feedback[0]
-        return opt_prompt
+        if not feedback:
+            feedback = utils.parse_tagged_text(res, "<START>", "</END>")
+    
+        if feedback:
+            return feedback[0].strip()
+
+        print("[Warning] Failed to extract tagged skill; using raw LLM output as fallback.")
+        return str(res).strip()
 
 
 def pre_pruning(user_input, prompt):
