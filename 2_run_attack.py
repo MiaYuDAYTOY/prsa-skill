@@ -1,3 +1,4 @@
+import numpy as np
 
 import os
 from tqdm import tqdm
@@ -8,7 +9,7 @@ import math
 import dataset
 import utils
 import llm
-import scorers
+from debug_structural_js import StructuralJSDebugger
 from sentence_bert import calculate_similarity_sbert
 
 
@@ -51,7 +52,7 @@ if __name__ == '__main__':
     config = vars(args)
 
     data = dataset.Datasets(config)
-    scorer = scorers.MetricsScorer(args.evaluator, args.m)
+    scorer = StructuralJSDebugger(m=args.m,score_mode="inverse")
     model = llm.ChatGPTPredictor(config)
     test_data = data.load_test_data()
 
@@ -115,48 +116,74 @@ if __name__ == '__main__':
 
 
         print("\n========Evaluation of Functional Consistency======== ... ...")
-        target_output_sim_score = scorer.evaluate_target_prompt(model.inference, inputs, target_prompt)
-        if target_output_sim_score is None:
-            print(f"[Warning] Skipped iteration {idx} due to failed target output generation.")
+        js_target_score = scorer.evaluate_target_prompt_js_only(
+        model.inference, inputs, target_prompt
+        )
+
+        if js_target_score is None:
+            print(f"[Warning] Skipped iteration {idx} due to failed target JS evaluation.")
             continue
 
-        stolen_output_sim_score = scorer.evaluate_stolen_prompt(model.inference, inputs, target_prompt, stolen_prompt)
-
-        semantic_target_score,  syntactic_target_score, js_target_score = target_output_sim_score
-        semantic_stolen_score, syntactic_stolen_score, js_stolen_score = stolen_output_sim_score
+        js_stolen_score = scorer.evaluate_stolen_prompt_js_only(
+        model.inference, inputs, target_prompt, stolen_prompt
+        )
 
         #We normalize our results against the similarity score between target outputs, producing a similarity score in the range (0,1)
-        if all(map(is_valid_score, [semantic_target_score, syntactic_target_score, js_target_score])):
-            semantic_sim_socre = min(semantic_stolen_score / semantic_target_score, 1)
-            syntactic_sim_socre = min(syntactic_stolen_score / syntactic_target_score, 1)
-            js_sim_socre = min(js_stolen_score / js_target_score, 1)
+def is_valid_score(score, eps=1e-12):
+        if score is None:
+            return False
+        if not np.isfinite(score):
+            return False
+        if score <= eps:
+            return False
+        return True
 
-            print("\nSemantic similarity score is:", semantic_sim_socre)
-            print("\nSyntactic similarity score is:", syntactic_sim_socre)
-            print("\nStructural similarity score is:", js_sim_socre)
-            with open(args.out, 'a') as outf:
-                outf.write(json.dumps(f"Round [{idx+1}/{len(test_data)}] semantic similarity score: {semantic_sim_socre:.4f}") + '\n')
-                outf.write(json.dumps(f"Round [{idx+1}/{len(test_data)}] syntactic similarity score: {syntactic_sim_socre:.4f}") + '\n')
-                outf.write(json.dumps(f"Round [{idx+1}/{len(test_data)}] structural similarity score: {js_sim_socre:.4f}") + '\n')
-                outf.write(json.dumps(f"Round [{idx+1}/{len(test_data)}] prompt similarity score: {prompt_sim_score:.4f}") + '\n')
-                outf.write('\n\n')
 
-        
+if is_valid_score(js_target_score) and is_valid_score(js_stolen_score):
+
+        js_sim_score = min(js_stolen_score / js_target_score, 1.0)
+
+        print("\nStructural target score is:", js_target_score)
+        print("Structural stolen score is:", js_stolen_score)
+        print("Structural similarity score is:", js_sim_score)
+
+        with open(args.out, 'a') as outf:
+            outf.write(json.dumps(
+                f"Round [{idx+1}/{len(test_data)}] structural target score: {js_target_score:.4f}"
+            ) + '\n')
+
+            outf.write(json.dumps(
+                f"Round [{idx+1}/{len(test_data)}] structural stolen score: {js_stolen_score:.4f}"
+            ) + '\n')
+
+            outf.write(json.dumps(
+                f"Round [{idx+1}/{len(test_data)}] structural similarity score: {js_sim_score:.4f}"
+            ) + '\n')
+
+            outf.write(json.dumps(
+                f"Round [{idx+1}/{len(test_data)}] prompt similarity score: {prompt_sim_score:.4f}"
+            ) + '\n')
+
+            outf.write('\n\n')
+
             scores_list.append({
                 'iteration': idx,
                 'target prompt': target_prompt,
-                "stolen prompt": stolen_prompt,
-                'semantic similarity score': semantic_sim_socre,
-                'syntactic similarity score': syntactic_sim_socre,
-                'structural similarity score': js_sim_socre,
+                'stolen prompt': stolen_prompt,
+                'structural target score': js_target_score,
+                'structural stolen score': js_stolen_score,
+                'structural similarity score': js_sim_score,
                 'prompt similarity score': prompt_sim_score
             })
-        else:
-            print(f"[Warning] Skipped iteration {idx} due to invalid denominator (0/inf/NaN) in target scores.")
 
+else:
+        print(f"[Warning] Skipped iteration {idx} due to invalid JS score.")
+        print(f"[DEBUG] js_target_score = {js_target_score}")
+        print(f"[DEBUG] js_stolen_score = {js_stolen_score}")
+        continue
         
         
-        print("\n======== LLM-based Multi-dimensional Evaluation======== ... ...")
+    print("\n======== LLM-based Multi-dimensional Evaluation======== ... ...")
         for input_case in inputs:
             target_output = model.inference(input_case, target_prompt)
             generated_output =  model.inference(input_case, stolen_prompt)
