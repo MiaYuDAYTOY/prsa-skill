@@ -5,7 +5,6 @@ from tqdm import tqdm
 import json
 import argparse
 import pandas as pd
-import math
 import dataset
 import utils
 import llm
@@ -14,8 +13,14 @@ from sentence_bert import calculate_similarity_sbert
 
 
 
-def is_valid_score(x):
-    return x != 0 and not math.isinf(x) and not math.isnan(x)
+def is_valid_score(score, eps=1e-12):
+    if score is None:
+        return False
+    if not np.isfinite(score):
+        return False
+    if score <= eps:
+        return False
+    return True
 
 
 def save_to_csv(df, directory, filename):
@@ -52,7 +57,7 @@ if __name__ == '__main__':
     config = vars(args)
 
     data = dataset.Datasets(config)
-    scorer = StructuralJSDebugger(m=args.m,score_mode="inverse")
+    scorer = StructuralJSDebugger(m=args.m, score_mode="inverse")
     model = llm.ChatGPTPredictor(config)
     test_data = data.load_test_data()
 
@@ -115,9 +120,12 @@ if __name__ == '__main__':
         print("\nPrompt similarity score is :", prompt_sim_score)
 
 
-        print("\n========Evaluation of Functional Consistency======== ... ...")
+        print("\n========Evaluation of Functional Consistency: JS Structural Only======== ... ...")
+
         js_target_score = scorer.evaluate_target_prompt_js_only(
-        model.inference, inputs, target_prompt
+            model.inference,
+            inputs,
+            target_prompt
         )
 
         if js_target_score is None:
@@ -125,46 +133,41 @@ if __name__ == '__main__':
             continue
 
         js_stolen_score = scorer.evaluate_stolen_prompt_js_only(
-        model.inference, inputs, target_prompt, stolen_prompt
+            model.inference,
+            inputs,
+            target_prompt,
+            stolen_prompt
         )
 
-        #We normalize our results against the similarity score between target outputs, producing a similarity score in the range (0,1)
-def is_valid_score(score, eps=1e-12):
-        if score is None:
-            return False
-        if not np.isfinite(score):
-            return False
-        if score <= eps:
-            return False
-        return True
+        if js_stolen_score is None:
+            print(f"[Warning] Skipped iteration {idx} due to failed stolen JS evaluation.")
+            continue
 
+        if is_valid_score(js_target_score) and is_valid_score(js_stolen_score):
+            js_sim_score = min(js_stolen_score / js_target_score, 1.0)
 
-if is_valid_score(js_target_score) and is_valid_score(js_stolen_score):
+            print("\nStructural target score is:", js_target_score)
+            print("Structural stolen score is:", js_stolen_score)
+            print("Structural similarity score is:", js_sim_score)
 
-        js_sim_score = min(js_stolen_score / js_target_score, 1.0)
+            with open(args.out, 'a') as outf:
+                outf.write(json.dumps(
+                    f"Round [{idx+1}/{len(test_data)}] structural target score: {js_target_score:.4f}"
+                ) + '\n')
 
-        print("\nStructural target score is:", js_target_score)
-        print("Structural stolen score is:", js_stolen_score)
-        print("Structural similarity score is:", js_sim_score)
+                outf.write(json.dumps(
+                    f"Round [{idx+1}/{len(test_data)}] structural stolen score: {js_stolen_score:.4f}"
+                ) + '\n')
 
-        with open(args.out, 'a') as outf:
-            outf.write(json.dumps(
-                f"Round [{idx+1}/{len(test_data)}] structural target score: {js_target_score:.4f}"
-            ) + '\n')
+                outf.write(json.dumps(
+                    f"Round [{idx+1}/{len(test_data)}] structural similarity score: {js_sim_score:.4f}"
+                ) + '\n')
 
-            outf.write(json.dumps(
-                f"Round [{idx+1}/{len(test_data)}] structural stolen score: {js_stolen_score:.4f}"
-            ) + '\n')
+                outf.write(json.dumps(
+                    f"Round [{idx+1}/{len(test_data)}] prompt similarity score: {prompt_sim_score:.4f}"
+                ) + '\n')
 
-            outf.write(json.dumps(
-                f"Round [{idx+1}/{len(test_data)}] structural similarity score: {js_sim_score:.4f}"
-            ) + '\n')
-
-            outf.write(json.dumps(
-                f"Round [{idx+1}/{len(test_data)}] prompt similarity score: {prompt_sim_score:.4f}"
-            ) + '\n')
-
-            outf.write('\n\n')
+                outf.write('\n\n')
 
             scores_list.append({
                 'iteration': idx,
@@ -176,18 +179,18 @@ if is_valid_score(js_target_score) and is_valid_score(js_stolen_score):
                 'prompt similarity score': prompt_sim_score
             })
 
-else:
-        print(f"[Warning] Skipped iteration {idx} due to invalid JS score.")
-        print(f"[DEBUG] js_target_score = {js_target_score}")
-        print(f"[DEBUG] js_stolen_score = {js_stolen_score}")
-        continue
-        
-        
-    print("\n======== LLM-based Multi-dimensional Evaluation======== ... ...")
+        else:
+            print(f"[Warning] Skipped iteration {idx} due to invalid JS score.")
+            print(f"[DEBUG] js_target_score = {js_target_score}")
+            print(f"[DEBUG] js_stolen_score = {js_stolen_score}")
+            continue
+
+        '''
+        print("\n======== LLM-based Multi-dimensional Evaluation======== ... ...")
         for input_case in inputs:
             target_output = model.inference(input_case, target_prompt)
             generated_output =  model.inference(input_case, stolen_prompt)
-            
+
             if target_output is None or generated_output is None:
                 print(f"[Warning] Skipped input '{input_case}' due to inference failure.")
                 continue
@@ -201,8 +204,9 @@ else:
                 print("Error: Could not parse response as JSON.")
                 print("Raw response:", llm_eva_res)
 
-            llm_based_eva_score_list.append((input_case, target_prompt, stolen_prompt, 
+            llm_based_eva_score_list.append((input_case, target_prompt, stolen_prompt,
                                llm_eva_scores["Accuracy"], llm_eva_scores["Completeness"],llm_eva_scores["Tone"],llm_eva_scores["Sentiment"],llm_eva_scores["Semantics"]))
+        '''
 
     
     directory = "result"
@@ -212,4 +216,3 @@ else:
 
     df_scores = pd.DataFrame(scores_list)
     save_to_csv(df_scores, directory, f"{save_file_name}.csv")
-
