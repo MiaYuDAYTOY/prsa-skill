@@ -153,6 +153,7 @@ class MetricsScorer:
         return [frequency[word] / len(text) for word in vocab]
     
     def jensen_shannon_divergence(self, text1, text2, base=2):
+        # print text1 and text2 for debugging 
         vocab = set(text1.split()) | set(text2.split())
         freq_dist1 = {word: text1.split().count(word) for word in vocab}
         freq_dist2 = {word: text2.split().count(word) for word in vocab}
