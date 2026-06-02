@@ -7,7 +7,7 @@ import argparse
 import scorers
 import dataset
 import llm
-import optimizers
+import debug_sentence_attention as optimizers
 import utils
 import config as prsa_config
 
