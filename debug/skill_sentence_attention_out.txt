@@ -1,0 +1,2 @@
+{"theme": "Planning", "data_dir": "skill_data", "batch_size": 1, "epochs": 1, "temperature": 0.7, "out": "debug/skill_sentence_attention_out.txt", "attention_threshold": 7.5, "evaluator": "semantic_similarity", "m": 3, "scorer": "semantic_similarity"}
+"Planning: {}"
