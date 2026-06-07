@@ -1,0 +1,831 @@
+[nltk_data] Downloading package punkt to /home/miasean/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package stopwords to
+[nltk_data]     /home/miasean/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package punkt to /home/miasean/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package stopwords to
+[nltk_data]     /home/miasean/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     /home/miasean/nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!
+{'theme': 'Planning', 'data_dir': 'skill_data', 'epochs': 1, 'beam_search': 1, 'pre_pruning': 1, 'alpha': 1, 'related_words_interval': 5, 'out': 'debug/attack_planning_skill_out.txt', 'temperature': 0.7, 'evaluator': 'syntactic_similarity', 'm': 2, 'n': 1, 'scorer': 'syntactic_similarity'}
+0it [00:00, ?it/s]0
+
+Get the prompt category: Planning
+
+========Start Stealing Target Prompt========  ... ...
+config.theme:  Planning
+
+Stolen prompt is : # SKILL.md
+
+## Skill Name
+**Solopreneur Business Plan Generator**
+
+## Description
+This skill generates a comprehensive, ready-to-use business plan for a solo founder launching a new venture at the idea or pre-launch stage. The output is a fully structured document covering every essential aspect of the business — from the problem it solves and market opportunity to detailed financial projections, operations, and marketing strategy. The plan is written in a professional, declarative style with sequentially numbered sections, using estimated but realistic data tailored to the venture’s specifics. It is designed to help a founder think through all critical elements, impress potential partners or grant reviewers, and provide a clear roadmap for launch.
+
+## Inputs
+- **`user_message`** (string, required): A free-text description from the user that includes the business idea, the stage (e.g., “idea stage”, “pre-launch”), and any special requests (e.g., “include market analysis and financials”). The message may also hint at the target audience, value proposition, or desired tone.
+
+## Behavior
+When invoked, the AI must:
+1. **Parse the user’s request** to extract:
+   - The core business concept (e.g., “online baking class subscription service”).
+   - The stage (idea / pre-launch / MVP in progress).
+   - Any explicit requests for sections (market analysis, financials, etc.).
+   - The target audience if mentioned (e.g., “beginners”).
+   - The founder context (solo, no outside funding, remote).
+2. **Generate a realistic business plan** using a consistent, professional structure. Each section must be populated with specific, plausible content that matches the user’s concept, not a generic template.
+3. **Incorporate these mandatory sections**, in order:
+   - Executive Summary
+   - Company Overview
+   - Problem and Solution (including evidence of the problem, the solution, and the “why now”)
+   - Market Analysis (TAM/SAM/SOM, trends, customer persona)
+   - Competitive Landscape (table with competitors, pricing, features, and our competitive wedge)
+   - Business and Revenue Model (acquisition channels, sales flow, revenue streams, bottom-up financial projections for Year 1, unit economics)
+   - Operations Plan (tech stack, weekly processes, automation, outsourcing triggers)
+   - Marketing and Sales Plan (positioning statement, channels, launch sequence)
+4. **Use declarative, polished language** throughout. Avoid questions, wishy-washy language, or first-person musings. Write as if the plan is ready to be shown to an external reader. All assumptions must be stated clearly.
+5. **Include data-based estimates** for market size, subscriber growth, revenue, and costs. These should be derived from publicly available industry data (e.g., IBISWorld, Grand View Research, Google Trends) or reasonably extrapolated for a niche. Use placeholder dates and location tags (`[Current Date]`, `[your city]`) to allow the user to fill in details later.
+6. **Tailor the plan to a solopreneur, bootstrapped business**: emphasis on lean operations, organic marketing, automation, and a realistic timeline where the founder does almost everything initially.
+7. **When the user requests “market analysis and financials”**, ensure those sections are especially detailed:
+   - Market analysis must include TAM/SAM/SOM with calculations, 3 key trends, a primary persona, and target segment size.
+   - Financials must include a 12-month subscription revenue projection table (monthly new subs, ending base, revenue), unit economics (CAC, LTV, LTV:CAC, payback), and Year 2–3 run-rate estimates.
+8. **Structure the document in Markdown** with numbered headings, tables where appropriate, and clear separation of sections. The final output should be a complete, self-contained business plan that the user can copy/paste, personalize, and use.
+
+## Output Format
+- A single Markdown block starting with the title `# [Business Name] Business Plan`.
+- Each major section is a level‑2 heading (`## 1. Executive Summary`, `## 2. Company Overview`, …).
+- Subsections use level‑3 headings (e.g., `### 3.1 The Problem`).
+- Tables are formatted in Markdown.
+- Financial tables are simple and easy to read.
+- Placeholders such as `[Current Date]`, `[Month Year]`, `[your city]` are used for information the user should supply.
+- The entire document is composed of declarative sentences with no interactive prompts.
+
+## Constraints / Important Notes
+- **Realism**: All numbers, competitors, and strategies must be plausible for a solo founder with zero funding. Avoid assuming immediate virality or huge ad budgets.
+- **No hallucinated external references**: If citing market data, use plausible, generic sources (e.g., “according to Grand View Research”) rather than fabricating specific reports. Do not include invented URLs or quotes.
+- **Founder-centric**: The plan must reflect the reality that a single person will execute the work. Hours per week should be mentioned (e.g., “30 minutes daily on community”).
+- **No personal opinion**: Keep the writing factual and confident. Avoid phrases like “I think” or “maybe”.
+- **Reusable**: While the output for a specific user will reflect their own venture idea, the skill itself must work for any B2C subscription, online course, or digital product solo venture. The logic for generating TAM, subscriber projections, and competitor analyses should be genre‑agnostic.
+
+========Evaluation of Prompt Similarity======== ... ...
+
+Prompt similarity score is : 0.7297465205192566
+
+========Evaluation of Functional Consistency======== ... ...
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[TARGET EVAL][INPUT 0] start
+[TARGET EVAL][INPUT 0][GEN target 0] time=86.243826
+[TARGET EVAL][INPUT 0][GEN target 1] time=103.191292
+[TARGET EVAL][INPUT 0][GEN total] time=189.435241
+[TARGET EVAL][INPUT 0][semantic] score=0.7183822393417358, time=0.043227
+[TARGET EVAL][INPUT 0][syntactic] score=0.49561198824064123, time=149.107114
+[JS DEBUG] text1_len=10089, text2_len=12417
+[JS DEBUG] Text 1 preview: Here’s a rework of the three sections, tailored for your pivot from freelance writer to solo content strategy agency. The language is specific, the competitive analysis honest, and the revenue model practical for a one‑person business. Slot these into your existing business plan and adjust any place
+[JS DEBUG] Text 2 preview: I’ll give you fully reworked sections ready to drop into your plan. These are built around the pivot from freelance writer to one‑person content strategy agency — same solopreneur setup, but the core offer shifts from taking orders to shaping the story.
+
+---
+
+## 3. Problem and Solution (Reworked)
+
+#
+[JS DEBUG] split_vocab_time=0.000310
+[JS DEBUG] freq_count_time=0.139745
+[JS DEBUG] prob_vector_time=0.000181
+[JS DEBUG] scipy_time=0.005437
+[JS DEBUG] total_time=0.145773
+[TARGET EVAL][INPUT 0][structural_js] score=1.4569630047613955, time=0.145893
+[TARGET EVAL][INPUT 0][total] time=338.732994
+
+100%|██████████| 1/1 [05:38<00:00, 338.73s/it][A100%|██████████| 1/1 [05:38<00:00, 338.73s/it]
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[STOLEN EVAL][INPUT 0] start
+[STOLEN EVAL][INPUT 0][GEN target 0] time=115.414272
+[STOLEN EVAL][INPUT 0][GEN target 1] time=64.612682
+[STOLEN EVAL][INPUT 0][GEN target total] time=180.027099
+[STOLEN EVAL][INPUT 0][GEN pred 0] time=115.692393
+[STOLEN EVAL][INPUT 0][GEN pred 1] time=114.760237
+[STOLEN EVAL][INPUT 0][GEN pred total] time=230.452768
+[STOLEN EVAL][INPUT 0][semantic] score=0.6381014287471771, time=0.128586
+[STOLEN EVAL][INPUT 0][syntactic] score=0.44069179214811377, time=540.885551
+[JS DEBUG] text1_len=13982, text2_len=12590
+[JS DEBUG] Text 1 preview: # Anchor Content Strategy Business Plan
+
+**Prepared for:** [Founder Name]  
+**Date:** [Current Date]  
+**Location:** [Your City, State]
+
+---
+
+## 1. Executive Summary
+
+Anchor Content Strategy is a solo‑operated content consultancy that helps B2B SaaS companies replace random acts of content with a me
+[JS DEBUG] Text 2 preview: Here are the three sections, rewritten for your pivot from freelance writer to a one-person content strategy agency. Each is built on the playbook’s structure, tailored to a solopreneur operation. Use them as a foundation — fill in the specifics of your niche, past wins, and client base.
+
+---
+
+## Se
+[JS DEBUG] split_vocab_time=0.000329
+[JS DEBUG] freq_count_time=0.199535
+[JS DEBUG] prob_vector_time=0.000363
+[JS DEBUG] scipy_time=0.000354
+[JS DEBUG] total_time=0.200695
+[JS DEBUG] text1_len=13982, text2_len=7099
+[JS DEBUG] Text 1 preview: # Anchor Content Strategy Business Plan
+
+**Prepared for:** [Founder Name]  
+**Date:** [Current Date]  
+**Location:** [Your City, State]
+
+---
+
+## 1. Executive Summary
+
+Anchor Content Strategy is a solo‑operated content consultancy that helps B2B SaaS companies replace random acts of content with a me
+[JS DEBUG] Text 2 preview: Let’s reshape these three sections to reflect the shift from writing gigs to a content strategy agency—while keeping everything doable as a one‑person operation. I’ll give you framework and prompts so you can drop in your own specifics.
+
+---
+
+## 1. Problem and Solution (Reframed for Strategy Over Wr
+[JS DEBUG] split_vocab_time=0.000307
+[JS DEBUG] freq_count_time=0.125214
+[JS DEBUG] prob_vector_time=0.000178
+[JS DEBUG] scipy_time=0.000196
+[JS DEBUG] total_time=0.126038
+[JS DEBUG] text1_len=10558, text2_len=12590
+[JS DEBUG] Text 1 preview: Here is your updated business plan, with the Problem & Solution, Competitive Landscape, and Revenue Streams sections completely reworked for your solo content strategy agency pivot. The rest of the plan has been refreshed to match the new direction, keeping everything feasible for a one‑person opera
+[JS DEBUG] Text 2 preview: Here are the three sections, rewritten for your pivot from freelance writer to a one-person content strategy agency. Each is built on the playbook’s structure, tailored to a solopreneur operation. Use them as a foundation — fill in the specifics of your niche, past wins, and client base.
+
+---
+
+## Se
+[JS DEBUG] split_vocab_time=0.000274
+[JS DEBUG] freq_count_time=0.159809
+[JS DEBUG] prob_vector_time=0.000198
+[JS DEBUG] scipy_time=0.000201
+[JS DEBUG] total_time=0.160588
+[JS DEBUG] text1_len=10558, text2_len=7099
+[JS DEBUG] Text 1 preview: Here is your updated business plan, with the Problem & Solution, Competitive Landscape, and Revenue Streams sections completely reworked for your solo content strategy agency pivot. The rest of the plan has been refreshed to match the new direction, keeping everything feasible for a one‑person opera
+[JS DEBUG] Text 2 preview: Let’s reshape these three sections to reflect the shift from writing gigs to a content strategy agency—while keeping everything doable as a one‑person operation. I’ll give you framework and prompts so you can drop in your own specifics.
+
+---
+
+## 1. Problem and Solution (Reframed for Strategy Over Wr
+[JS DEBUG] split_vocab_time=0.000229
+[JS DEBUG] freq_count_time=0.100357
+[JS DEBUG] prob_vector_time=0.000169
+[JS DEBUG] scipy_time=0.000191
+[JS DEBUG] total_time=0.101058
+[STOLEN EVAL][INPUT 0][structural_js] score=1.3747506548648403, time=0.588585
+[STOLEN EVAL][INPUT 0][total] time=952.082711
+
+100%|██████████| 1/1 [15:52<00:00, 952.08s/it][A100%|██████████| 1/1 [15:52<00:00, 952.08s/it]
+
+Target semantic score is: 0.7183822393417358
+Target syntactic score is: 0.49561198824064123
+Target structural score is: 1.4569630047613955
+Stolen semantic score is: 0.6381014287471771
+Stolen syntactic score is: 0.44069179214811377
+Stolen structural score is: 1.3747506548648403
+Semantic similarity score is: 0.8882477792489397
+Syntactic similarity score is: 0.889187111297515
+Structural similarity score is: 0.9435727951719549
+1it [23:35, 1415.29s/it]1
+
+Get the prompt category: Planning
+
+========Start Stealing Target Prompt========  ... ...
+config.theme:  Planning
+
+Stolen prompt is : # SKILL.md
+
+## Name
+Content Strategy Discovery Brief Generator
+
+## Description
+This skill generates a thorough, structured inquiry tailored to a business owner seeking a content strategy. It is designed to elicit all necessary context before any content plan is drafted. The inquiry covers the business model, audience, current content performance, and competitive landscape. The skill adapts question wording based on the user’s initial description of their business.
+
+## Inputs
+- `user_request` – The initial message from a user requesting help with content strategy (e.g., “What blog posts and videos would attract more clients for my [business type]?”). The message typically includes a brief description of the business niche and a high‑level goal.
+
+## Behavior
+1. Parse the `user_request` to extract:
+   - The business type/descriptor (e.g., “online fitness coaching”, “local bakery”, “SaaS startup”).
+   - The primary goal mentioned (e.g., “attract more clients”, “increase traffic”, “build authority”).
+2. Construct a response that follows this strict structure:
+   - An introductory sentence acknowledging the request and stating the need for more context, with a friendly but professional tone. Mention that the more specific the user is, the more tailored the strategy will be.
+   - Four numbered sections, each with a markdown heading (`### 1. Your Business`, `### 2. Your Customers`, `### 3. Your Current State`, `### 4. Competition & Market`).
+   - Under each heading, a list of bullet‑point questions (`- …`) that are:
+     - Direct and actionable, mixing open‑ended and specific interrogative/imperative forms.
+     - Customised by inserting the extracted business descriptor where relevant, e.g., “What exactly does your `[business type]` do?” or “Who is your absolute ideal client for `[business type]`?”
+     - Focused on uncovering: exact offerings, ideal customer profile and pain points, common objections, current content assets and performance, resource constraints, and competitor landscape.
+   - A closing sentence that promises a tailored output upon receiving the answers, explicitly mentioning: content pillars, a prioritised list of specific topics (searchable and shareable), and a cluster map.
+3. If `user_request` already contains partial details (e.g., a specific niche like “postpartum fitness”), the skill may include a example in a question to invite elaboration, but it must remain reusable across any niche.
+4. The tone remains helpful and client‑focused, never presuming to deliver the strategy before the discovery is complete.
+
+## Output Format
+A plain‑text message following this exact schema:
+
+```
+To give you a content strategy that actually attracts clients, I need a bit more context first. The more specific you can be, the more tailored the plan will be.
+
+Here’s what I need to know:
+
+### 1. Your Business
+- Question 1
+- Question 2
+- …
+
+### 2. Your Customers
+- Question 1
+- …
+
+### 3. Your Current State
+- Question 1
+- …
+
+### 4. Competition & Market
+- Question 1
+- …
+
+Once you share this, I’ll come back with your content pillars, a prioritized list of specific topics (searchable and shareable), and a cluster map that ties it all together.
+```
+
+- The section headings must appear exactly as shown.
+- Each section contains between 3 and 6 bullet questions, dependent on the depth of information typically needed for a content strategy.
+- The closing sentence must always mention content pillars, prioritized topic list, and cluster map.
+
+## Constraints & Important Notes
+- This skill must not generate any actual content strategy in its output; it only produces the discovery inquiry.
+- The skill may be reused for any business domain; it must replace generic placeholder like “your business” with the specific descriptor from the user input.
+- If the `user_request` is too vague (e.g., “I need content”), the first bullet under “Your Business” should ask for clarification of the business type.
+- The output must be entirely in English and formatted as plain text (no code blocks, no extraneous markdown outside the defined structure).
+- The closing promise must reflect an actionable, data‑driven deliverable, reinforcing the value of providing detailed answers.
+
+========Evaluation of Prompt Similarity======== ... ...
+
+Prompt similarity score is : 0.5528363585472107
+
+========Evaluation of Functional Consistency======== ... ...
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[TARGET EVAL][INPUT 0] start
+[TARGET EVAL][INPUT 0][GEN target 0] time=25.854206
+[TARGET EVAL][INPUT 0][GEN target 1] time=17.522895
+[TARGET EVAL][INPUT 0][GEN total] time=43.377251
+[TARGET EVAL][INPUT 0][semantic] score=0.6233270168304443, time=0.033602
+[TARGET EVAL][INPUT 0][syntactic] score=0.5331728491835092, time=8.850109
+[JS DEBUG] text1_len=2599, text2_len=2000
+[JS DEBUG] Text 1 preview: Before I map out your content pillars and calendar, I need to understand your business, audience, and existing assets. I can also lean on whatever product marketing documentation you already have—do you have a product marketing context file (e.g., a `product-marketing.md` in your `.agents/`, `.claud
+[JS DEBUG] Text 2 preview: Let me first check if you have any existing product marketing context I can reference. After that, I’ll need a bit more detail to build a strategy that’s actually tailored to your product and audience rather than something generic. Here’s what I’m missing:
+
+### 1. Your Product & Ideal Customer
+- Wha
+[JS DEBUG] split_vocab_time=0.000070
+[JS DEBUG] freq_count_time=0.006708
+[JS DEBUG] prob_vector_time=0.000042
+[JS DEBUG] scipy_time=0.000092
+[JS DEBUG] total_time=0.006950
+[TARGET EVAL][INPUT 0][structural_js] score=1.4404220426403154, time=0.006974
+[TARGET EVAL][INPUT 0][total] time=52.268083
+
+100%|██████████| 1/1 [00:52<00:00, 52.27s/it][A100%|██████████| 1/1 [00:52<00:00, 52.27s/it]
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[STOLEN EVAL][INPUT 0] start
+[STOLEN EVAL][INPUT 0][GEN target 0] time=24.374969
+[STOLEN EVAL][INPUT 0][GEN target 1] time=46.875550
+[STOLEN EVAL][INPUT 0][GEN target total] time=71.250618
+[STOLEN EVAL][INPUT 0][GEN pred 0] time=29.555798
+[STOLEN EVAL][INPUT 0][GEN pred 1] time=35.183698
+[STOLEN EVAL][INPUT 0][GEN pred total] time=64.739632
+[STOLEN EVAL][INPUT 0][semantic] score=0.7228545993566513, time=0.110457
+[STOLEN EVAL][INPUT 0][syntactic] score=0.3754730899019895, time=75.272406
+[JS DEBUG] text1_len=3388, text2_len=3000
+[JS DEBUG] Text 1 preview: To give you a content roadmap that actually attracts mid‑size businesses to your cybersecurity software, I need a bit more context first. The more specific you can be, the more tailored the plan will be.
+
+Here’s what I need to know:
+
+### 1. Your Business
+- What exactly does your cybersecurity softwa
+[JS DEBUG] Text 2 preview: Absolutely. Before we jump into pillars and a calendar, I need to ground the strategy in your specific reality. Could you help me by answering a few questions? The more detail you can share (especially from real customer interactions), the more precise and effective the content plan will be.
+
+Here’s
+[JS DEBUG] split_vocab_time=0.000098
+[JS DEBUG] freq_count_time=0.012129
+[JS DEBUG] prob_vector_time=0.000057
+[JS DEBUG] scipy_time=0.000154
+[JS DEBUG] total_time=0.012489
+[JS DEBUG] text1_len=3388, text2_len=6430
+[JS DEBUG] Text 1 preview: To give you a content roadmap that actually attracts mid‑size businesses to your cybersecurity software, I need a bit more context first. The more specific you can be, the more tailored the plan will be.
+
+Here’s what I need to know:
+
+### 1. Your Business
+- What exactly does your cybersecurity softwa
+[JS DEBUG] Text 2 preview: Before I map out the pillars and calendar, I need a bit more context about your business and buyers. The more specific we are now, the better the roadmap will anchor to actual customer problems — which is what turns content into pipeline.
+
+Please answer these (briefly — bullet points are fine):
+
+**1
+[JS DEBUG] split_vocab_time=0.000135
+[JS DEBUG] freq_count_time=0.029678
+[JS DEBUG] prob_vector_time=0.000088
+[JS DEBUG] scipy_time=0.000107
+[JS DEBUG] total_time=0.030105
+[JS DEBUG] text1_len=3248, text2_len=3000
+[JS DEBUG] Text 1 preview: Thanks for reaching out! To give you a content strategy that actually attracts mid-size businesses for your cybersecurity software, I need a bit more context first. The more specific you can be, the more tailored the plan will be.
+
+Here’s what I need to know:
+
+### 1. Your Business
+- What exactly doe
+[JS DEBUG] Text 2 preview: Absolutely. Before we jump into pillars and a calendar, I need to ground the strategy in your specific reality. Could you help me by answering a few questions? The more detail you can share (especially from real customer interactions), the more precise and effective the content plan will be.
+
+Here’s
+[JS DEBUG] split_vocab_time=0.000098
+[JS DEBUG] freq_count_time=0.011958
+[JS DEBUG] prob_vector_time=0.000057
+[JS DEBUG] scipy_time=0.000076
+[JS DEBUG] total_time=0.012256
+[JS DEBUG] text1_len=3248, text2_len=6430
+[JS DEBUG] Text 1 preview: Thanks for reaching out! To give you a content strategy that actually attracts mid-size businesses for your cybersecurity software, I need a bit more context first. The more specific you can be, the more tailored the plan will be.
+
+Here’s what I need to know:
+
+### 1. Your Business
+- What exactly doe
+[JS DEBUG] Text 2 preview: Before I map out the pillars and calendar, I need a bit more context about your business and buyers. The more specific we are now, the better the roadmap will anchor to actual customer problems — which is what turns content into pipeline.
+
+Please answer these (briefly — bullet points are fine):
+
+**1
+[JS DEBUG] split_vocab_time=0.000130
+[JS DEBUG] freq_count_time=0.029765
+[JS DEBUG] prob_vector_time=0.000165
+[JS DEBUG] scipy_time=0.000133
+[JS DEBUG] total_time=0.030272
+[STOLEN EVAL][INPUT 0][structural_js] score=1.3105270569029406, time=0.085241
+[STOLEN EVAL][INPUT 0][total] time=211.458472
+
+100%|██████████| 1/1 [03:31<00:00, 211.46s/it][A100%|██████████| 1/1 [03:31<00:00, 211.46s/it]
+
+Target semantic score is: 0.6233270168304443
+Target syntactic score is: 0.5331728491835092
+Target structural score is: 1.4404220426403154
+Stolen semantic score is: 0.7228545993566513
+Stolen syntactic score is: 0.3754730899019895
+Stolen structural score is: 1.3105270569029406
+Semantic similarity score is: 1.0
+Syntactic similarity score is: 0.7042239500323055
+Structural similarity score is: 0.9098215787511309
+2it [29:44, 800.22s/it] 2
+
+Get the prompt category: Planning
+
+========Start Stealing Target Prompt========  ... ...
+config.theme:  Planning
+======Run selective beam search====== ... ...
+======Run selective beam search====== ... ...
+
+Stolen prompt is : # Skill: Speak Sooner Language Plan
+
+## Description
+Generates a personalized, time-boxed language learning plan for travelers who need practical, spoken‑communication skills before a trip.  
+The plan always assumes the user is {}, prioritizes speaking out loud, and structures the remaining time into weekly themes, a daily 15‑minute routine, and concrete benchmarks.
+
+## Inputs
+- **language** (required): the target language (e.g., Italian, Japanese, Spanish).
+- **timeframe** (required or inferred): number of weeks until the trip, trip start date, or total days. If not stated, default to **8 weeks**.
+- **daily study time** (optional): minutes per {} the user can dedicate. Default **{}** if not provided.
+- **trip duration** (optional): length of the trip (e.g., 10 days). Mentioned in the assumption but not critical to the plan.
+- **learner level** (optional): always treated as **complete beginner** unless the user explicitly says otherwise. The plan is built for absolute novices.
+- **special needs** (optional): any specific situations (e.g., business meetings, dietary restrictions, medical history). If absent, the plan sticks to typical traveler needs.
+
+## Behavior
+1. **Assess and assume:** Extract or assume the missing parameters. State assumptions clearly at the top of the output (e.g., “You have about 8 weeks … {} a {}”).
+2. **Define the goal:** Frame the goal around confidently handling essential travel situations (greetings, polite exchanges, ordering, directions, accommodation, tickets, simple problem-solving).
+3. **Craft a timed daily routine:** Distribute the daily study time into short, actionable segments that always include:  
+   - listening/review,  
+   - learning 3–5 new travel phrases by theme,  
+   - active speaking (shadowing, role-play),  
+   - quick recap of previous days.  
+   Use bullet points with time ranges like “Minutes 0–3” etc., adjusted if daily time differs from {}.
+4. **Build a weekly theme table:** Map out the available weeks, assigning one travel theme per week. If the timeframe is shorter (e.g., 4 weeks), cover two themes per week and note the adjustment. Always use a presentable Markdown table.
+5. **Specify speaking practice techniques:** Provide actionable methods—shadowing, self-talk, role-play, recording oneself—all focused on spoken output and pronunciation.
+6. **Suggest home immersion activities:** Keep them extremely simple and low‑cost (phone language change, sticky labels, beginner podcast, short YouTube videos).
+7. **Set weekly benchmarks:** Include small, measurable speaking tasks (record a self-introduction, complete a mock order, role-play a full conversation) that build confidence and track progress.
+8. **Close with motivation:** End on an encouraging note (e.g., “Stay consistent … Buon viaggio!” in the target language).
+
+The entire output is written primarily in **imperative** sentences, instructing the user what to do. Declarative sentences are used only for the goal statement and assumptions.
+
+## Output Format
+A Markdown document with these exact sections (level‑2 headings unless otherwise specified):
+
+```markdown
+# Speak Sooner Language Plan: [Language]
+
+**Assumption:** [state assumed timeframe, daily time, beginner status, trip length if needed]
+
+## Goal
+[1–2 sentences describing the practical communication goal]
+
+## Daily Routine ([X] minutes)
+- **Minutes 0–Y:** …
+- **Minutes Y–Z:** …
+- … (always ending with a review step)
+
+## Weekly Focus
+| Week | Theme |
+|------|-------|
+| 1    | Greetings, introductions, “please,” “thank you,” “excuse me” |
+| …    | … |
+| N    | Review all themes, full role-plays, and confidence practice |
+
+(Adaptation note for shorter timeframes, if applicable.)
+
+## Speaking Practice
+- **Shadowing:** …
+- **Self-talk:** …
+- **Role-play:** …
+- **Record yourself:** …
+
+## Home Immersion
+- …
+- …
+- …
+- …
+
+## Benchmarks
+- **Week X:** …
+- **Week Y:** …
+- … (at least one per week or cluster of weeks)
+
+[closing encouragement in the target language or general motivational line]
+```
+
+The closing line always uses an exclamation or a phrase in the target language (e.g., “Buon viaggio!”, “¡Buen viaje!”, “Bon voyage!”).
+
+## Constraints & Important Notes
+- **Stay practical, not perfect.** The plan never includes grammar drills, writing exercises, or perfectionism. Focus is on being understood.
+- **Assume absolute zero knowledge.** Never introduce the alphabet, complex tenses, or reading unless the user explicitly asks for it.
+- **Adjust for time shortage gracefully.** If the user has only 2–4 weeks, condense themes (two per week) and reduce benchmarks, but keep the same structure.
+- **Use inclusive, encouraging language.** No judgment, no “you must” statements—use “try to”, “focus on”, “you can”.
+- **Provide the plan in a single, self-contained Markdown message.** The user should be able to copy and follow it immediately.
+
+========Evaluation of Prompt Similarity======== ... ...
+
+Prompt similarity score is : 0.6430328488349915
+
+========Evaluation of Functional Consistency======== ... ...
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[TARGET EVAL][INPUT 0] start
+[TARGET EVAL][INPUT 0][GEN target 0] time=103.742342
+[TARGET EVAL][INPUT 0][GEN target 1] time=99.306989
+[TARGET EVAL][INPUT 0][GEN total] time=203.049413
+[TARGET EVAL][INPUT 0][semantic] score=0.9563452005386353, time=0.039620
+[TARGET EVAL][INPUT 0][syntactic] score=0.40963892725086565, time=163.996991
+[JS DEBUG] text1_len=9340, text2_len=13500
+[JS DEBUG] Text 1 preview: # Speak Sooner Language Plan: Korean for Everyday Conversations in Seoul
+
+## Learner Snapshot
+- **Language:** Korean  
+- **Current Level:** Low intermediate (can read Hangul comfortably, but struggles to form and speak full sentences)  
+- **Timeframe:** 6 weeks, intensive  
+- **Goal:** Handle everyd
+[JS DEBUG] Text 2 preview: # Speak Sooner Language Plan: Korean for Everyday Conversations in Seoul
+
+## Learner Snapshot
+
+- **Language:** Korean  
+- **Current level:** Low intermediate – you can read Hangul and understand some grammar, but you often freeze or piece together broken sentences when trying to speak.  
+- **Timefra
+[JS DEBUG] split_vocab_time=0.000301
+[JS DEBUG] freq_count_time=0.158670
+[JS DEBUG] prob_vector_time=0.000235
+[JS DEBUG] scipy_time=0.000502
+[JS DEBUG] total_time=0.159956
+[TARGET EVAL][INPUT 0][structural_js] score=1.4656053701392147, time=0.160104
+[TARGET EVAL][INPUT 0][total] time=367.246287
+
+100%|██████████| 1/1 [06:07<00:00, 367.25s/it][A100%|██████████| 1/1 [06:07<00:00, 367.25s/it]
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[STOLEN EVAL][INPUT 0] start
+[STOLEN EVAL][INPUT 0][GEN target 0] time=100.662734
+[STOLEN EVAL][INPUT 0][GEN target 1] time=101.498002
+[STOLEN EVAL][INPUT 0][GEN target total] time=202.160848
+[STOLEN EVAL][INPUT 0][GEN pred 0] time=74.985206
+[STOLEN EVAL][INPUT 0][GEN pred 1] time=74.351534
+[STOLEN EVAL][INPUT 0][GEN pred total] time=149.336916
+[STOLEN EVAL][INPUT 0][semantic] score=0.9024144858121872, time=0.122654
+[STOLEN EVAL][INPUT 0][syntactic] score=0.2770992171147669, time=345.316463
+[JS DEBUG] text1_len=6617, text2_len=9745
+[JS DEBUG] Text 1 preview: # Speak Sooner Language Plan: Korean
+
+**Assumption:** You have **6 weeks** (about 42 days) until your summer program in Seoul. You can dedicate **45 minutes per day**. You already read 한글 comfortably and are at a low-intermediate level, but you struggle to string together full, natural sentences. Th
+[JS DEBUG] Text 2 preview: # Speak Sooner Language Plan: Korean for Everyday Conversations in Seoul
+
+## Learner Snapshot
+- **Language:** Korean  
+- **Current Level:** Low intermediate — can read Hangul, understands basic words and phrases, but struggles to speak in full sentences.  
+- **Timeframe:** 6 weeks (intensive)  
+- **
+[JS DEBUG] split_vocab_time=0.000226
+[JS DEBUG] freq_count_time=0.083686
+[JS DEBUG] prob_vector_time=0.000300
+[JS DEBUG] scipy_time=0.000246
+[JS DEBUG] total_time=0.084584
+[JS DEBUG] text1_len=6617, text2_len=14072
+[JS DEBUG] Text 1 preview: # Speak Sooner Language Plan: Korean
+
+**Assumption:** You have **6 weeks** (about 42 days) until your summer program in Seoul. You can dedicate **45 minutes per day**. You already read 한글 comfortably and are at a low-intermediate level, but you struggle to string together full, natural sentences. Th
+[JS DEBUG] Text 2 preview: # Speak Sooner Language Plan: Korean for Everyday Conversations in Seoul
+
+## Learner Snapshot  
+- **Language:** Korean  
+- **Current level:** Low intermediate – you can read Hangul comfortably but often freeze when trying to speak in full sentences. Your listening understanding is emerging, but quic
+[JS DEBUG] split_vocab_time=0.000277
+[JS DEBUG] freq_count_time=0.132955
+[JS DEBUG] prob_vector_time=0.000350
+[JS DEBUG] scipy_time=0.000228
+[JS DEBUG] total_time=0.134212
+[JS DEBUG] text1_len=5271, text2_len=9745
+[JS DEBUG] Text 1 preview: # Speak Sooner Language Plan: Korean
+
+**Assumption:** You have 6 weeks until your summer program in Seoul.  
+You can dedicate **45 minutes a day** to focused practice.  
+You already read Hangul, understand basic grammar at a low‑intermediate level, but struggle to speak in complete sentences.  
+Your
+[JS DEBUG] Text 2 preview: # Speak Sooner Language Plan: Korean for Everyday Conversations in Seoul
+
+## Learner Snapshot
+- **Language:** Korean  
+- **Current Level:** Low intermediate — can read Hangul, understands basic words and phrases, but struggles to speak in full sentences.  
+- **Timeframe:** 6 weeks (intensive)  
+- **
+[JS DEBUG] split_vocab_time=0.000266
+[JS DEBUG] freq_count_time=0.308699
+[JS DEBUG] prob_vector_time=0.000139
+[JS DEBUG] scipy_time=0.000223
+[JS DEBUG] total_time=0.309420
+[JS DEBUG] text1_len=5271, text2_len=14072
+[JS DEBUG] Text 1 preview: # Speak Sooner Language Plan: Korean
+
+**Assumption:** You have 6 weeks until your summer program in Seoul.  
+You can dedicate **45 minutes a day** to focused practice.  
+You already read Hangul, understand basic grammar at a low‑intermediate level, but struggle to speak in complete sentences.  
+Your
+[JS DEBUG] Text 2 preview: # Speak Sooner Language Plan: Korean for Everyday Conversations in Seoul
+
+## Learner Snapshot  
+- **Language:** Korean  
+- **Current level:** Low intermediate – you can read Hangul comfortably but often freeze when trying to speak in full sentences. Your listening understanding is emerging, but quic
+[JS DEBUG] split_vocab_time=0.000615
+[JS DEBUG] freq_count_time=0.111219
+[JS DEBUG] prob_vector_time=0.000188
+[JS DEBUG] scipy_time=0.000517
+[JS DEBUG] total_time=0.112758
+[STOLEN EVAL][INPUT 0][structural_js] score=1.3837701990340219, time=0.641237
+[STOLEN EVAL][INPUT 0][total] time=697.578235
+
+100%|██████████| 1/1 [11:37<00:00, 697.58s/it][A100%|██████████| 1/1 [11:37<00:00, 697.58s/it]
+
+Target semantic score is: 0.9563452005386353
+Target syntactic score is: 0.40963892725086565
+Target structural score is: 1.4656053701392147
+Stolen semantic score is: 0.9024144858121872
+Stolen syntactic score is: 0.2770992171147669
+Stolen structural score is: 1.3837701990340219
+Semantic similarity score is: 0.9436074811730397
+Syntactic similarity score is: 0.6764474728376326
+Structural similarity score is: 0.9441628880648688
+3it [56:57, 1180.47s/it]3
+
+Get the prompt category: Planning
+
+========Start Stealing Target Prompt========  ... ...
+config.theme:  Planning
+[Warning] Failed to extract tagged skill; using raw LLM output as fallback.
+======Run selective beam search====== ... ...
+
+Stolen prompt is : # SKILL.md
+
+## Name
+{}-{}
+
+## Description
+This skill generates a comprehensive, 12-month {} strategy document for a given company. The output is highly structured, data-driven, and actionable, using declarative sentences and a professional business-document format. It produces a full {} including an executive summary, strategic framework, current-state assessment, acquisition strategy, and detailed metrics, all grounded in the company’s industry and known public information.
+
+## Inputs
+A user prompt that begins with `/{}-{}` followed by a company identifier (domain, company name, or ticker).  
+Example: `/{}-{} {}`
+
+## Behavior
+1. **Parse the input** to extract the target company.  
+2. **Research the company** using available knowledge (public reports, website, news, industry benchmarks) to understand:  
+   - Industry, size, business model, product lines.  
+   - Current brand positioning, {} channels, and notable campaigns.  
+   - Competitive landscape and common {} restrictions (e.g., cannabis, alcohol, pharma, finance).  
+3. **Construct a full 12-month {} {}** following the rigid structure below. Where exact data is unavailable, infer plausible and realistic numbers based on the industry norms and the company’s footprint. Clearly state major assumptions but do not interrupt the document flow.  
+4. **Ensure every section** uses a declarative, factual tone; no open-ended questions or conversational fluff. Use tables, bullet points, and numbered subsections as shown.
+
+### {} Structure (mandatory sections)
+#### 1. Executive Summary
+- Three big bets (clear, strategic moves).
+- 90-day priorities in a table with columns: Week, Priority, Owner, AARRR stage.
+- 12-month outcome with quantified targets (percentage improvements, revenue, margin).
+
+#### 2. Strategic Frame
+- **Category claim** – the brand’s overarching value proposition, with a note on legal defensibility if relevant.
+- **ICP** – primary and secondary ideal customer profiles, including demographics, behaviors, pain points, and discovery channels.
+- **Business-model logic** – how the revenue model shapes {} (e.g., wholesale vs. D2C, high-margin vs. volume).
+- **Brand voice non-negotiables** – tone, vocabulary, visual style, and any regulatory filters.
+
+#### 3. Current State
+- **Team** – current {} roles, gaps, and reporting structure.
+- **Budget** – total monthly spend, blended CAC, percentage of net revenue, and a detailed channel breakdown.
+- **What’s done** – recent completed initiatives.
+- **What’s in-flight** – ongoing projects and their blockers.
+- **Current-state rubric** – a table scoring key {} areas (0–5) with a short rationale for each. Include at least 15 areas: Brand strategy, Positioning, ICP, Messaging, Website, SEO, Content {}, Social media, Email/CRM, Paid media, PR/Influencer, Events, Sales enablement, Customer experience, Analytics & attribution, MarTech stack, Team & org.
+- **Overall average score** and a brief diagnostic statement.
+
+#### 4. Acquisition — How strangers become aware
+- **Philosophy** – overarching acquisition approach given industry constraints.
+- **Current channels (what’s working)** – channels and metrics.
+- **Planned additions (next 90 days)** – concrete tactics with specific partners, platforms, or programs.
+
+## Output Format
+A Markdown document using `##` for main sections, `###` for subsections as needed. Tables must be properly formatted with pipes and alignments. Lists must use dashes or asterisks. All statements must be complete declarative sentences. The document should be ready to share with a leadership team.
+
+## Constraints
+- Do **not** ask the user for clarification. Build the {} from known or inferred information; note any critical assumptions briefly.
+- The {} must be **actionable and quantified** — avoid vague goals like “increase awareness” without a target metric.
+- When the company operates in a heavily regulated industry (e.g., cannabis, alcohol, pharma), incorporate relevant {} restrictions explicitly in the brand voice, acquisition philosophy, and channel selections.
+- The output must be a **self-contained {} file** with no extra commentary or meta-text.
+
+========Evaluation of Prompt Similarity======== ... ...
+
+Prompt similarity score is : 0.46339061856269836
+
+========Evaluation of Functional Consistency======== ... ...
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[TARGET EVAL][INPUT 0] start
+[TARGET EVAL][INPUT 0][GEN target 0] time=105.094476
+[TARGET EVAL][INPUT 0][GEN target 1] time=46.112999
+[TARGET EVAL][INPUT 0][GEN total] time=151.207567
+[TARGET EVAL][INPUT 0][semantic] score=0.6775697469711304, time=0.035443
+[TARGET EVAL][INPUT 0][syntactic] score=0.20050544420784924, time=70.803281
+[JS DEBUG] text1_len=13314, text2_len=3578
+[JS DEBUG] Text 1 preview: # CalmWave · 12-Month Marketing Plan  
+**Version 1.0** · Prepared for Co-Founders (Pre-Seed)  
+*AARRR-Driven · Budget $2K/mo · No Dedicated Marketing Hire*
+
+---
+
+## 1. Executive Summary
+
+CalmWave will grow from an organic TikTok presence and basic ASO into a systematic, compounding marketing engine 
+[JS DEBUG] Text 2 preview: I’m pulling together a 12‑month AARRR plan for **CalmWave**, tailored to your pre‑seed reality ($2k/mo, no marketing hire, TikTok organic + ASO) and explicitly mapped to what happens when the seed round closes.
+
+This is Phase 1 — the research and intake. The plan will have 13 sections (executive sum
+[JS DEBUG] split_vocab_time=0.000489
+[JS DEBUG] freq_count_time=0.098039
+[JS DEBUG] prob_vector_time=0.000160
+[JS DEBUG] scipy_time=0.000184
+[JS DEBUG] total_time=0.098970
+[TARGET EVAL][INPUT 0][structural_js] score=1.183733828507445, time=0.099028
+[TARGET EVAL][INPUT 0][total] time=222.145459
+
+100%|██████████| 1/1 [03:42<00:00, 222.15s/it][A100%|██████████| 1/1 [03:42<00:00, 222.15s/it]
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[STOLEN EVAL][INPUT 0] start
+[STOLEN EVAL][INPUT 0][GEN target 0] time=115.237369
+[STOLEN EVAL][INPUT 0][GEN target 1] time=104.630103
+[STOLEN EVAL][INPUT 0][GEN target total] time=219.867595
+[STOLEN EVAL][INPUT 0][GEN pred 0] time=100.553898
+[STOLEN EVAL][INPUT 0][GEN pred 1] time=104.447054
+[STOLEN EVAL][INPUT 0][GEN pred total] time=205.001074
+[STOLEN EVAL][INPUT 0][semantic] score=0.6949016898870468, time=0.119585
+[STOLEN EVAL][INPUT 0][syntactic] score=0.2637747381727202, time=369.395684
+[JS DEBUG] text1_len=8876, text2_len=13691
+[JS DEBUG] Text 1 preview: ## Executive Summary
+
+CalmWave’s 12‑month marketing strategy will turn the app into a top‑10 mindfulness brand by executing three concentrated bets:
+1. **Short‑form video dominance** – publish 30+ high‑quality TikToks, Reels, and Shorts per week to drive over 1 million monthly organic impressions.
+2
+[JS DEBUG] Text 2 preview: Here's your Notion-ready marketing plan for **CalmWave**. This is a Fractional CMO's comprehensive strategy, balancing high-level vision with concrete, executable tactics for your $2k/mo budget and pre-seed reality. Let's dive in.
+
+---
+
+## 1. Executive Summary
+
+**The 3 Big Bets for CalmWave**
+Our 12
+[JS DEBUG] split_vocab_time=0.000263
+[JS DEBUG] freq_count_time=0.143117
+[JS DEBUG] prob_vector_time=0.000199
+[JS DEBUG] scipy_time=0.000200
+[JS DEBUG] total_time=0.143873
+[JS DEBUG] text1_len=8876, text2_len=10214
+[JS DEBUG] Text 1 preview: ## Executive Summary
+
+CalmWave’s 12‑month marketing strategy will turn the app into a top‑10 mindfulness brand by executing three concentrated bets:
+1. **Short‑form video dominance** – publish 30+ high‑quality TikToks, Reels, and Shorts per week to drive over 1 million monthly organic impressions.
+2
+[JS DEBUG] Text 2 preview: # CalmWave — 12-Month Marketing Plan
+
+> *Fractional CMO artifact. Pre‑seed stage, founders‑led marketing. Built for review and iteration; open decisions called out.*
+
+---
+
+## 1. Executive Summary
+
+**Three Big Bets**  
+1. **Organic TikTok → ASO flywheel** — Daily native content builds the top of funn
+[JS DEBUG] split_vocab_time=0.000224
+[JS DEBUG] freq_count_time=0.097261
+[JS DEBUG] prob_vector_time=0.000170
+[JS DEBUG] scipy_time=0.000458
+[JS DEBUG] total_time=0.098253
+[JS DEBUG] text1_len=6460, text2_len=13691
+[JS DEBUG] Text 1 preview: ## 12-Month Marketing Strategy: CalmWave  
+**Prepared for:** CalmWave Founders  
+**Date:** March 2025  
+**Type:** D2C Meditation App – Pre-Seed to Post-Seed Growth Plan  
+**Budget:** $2,000/month (Months 1–3) → $20,000/month (Months 4–12, post-seed)  
+
+---
+
+### 1. Executive Summary
+CalmWave will tra
+[JS DEBUG] Text 2 preview: Here's your Notion-ready marketing plan for **CalmWave**. This is a Fractional CMO's comprehensive strategy, balancing high-level vision with concrete, executable tactics for your $2k/mo budget and pre-seed reality. Let's dive in.
+
+---
+
+## 1. Executive Summary
+
+**The 3 Big Bets for CalmWave**
+Our 12
+[JS DEBUG] split_vocab_time=0.000433
+[JS DEBUG] freq_count_time=0.113419
+[JS DEBUG] prob_vector_time=0.000190
+[JS DEBUG] scipy_time=0.000191
+[JS DEBUG] total_time=0.114527
+[JS DEBUG] text1_len=6460, text2_len=10214
+[JS DEBUG] Text 1 preview: ## 12-Month Marketing Strategy: CalmWave  
+**Prepared for:** CalmWave Founders  
+**Date:** March 2025  
+**Type:** D2C Meditation App – Pre-Seed to Post-Seed Growth Plan  
+**Budget:** $2,000/month (Months 1–3) → $20,000/month (Months 4–12, post-seed)  
+
+---
+
+### 1. Executive Summary
+CalmWave will tra
+[JS DEBUG] Text 2 preview: # CalmWave — 12-Month Marketing Plan
+
+> *Fractional CMO artifact. Pre‑seed stage, founders‑led marketing. Built for review and iteration; open decisions called out.*
+
+---
+
+## 1. Executive Summary
+
+**Three Big Bets**  
+1. **Organic TikTok → ASO flywheel** — Daily native content builds the top of funn
+[JS DEBUG] split_vocab_time=0.000232
+[JS DEBUG] freq_count_time=0.082888
+[JS DEBUG] prob_vector_time=0.000234
+[JS DEBUG] scipy_time=0.000322
+[JS DEBUG] total_time=0.083840
+[STOLEN EVAL][INPUT 0][structural_js] score=1.2695600257581576, time=0.440771
+[STOLEN EVAL][INPUT 0][total] time=794.824847
+
+100%|██████████| 1/1 [13:14<00:00, 794.82s/it][A100%|██████████| 1/1 [13:14<00:00, 794.83s/it]
+
+Target semantic score is: 0.6775697469711304
+Target syntactic score is: 0.20050544420784924
+Target structural score is: 1.183733828507445
+Stolen semantic score is: 0.6949016898870468
+Stolen syntactic score is: 0.2637747381727202
+Stolen structural score is: 1.2695600257581576
+Semantic similarity score is: 1.0
+Syntactic similarity score is: 1.0
+Structural similarity score is: 1.0
+4it [1:25:09, 1382.17s/it]4
+
+Get the prompt category: Planning
+
+========Start Stealing Target Prompt========  ... ...
+config.theme:  Planning
+4it [1:27:25, 1311.43s/it]
+Traceback (most recent call last):
+  File "/home/miasean/PRSA-skill/2_run_attack.py", line 98, in <module>
+    stolen_prompt = utils.prompt_pruning_google(config, stolen_prompt, input_data, output_data, model.inference)
+  File "/home/miasean/PRSA-skill/utils.py", line 292, in prompt_pruning_google
+    prompt = llm.pre_pruning(input_data, prompt)
+  File "/home/miasean/PRSA-skill/llm.py", line 264, in pre_pruning
+    cleaned = re.sub(r"^```(?:markdown|md)?\s*", "", cleaned)
+NameError: name 're' is not defined. Did you mean: 'res'?
