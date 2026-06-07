@@ -5,6 +5,7 @@ from scipy.spatial.distance import jensenshannon
 from collections import Counter
 import re
 import os
+import time
 from transformers import BertTokenizer, BertModel
 import torch
 import fkassim.FastKassim as fkassim
@@ -51,19 +52,46 @@ class MetricsScorer:
         target_semantic_score_list = []
         target_syntactic_score_list = []
         target_js_score_list = []
-        
-        for input_data in tqdm(inputs):
-            target_outputs = [fn(input_data, target_prompt) for _ in range(self.m)]
+
+        for input_idx, input_data in enumerate(tqdm(inputs)):
+            input_start_time = time.time()
+            print(f"[TARGET EVAL][INPUT {input_idx}] start", flush=True)
+
+            generation_start_time = time.time()
+            target_outputs = []
+            for gen_idx in range(self.m):
+                gen_start_time = time.time()
+                target_output = fn(input_data, target_prompt)
+                gen_time = time.time() - gen_start_time
+                print(f"[TARGET EVAL][INPUT {input_idx}][GEN target {gen_idx}] time={gen_time:.6f}", flush=True)
+                target_outputs.append(target_output)
+            generation_total_time = time.time() - generation_start_time
+            print(f"[TARGET EVAL][INPUT {input_idx}][GEN total] time={generation_total_time:.6f}", flush=True)
+
             if any(out is None or out.strip() == "" for out in target_outputs):
                 return None
 
+            semantic_start_time = time.time()
             target_semantic_score = self.eval_target_target("semantic_similarity", target_outputs)
+            semantic_time = time.time() - semantic_start_time
+            print(f"[TARGET EVAL][INPUT {input_idx}][semantic] score={target_semantic_score}, time={semantic_time:.6f}", flush=True)
+
+            syntactic_start_time = time.time()
             target_syntactic_score = self.eval_target_target("syntactic_similarity", target_outputs)
+            syntactic_time = time.time() - syntactic_start_time
+            print(f"[TARGET EVAL][INPUT {input_idx}][syntactic] score={target_syntactic_score}, time={syntactic_time:.6f}", flush=True)
+
+            structural_js_start_time = time.time()
             target_js_score = self.eval_target_target("jensen_shannon_divergence", target_outputs)
+            structural_js_time = time.time() - structural_js_start_time
+            print(f"[TARGET EVAL][INPUT {input_idx}][structural_js] score={target_js_score}, time={structural_js_time:.6f}", flush=True)
 
             target_semantic_score_list.append(target_semantic_score)
             target_syntactic_score_list.append(target_syntactic_score)
             target_js_score_list.append(target_js_score)
+
+            input_total_time = time.time() - input_start_time
+            print(f"[TARGET EVAL][INPUT {input_idx}][total] time={input_total_time:.6f}", flush=True)
  
         avg_target_semantic_score = np.mean(target_semantic_score_list)
         avg_target_syntactic_score = np.mean(target_syntactic_score_list)
@@ -81,19 +109,53 @@ class MetricsScorer:
         syntactic_score_list = []
         js_score_list = []
 
-        
-        for input_data in tqdm(inputs):
+        for input_idx, input_data in enumerate(tqdm(inputs)):
+            input_start_time = time.time()
+            print(f"[STOLEN EVAL][INPUT {input_idx}] start", flush=True)
 
-            target_outputs = [fn(input_data, target_prompt) for _ in range(self.m)]
-            pred_outputs = [fn(input_data, stolen_prompt) for _ in range(self.m)]
+            target_generation_start_time = time.time()
+            target_outputs = []
+            for gen_idx in range(self.m):
+                gen_start_time = time.time()
+                target_output = fn(input_data, target_prompt)
+                gen_time = time.time() - gen_start_time
+                print(f"[STOLEN EVAL][INPUT {input_idx}][GEN target {gen_idx}] time={gen_time:.6f}", flush=True)
+                target_outputs.append(target_output)
+            target_generation_total_time = time.time() - target_generation_start_time
+            print(f"[STOLEN EVAL][INPUT {input_idx}][GEN target total] time={target_generation_total_time:.6f}", flush=True)
 
+            pred_generation_start_time = time.time()
+            pred_outputs = []
+            for gen_idx in range(self.m):
+                gen_start_time = time.time()
+                pred_output = fn(input_data, stolen_prompt)
+                gen_time = time.time() - gen_start_time
+                print(f"[STOLEN EVAL][INPUT {input_idx}][GEN pred {gen_idx}] time={gen_time:.6f}", flush=True)
+                pred_outputs.append(pred_output)
+            pred_generation_total_time = time.time() - pred_generation_start_time
+            print(f"[STOLEN EVAL][INPUT {input_idx}][GEN pred total] time={pred_generation_total_time:.6f}", flush=True)
+
+            semantic_start_time = time.time()
             pred_semantic_score = self.eval_pred_target("semantic_similarity", pred_outputs, target_outputs)
+            semantic_time = time.time() - semantic_start_time
+            print(f"[STOLEN EVAL][INPUT {input_idx}][semantic] score={pred_semantic_score}, time={semantic_time:.6f}", flush=True)
+
+            syntactic_start_time = time.time()
             pred_syntactic_score = self.eval_pred_target("syntactic_similarity", pred_outputs, target_outputs)
+            syntactic_time = time.time() - syntactic_start_time
+            print(f"[STOLEN EVAL][INPUT {input_idx}][syntactic] score={pred_syntactic_score}, time={syntactic_time:.6f}", flush=True)
+
+            structural_js_start_time = time.time()
             pred_js_score = self.eval_pred_target("jensen_shannon_divergence", pred_outputs, target_outputs)
+            structural_js_time = time.time() - structural_js_start_time
+            print(f"[STOLEN EVAL][INPUT {input_idx}][structural_js] score={pred_js_score}, time={structural_js_time:.6f}", flush=True)
 
             semantic_score_list.append(pred_semantic_score)
             syntactic_score_list.append(pred_syntactic_score)
             js_score_list.append(pred_js_score)
+
+            input_total_time = time.time() - input_start_time
+            print(f"[STOLEN EVAL][INPUT {input_idx}][total] time={input_total_time:.6f}", flush=True)
            
         avg_semantic_score = np.mean(semantic_score_list)
         avg_syntactic_score = np.mean(syntactic_score_list)
@@ -153,15 +215,38 @@ class MetricsScorer:
         return [frequency[word] / len(text) for word in vocab]
     
     def jensen_shannon_divergence(self, text1, text2, base=2):
-        # print text1 and text2 for debugging 
+        js_start_time = time.time()
+        print(f"[JS DEBUG] text1_len={len(text1)}, text2_len={len(text2)}", flush=True)
+        print(f"[JS DEBUG] Text 1 preview: {text1[:300]}", flush=True)
+        print(f"[JS DEBUG] Text 2 preview: {text2[:300]}", flush=True)
+
+        split_vocab_start_time = time.time()
         vocab = set(text1.split()) | set(text2.split())
+        split_vocab_time = time.time() - split_vocab_start_time
+        print(f"[JS DEBUG] split_vocab_time={split_vocab_time:.6f}", flush=True)
+
+        freq_count_start_time = time.time()
         freq_dist1 = {word: text1.split().count(word) for word in vocab}
         freq_dist2 = {word: text2.split().count(word) for word in vocab}
+        freq_count_time = time.time() - freq_count_start_time
+        print(f"[JS DEBUG] freq_count_time={freq_count_time:.6f}", flush=True)
+
+        prob_vector_start_time = time.time()
         sum_freq1 = sum(freq_dist1.values())
         sum_freq2 = sum(freq_dist2.values())
         prob_dist1 = [freq_dist1[word] / sum_freq1 for word in vocab]
         prob_dist2 = [freq_dist2[word] / sum_freq2 for word in vocab]
-        return jensenshannon(prob_dist1, prob_dist2, base=base)
+        prob_vector_time = time.time() - prob_vector_start_time
+        print(f"[JS DEBUG] prob_vector_time={prob_vector_time:.6f}", flush=True)
+
+        scipy_start_time = time.time()
+        score = jensenshannon(prob_dist1, prob_dist2, base=base)
+        scipy_time = time.time() - scipy_start_time
+        print(f"[JS DEBUG] scipy_time={scipy_time:.6f}", flush=True)
+
+        total_time = time.time() - js_start_time
+        print(f"[JS DEBUG] total_time={total_time:.6f}", flush=True)
+        return score
     
     def norm_js_score(self, pred_score, target_score, max_diff=1):
         diff = abs(pred_score - target_score)
@@ -179,5 +264,4 @@ class MetricsScorer:
         else:
             raise ValueError(f"Unsupported evaluator type: {self.evaluator}")
         return similarity_score
-
 
