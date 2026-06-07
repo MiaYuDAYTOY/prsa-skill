@@ -8,7 +8,7 @@ import pandas as pd
 import dataset
 import utils
 import llm
-from debug_structural_js import StructuralJSDebugger
+from scorers import MetricsScorer
 from sentence_bert import calculate_similarity_sbert
 
 
@@ -57,7 +57,7 @@ if __name__ == '__main__':
     config = vars(args)
 
     data = dataset.Datasets(config)
-    scorer = StructuralJSDebugger(m=args.m, score_mode="inverse")
+    scorer = MetricsScorer(args.evaluator, args.m)
     model = llm.ChatGPTPredictor(config)
     test_data = data.load_test_data()
 
@@ -120,43 +120,66 @@ if __name__ == '__main__':
         print("\nPrompt similarity score is :", prompt_sim_score)
 
 
-        print("\n========Evaluation of Functional Consistency: JS Structural Only======== ... ...")
+        print("\n========Evaluation of Functional Consistency======== ... ...")
 
-        js_target_score = scorer.evaluate_target_prompt_js_only(
+        target_score = scorer.evaluate_target_prompt(
             model.inference,
             inputs,
             target_prompt
         )
 
-        if js_target_score is None:
-            print(f"[Warning] Skipped iteration {idx} due to failed target JS evaluation.")
+        if target_score is None:
+            print(f"[Warning] Skipped iteration {idx} due to failed target evaluation.")
             continue
 
-        js_stolen_score = scorer.evaluate_stolen_prompt_js_only(
+        stolen_score = scorer.evaluate_stolen_prompt(
             model.inference,
             inputs,
             target_prompt,
             stolen_prompt
         )
 
-        if js_stolen_score is None:
-            print(f"[Warning] Skipped iteration {idx} due to failed stolen JS evaluation.")
+        if stolen_score is None:
+            print(f"[Warning] Skipped iteration {idx} due to failed stolen evaluation.")
             continue
 
-        if is_valid_score(js_target_score) and is_valid_score(js_stolen_score):
-            js_sim_score = min(js_stolen_score / js_target_score, 1.0)
+        target_semantic_score = target_score[0]
+        target_syntactic_score = target_score[1]
+        target_js_score = target_score[2]
 
-            print("\nStructural target score is:", js_target_score)
-            print("Structural stolen score is:", js_stolen_score)
+        stolen_semantic_score = stolen_score[0]
+        stolen_syntactic_score = stolen_score[1]
+        stolen_js_score = stolen_score[2]
+
+        if (
+            is_valid_score(target_semantic_score)
+            and is_valid_score(target_syntactic_score)
+            and is_valid_score(target_js_score)
+            and is_valid_score(stolen_semantic_score)
+            and is_valid_score(stolen_syntactic_score)
+            and is_valid_score(stolen_js_score)
+        ):
+            semantic_sim_score = min(stolen_semantic_score / target_semantic_score, 1.0)
+            syntactic_sim_score = min(stolen_syntactic_score / target_syntactic_score, 1.0)
+            js_sim_score = min(stolen_js_score / target_js_score, 1.0)
+
+            print("\nTarget semantic score is:", target_semantic_score)
+            print("Target syntactic score is:", target_syntactic_score)
+            print("Target structural score is:", target_js_score)
+            print("Stolen semantic score is:", stolen_semantic_score)
+            print("Stolen syntactic score is:", stolen_syntactic_score)
+            print("Stolen structural score is:", stolen_js_score)
+            print("Semantic similarity score is:", semantic_sim_score)
+            print("Syntactic similarity score is:", syntactic_sim_score)
             print("Structural similarity score is:", js_sim_score)
 
             with open(args.out, 'a') as outf:
                 outf.write(json.dumps(
-                    f"Round [{idx+1}/{len(test_data)}] structural target score: {js_target_score:.4f}"
+                    f"Round [{idx+1}/{len(test_data)}] semantic similarity score: {semantic_sim_score:.4f}"
                 ) + '\n')
 
                 outf.write(json.dumps(
-                    f"Round [{idx+1}/{len(test_data)}] structural stolen score: {js_stolen_score:.4f}"
+                    f"Round [{idx+1}/{len(test_data)}] syntactic similarity score: {syntactic_sim_score:.4f}"
                 ) + '\n')
 
                 outf.write(json.dumps(
@@ -173,16 +196,20 @@ if __name__ == '__main__':
                 'iteration': idx,
                 'target prompt': target_prompt,
                 'stolen prompt': stolen_prompt,
-                'structural target score': js_target_score,
-                'structural stolen score': js_stolen_score,
+                'semantic similarity score': semantic_sim_score,
+                'syntactic similarity score': syntactic_sim_score,
                 'structural similarity score': js_sim_score,
                 'prompt similarity score': prompt_sim_score
             })
 
         else:
-            print(f"[Warning] Skipped iteration {idx} due to invalid JS score.")
-            print(f"[DEBUG] js_target_score = {js_target_score}")
-            print(f"[DEBUG] js_stolen_score = {js_stolen_score}")
+            print(f"[Warning] Skipped iteration {idx} due to invalid functional consistency score.")
+            print(f"[DEBUG] target_semantic_score = {target_semantic_score}")
+            print(f"[DEBUG] target_syntactic_score = {target_syntactic_score}")
+            print(f"[DEBUG] target_js_score = {target_js_score}")
+            print(f"[DEBUG] stolen_semantic_score = {stolen_semantic_score}")
+            print(f"[DEBUG] stolen_syntactic_score = {stolen_syntactic_score}")
+            print(f"[DEBUG] stolen_js_score = {stolen_js_score}")
             continue
 
         '''
